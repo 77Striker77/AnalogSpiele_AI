@@ -276,6 +276,42 @@
     .menue{border-radius:14px;}
     .menue button{font-size:.8rem;padding:.5em .85em;}
   }
+
+  /* --- Fusszeile der Karte: Kauf und Video --- */
+  .karte-fuss{display:flex;flex-wrap:wrap;gap:8px;align-items:stretch;}
+  .karte-fuss .buy{flex:1 1 auto;margin:0;}
+  .video{
+    display:flex;align-items:center;gap:7px;flex:0 0 auto;
+    text-decoration:none;font-size:.78rem;font-weight:600;
+    color:#3A3F49;background:#EDE9DC;border:1px solid var(--line);
+    border-radius:8px;padding:.55em .85em;transition:background .15s,border-color .15s;
+  }
+  .video:hover{background:#E3DECD;border-color:#C4BCA6;}
+  .video:focus-visible{outline:3px solid var(--gold);outline-offset:2px;}
+  .video .play{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:17px;height:17px;border-radius:50%;background:#C0392B;color:#fff;
+    font-size:.55rem;padding-left:2px;flex:none;
+  }
+  .video .kanal{color:var(--ink-soft);font-weight:400;}
+  @media (max-width:400px){ .karte-fuss{flex-direction:column;} }
+
+  /* --- Sprung aus der Rangliste --- */
+  .zum-spiel{
+    font:inherit;font-size:inherit;color:var(--coop);background:none;border:0;
+    padding:0;cursor:pointer;text-align:left;
+    border-bottom:1px solid rgba(42,100,150,.32);
+  }
+  .zum-spiel:hover{border-bottom-color:var(--coop);}
+  .zum-spiel:focus-visible{outline:3px solid var(--gold);outline-offset:2px;}
+  .card.hervor{animation:hervor 2.4s ease-out;}
+  @keyframes hervor{
+    0%,18%{box-shadow:0 0 0 4px var(--gold), 0 14px 30px rgba(0,0,0,.32);}
+    100%{box-shadow:0 0 0 0 rgba(201,162,75,0), 0 8px 20px rgba(0,0,0,.18);}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .card.hervor{animation:none;box-shadow:0 0 0 4px var(--gold);}
+  }
 </style>
 </head>
 <body>
@@ -319,7 +355,7 @@
     <div class="rule"></div>
   </div>
   <div class="grid">
-    <div data-reise="59.4" data-zweier="100.0" class="card coop-card" data-kritiker="78.0" data-community="70.7" data-name="MicroMacro: Crime City">
+    <div id="spiel-micromacro-crime-city" data-reise="59.4" data-zweier="100.0" class="card coop-card" data-kritiker="78.0" data-community="70.7" data-name="MicroMacro: Crime City">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu MicroMacro: Crime City">
@@ -381,9 +417,12 @@
         <div class="pro"><b>Pro</b>Zu zweit ideal, weil ihr euch über den Plan beugt und laut mitdenkt; extrem günstig; Einstieg in unter zwei Minuten erklärt.</div>
         <div class="con"><b>Contra</b>Einmal gelöste Fälle sind verbraucht – nach rund drei Stunden ist die Box durch (dafür gut weiterverschenkbar); winzige Details brauchen gutes Licht.</div>
       </div>
-      <a class="buy" href="https://www.brettspiel-angebote.de/spiele/micromacro-crime-city/4121/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
+      <div class="karte-fuss">
+  <a class="buy" href="https://www.brettspiel-angebote.de/spiele/micromacro-crime-city/4121/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
+      <a class="video" href="https://www.youtube.com/watch?v=So2UsuYs4QE" target="_blank" rel="noopener" title="MicroMacro Crime city - Regeln + Review"><span class="play" aria-hidden="true">&#9654;</span> Regelvideo <span class="kanal">Brettspielguru</span></a>
+      </div>
     </div>
-    <div data-reise="57.5" data-zweier="100.0" class="card coop-card" data-kritiker="94.0" data-community="76.4" data-name="Codenames Duett">
+    <div id="spiel-codenames-duett" data-reise="57.5" data-zweier="100.0" class="card coop-card" data-kritiker="94.0" data-community="76.4" data-name="Codenames Duett">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Codenames Duett">
@@ -449,9 +488,12 @@
         <div class="pro"><b>Pro</b>Riesiger Wiederspielwert, winziges Packma&szlig;, funktioniert auch mit Wenigspielern sofort.</div>
         <div class="con"><b>Contra</b>Braucht &auml;hnliches Assoziationsdenken &ndash; bei sehr unterschiedlichen K&ouml;pfen kann's frustrieren.</div>
       </div>
-      <a class="buy" href="https://www.brettspiel-angebote.de/spiele/codenames-duett/2282/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
+      <div class="karte-fuss">
+  <a class="buy" href="https://www.brettspiel-angebote.de/spiele/codenames-duett/2282/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
+      <a class="video" href="https://www.youtube.com/watch?v=XEMM2PZJWZE" target="_blank" rel="noopener" title="Spielregeln Codenames Duett - Czech Games Edition"><span class="play" aria-hidden="true">&#9654;</span> Regelvideo <span class="kanal">Heimspiel Köln</span></a>
+      </div>
     </div>
-    <div data-reise="11.4" data-zweier="88.0" class="card coop-card" data-kritiker="" data-community="73.7" data-name="Paleo">
+    <div id="spiel-paleo" data-reise="11.4" data-zweier="88.0" class="card coop-card" data-kritiker="" data-community="73.7" data-name="Paleo">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Paleo">
@@ -511,9 +553,12 @@
         <div class="pro"><b>Pro</b>Enorme Abwechslung durch die frei kombinierbaren Module, dichte Erzählatmosphäre, hochwertiges Holzmaterial, zu zweit sehr gut ausbalanciert.</div>
         <div class="con"><b>Contra</b>Die Anleitung gilt als sperrig, der Einstieg dauert; die ersten Partien verliert man meist – wer Frust schlecht verträgt, ist hier falsch.</div>
       </div>
-      <a class="buy" href="https://www.brettspiel-angebote.de/spiele/paleo/3844/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
+      <div class="karte-fuss">
+  <a class="buy" href="https://www.brettspiel-angebote.de/spiele/paleo/3844/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
+      <a class="video" href="https://www.youtube.com/watch?v=2KWUDkqGzhM" target="_blank" rel="noopener" title="Paleo Regeln Anleitung Regelerklärung Regelvideo Kennerspiel des Jahres 2021"><span class="play" aria-hidden="true">&#9654;</span> Regelvideo <span class="kanal">Brettspiel-Zimmer - Guru erklärt</span></a>
+      </div>
     </div>
-    <div data-reise="97.4" data-zweier="62.0" class="card coop-card" data-kritiker="70.0" data-community="65.8" data-name="Hanabi">
+    <div id="spiel-hanabi" data-reise="97.4" data-zweier="62.0" class="card coop-card" data-kritiker="70.0" data-community="65.8" data-name="Hanabi">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Hanabi">
@@ -573,9 +618,12 @@
         <div class="pro"><b>Pro</b>Winzig und spottbillig, hoher Anspruch trotz simpler Regeln, echter Klassiker.</div>
         <div class="con"><b>Contra</b>Sehr fehlerintolerant &ndash; ein Patzer kippt die Partie; zu zweit etwas schw&auml;cher als zu dritt.</div>
       </div>
-      <a class="buy" href="https://www.brettspiel-angebote.de/spiele/hanabi-neuauflage/7122/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
+      <div class="karte-fuss">
+  <a class="buy" href="https://www.brettspiel-angebote.de/spiele/hanabi-neuauflage/7122/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
+      <a class="video" href="https://www.youtube.com/watch?v=FdIPpgmtt_k" target="_blank" rel="noopener" title="Hanabi Regeln Anleitung Kartenspiel Erklärung Spiel des Jahres 2013"><span class="play" aria-hidden="true">&#9654;</span> Regelvideo <span class="kanal">Brettspiel-Zimmer - Guru erklärt</span></a>
+      </div>
     </div>
-    <div data-reise="39.1" data-zweier="62.0" class="card coop-card" data-kritiker="82.0" data-community="74.3" data-name="Pandemie">
+    <div id="spiel-pandemie" data-reise="39.1" data-zweier="62.0" class="card coop-card" data-kritiker="82.0" data-community="74.3" data-name="Pandemie">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Pandemie">
@@ -631,9 +679,12 @@
         <div class="pro"><b>Pro</b>Riesige Rollen-Vielfalt, Schwierigkeitsgrad frei einstellbar, funktioniert zu zweit hervorragend, unzählige Erweiterungen.</div>
         <div class="con"><b>Contra</b>Die größte Box dieser Liste und damit kaum reisetauglich; lädt zum „Alpha-Spieler“ ein, der alle Züge durchdirigiert.</div>
       </div>
-      <a class="buy" href="https://www.brettspiel-angebote.de/spiele/pandemie/274/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
+      <div class="karte-fuss">
+  <a class="buy" href="https://www.brettspiel-angebote.de/spiele/pandemie/274/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
+      <a class="video" href="https://www.youtube.com/watch?v=_ecskoWNaMc" target="_blank" rel="noopener" title="Pandemie Regeln Anleitung Regelerklärung Regelvideo Brettspiel"><span class="play" aria-hidden="true">&#9654;</span> Regelvideo <span class="kanal">Brettspiel-Zimmer - Guru erklärt</span></a>
+      </div>
     </div>
-    <div data-reise="" data-zweier="100.0" class="card coop-card" data-kritiker="" data-community="67.6" data-name="Der Fuchs im Wald: Duett">
+    <div id="spiel-der-fuchs-im-wald-duett" data-reise="" data-zweier="100.0" class="card coop-card" data-kritiker="" data-community="67.6" data-name="Der Fuchs im Wald: Duett">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Der Fuchs im Wald: Duett">
@@ -697,7 +748,10 @@
         <div class="pro"><b>Pro</b>Kooperatives Stichspiel f&uuml;r genau zwei &ndash; daf&uuml;r gibt es kaum Alternativen; jede Partie ist ein anderes Puzzle; wunderbar illustriert.</div>
         <div class="con"><b>Contra</b>Ohne Absprache kommunizieren muss man m&ouml;gen; wer Stichspiele nicht mag, findet hier keinen Zugang; keine Redaktionswertung als Gegenprobe.</div>
       </div>
-      <a class="buy" href="https://www.brettspiel-angebote.de/spiele/der-fuchs-im-wald-duett/4209/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
+      <div class="karte-fuss">
+  <a class="buy" href="https://www.brettspiel-angebote.de/spiele/der-fuchs-im-wald-duett/4209/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
+      <a class="video" href="https://www.youtube.com/watch?v=ByUUOODEFhE" target="_blank" rel="noopener" title="Der Fuchs im Wald Duett vom Schwerkraft-Verlag - Regeln + Review - Brettspiel - Die Brettspieltester"><span class="play" aria-hidden="true">&#9654;</span> Regelvideo <span class="kanal">Die Brettspieltester</span></a>
+      </div>
     </div>
     </div>
 </section>
@@ -711,7 +765,7 @@
     <div class="rule"></div>
   </div>
   <div class="grid">
-    <div data-reise="51.4" data-zweier="100.0" class="card duel-card" data-kritiker="86.0" data-community="79.9" data-name="7 Wonders Duel">
+    <div id="spiel-7-wonders-duel" data-reise="51.4" data-zweier="100.0" class="card duel-card" data-kritiker="86.0" data-community="79.9" data-name="7 Wonders Duel">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu 7 Wonders Duel">
@@ -774,9 +828,12 @@
         <div class="pro"><b>Pro</b>Reviews sind sich einig: konfrontativer und spannender als das gro&szlig;e 7 Wonders, durchgehend knifflige Entscheidungen, keine Vorkenntnisse n&ouml;tig.</div>
         <div class="con"><b>Contra</b>Aufgedeckte Karten bringen Gl&uuml;cksmomente; die Sofort-Siege k&ouml;nnen sich abrupt anf&uuml;hlen.</div>
       </div>
-      <a class="buy" href="https://www.brettspiel-angebote.de/spiele/7-wonders-duel/355/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
+      <div class="karte-fuss">
+  <a class="buy" href="https://www.brettspiel-angebote.de/spiele/7-wonders-duel/355/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
+      <a class="video" href="https://www.youtube.com/watch?v=73vSxih8uvo" target="_blank" rel="noopener" title="7 Wonders Duel Regeln Anleitung Regelerklärung Erklärung Kartenspiel"><span class="play" aria-hidden="true">&#9654;</span> Regelvideo <span class="kanal">Brettspiel-Zimmer - Guru erklärt</span></a>
+      </div>
     </div>
-    <div data-reise="78.2" data-zweier="100.0" class="card duel-card" data-kritiker="92.0" data-community="77.6" data-name="Splendor Duel">
+    <div id="spiel-splendor-duel" data-reise="78.2" data-zweier="100.0" class="card duel-card" data-kritiker="92.0" data-community="77.6" data-name="Splendor Duel">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Splendor Duel">
@@ -837,9 +894,12 @@
         <div class="pro"><b>Pro</b>Mehr Tiefe und Interaktion als Splendor, cleverer Abnutzungskrieg um die Chips auf dem Brett.</div>
         <div class="con"><b>Contra</b>Chips und Karten sind kleiner als beim Original und verlieren haptisch etwas.</div>
       </div>
-      <a class="buy" href="https://www.brettspiel-angebote.de/spiele/splendor-duel/5394/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
+      <div class="karte-fuss">
+  <a class="buy" href="https://www.brettspiel-angebote.de/spiele/splendor-duel/5394/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
+      <a class="video" href="https://www.youtube.com/watch?v=gKkUIBvD5yg" target="_blank" rel="noopener" title="Splendor Duel 👑 Regeln Anleitung Erklärung 💎 Brettspiel Spiel zu zweit"><span class="play" aria-hidden="true">&#9654;</span> Regelvideo <span class="kanal">Brettspiel-Zimmer - Guru erklärt</span></a>
+      </div>
     </div>
-    <div data-reise="59.2" data-zweier="100.0" class="card duel-card" data-kritiker="84.0" data-community="76.3" data-name="Targi">
+    <div id="spiel-targi" data-reise="59.2" data-zweier="100.0" class="card duel-card" data-kritiker="84.0" data-community="76.3" data-name="Targi">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Targi">
@@ -895,9 +955,12 @@
         <div class="pro"><b>Pro</b>Hohe Interaktion, kein Spiel gleicht dem anderen, echtes Kennerspiel-Gef&uuml;hl im kleinen Format.</div>
         <div class="con"><b>Contra</b>L&auml;ngste Spieldauer dieser Liste und deutlich gr&uuml;bellastiger &ndash; nichts f&uuml;r ganz lockere Runden.</div>
       </div>
-      <a class="buy" href="https://www.brettspiel-angebote.de/spiele/targi/186/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
+      <div class="karte-fuss">
+  <a class="buy" href="https://www.brettspiel-angebote.de/spiele/targi/186/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
+      <a class="video" href="https://www.youtube.com/watch?v=XWpUl25o_Kg" target="_blank" rel="noopener" title="Targi von KOSMOS - Regeln + Review - Brettspiel - Die Brettspieltester"><span class="play" aria-hidden="true">&#9654;</span> Regelvideo <span class="kanal">Die Brettspieltester</span></a>
+      </div>
     </div>
-    <div data-reise="56.2" data-zweier="100.0" class="card duel-card" data-kritiker="78.0" data-community="75.3" data-name="Patchwork">
+    <div id="spiel-patchwork" data-reise="56.2" data-zweier="100.0" class="card duel-card" data-kritiker="78.0" data-community="75.3" data-name="Patchwork">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Patchwork">
@@ -961,9 +1024,12 @@
         <div class="pro"><b>Pro</b>In 2 Minuten erkl&auml;rt, funktioniert f&uuml;r Wenigspieler UND als knallhartes Optimierungsduell.</div>
         <div class="con"><b>Contra</b>Thema ist reine Deko; wer Puzzle-Optimierung nicht mag, findet es schnell repetitiv.</div>
       </div>
-      <a class="buy" href="https://www.brettspiel-angebote.de/spiele/patchwork/121/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
+      <div class="karte-fuss">
+  <a class="buy" href="https://www.brettspiel-angebote.de/spiele/patchwork/121/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
+      <a class="video" href="https://www.youtube.com/watch?v=lskOe5sujeU" target="_blank" rel="noopener" title="Patchwork Regeln Anleitung Erklärung - Spiel für Zwei - Duell Brettspiel"><span class="play" aria-hidden="true">&#9654;</span> Regelvideo <span class="kanal">Brettspiel-Zimmer - Guru erklärt</span></a>
+      </div>
     </div>
-    <div data-reise="100.0" data-zweier="100.0" class="card duel-card" data-kritiker="82.0" data-community="74.0" data-name="Schotten Totten">
+    <div id="spiel-schotten-totten" data-reise="100.0" data-zweier="100.0" class="card duel-card" data-kritiker="82.0" data-community="74.0" data-name="Schotten Totten">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Schotten Totten">
@@ -1024,9 +1090,12 @@
         <div class="pro"><b>Pro</b>Ultraportabel und g&uuml;nstig, &uuml;berraschend viel Bluff und Taktik f&uuml;r so wenig Material.</div>
         <div class="con"><b>Contra</b>Kartennachzug bringt sp&uuml;rbaren Gl&uuml;cksfaktor; abstraktes Thema.</div>
       </div>
-      <a class="buy" href="https://www.brettspiel-angebote.de/spiele/schotten-totten-neuauflage/6791/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
+      <div class="karte-fuss">
+  <a class="buy" href="https://www.brettspiel-angebote.de/spiele/schotten-totten-neuauflage/6791/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
+      <a class="video" href="https://www.youtube.com/watch?v=tm1_JBOjx_k" target="_blank" rel="noopener" title="How to Play Schotten Totten | Board Game Rules &amp; Instructions"><span class="play" aria-hidden="true">&#9654;</span> Regelvideo <span class="kanal">Boardgaimz</span></a>
+      </div>
     </div>
-    <div data-reise="81.8" data-zweier="100.0" class="card duel-card" data-kritiker="82.0" data-community="76.1" data-name="Hive Pocket">
+    <div id="spiel-hive-pocket" data-reise="81.8" data-zweier="100.0" class="card duel-card" data-kritiker="82.0" data-community="76.1" data-name="Hive Pocket">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Hive Pocket">
@@ -1084,9 +1153,12 @@
         <div class="pro"><b>Pro</b>Null Zufall, nahezu unendliche Skill-Kurve, extrem robust und &uuml;berall spielbar.</div>
         <div class="con"><b>Contra</b>Komplett abstrakt; bei ungleichem K&ouml;nnen gewinnt fast immer dieselbe Person.</div>
       </div>
-      <a class="buy" href="https://www.brettspiel-angebote.de/spiele/hive-pocket/931/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
+      <div class="karte-fuss">
+  <a class="buy" href="https://www.brettspiel-angebote.de/spiele/hive-pocket/931/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
+      <a class="video" href="https://www.youtube.com/watch?v=K9PQlqPdGRw" target="_blank" rel="noopener" title="How to Play Hive | Board Game Rules &amp; Instructions"><span class="play" aria-hidden="true">&#9654;</span> Regelvideo <span class="kanal">Boardgaimz</span></a>
+      </div>
     </div>
-    <div data-reise="85.4" data-zweier="100.0" class="card duel-card" data-kritiker="60.0" data-community="74.5" data-name="Mindbug">
+    <div id="spiel-mindbug" data-reise="85.4" data-zweier="100.0" class="card duel-card" data-kritiker="60.0" data-community="74.5" data-name="Mindbug">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Mindbug">
@@ -1150,9 +1222,12 @@
         <div class="pro"><b>Pro</b>In zwei Minuten erkl&auml;rt und trotzdem voller Bluff; winziges Deck f&uuml;r unterwegs; jede Partie beginnt mit anderen Kreaturen.</div>
         <div class="con"><b>Contra</b>Sp&uuml;rbarer Gl&uuml;cksfaktor beim Nachziehen; wer echte taktische Tiefe sucht, greift eher zu Radlands oder Riftforce.</div>
       </div>
-      <a class="buy" href="https://www.brettspiel-angebote.de/spiele/mindbug/5400/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
+      <div class="karte-fuss">
+  <a class="buy" href="https://www.brettspiel-angebote.de/spiele/mindbug/5400/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
+      <a class="video" href="https://www.youtube.com/watch?v=1VYVHOCXitw" target="_blank" rel="noopener" title="Mindbug Regeln Anleitung Erklärung - Kartenspiel Kennerspiel - TCG"><span class="play" aria-hidden="true">&#9654;</span> Regelvideo <span class="kanal">Brettspiel-Zimmer - Guru erklärt</span></a>
+      </div>
     </div>
-    <div data-reise="97.9" data-zweier="100.0" class="card duel-card" data-kritiker="" data-community="74.6" data-name="Compile: Main 1">
+    <div id="spiel-compile-main-1" data-reise="97.9" data-zweier="100.0" class="card duel-card" data-kritiker="" data-community="74.6" data-name="Compile: Main 1">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Compile">
@@ -1218,9 +1293,12 @@
         <div class="pro"><b>Pro</b>Aus einer Handvoll Regeln entsteht erstaunliche taktische Tiefe; das Tauziehen um die Spalten ist dramatisch; hohe Varianz durch die Protokollwahl.</div>
         <div class="con"><b>Contra</b>Mit ab 14 Jahren der anspruchsvollste Titel dieser Liste; die Kartentexte der zw&ouml;lf Protokolle wollen erst gelesen und verstanden werden.</div>
       </div>
-      <a class="buy" href="https://www.brettspiel-angebote.de/spiele/compile/7426/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
+      <div class="karte-fuss">
+  <a class="buy" href="https://www.brettspiel-angebote.de/spiele/compile/7426/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
+      <a class="video" href="https://www.youtube.com/watch?v=xBH8m2jSBjM" target="_blank" rel="noopener" title="COMPILE – Regelerklärung und Review – Das aktuell beste Zwei-Spieler-Kartenspiel"><span class="play" aria-hidden="true">&#9654;</span> Regelvideo <span class="kanal">Michael Will Spielen</span></a>
+      </div>
     </div>
-    <div data-reise="85.4" data-zweier="100.0" class="card duel-card" data-kritiker="86.0" data-community="72.7" data-name="Agent Avenue">
+    <div id="spiel-agent-avenue" data-reise="85.4" data-zweier="100.0" class="card duel-card" data-kritiker="86.0" data-community="72.7" data-name="Agent Avenue">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Agent Avenue">
@@ -1286,9 +1364,12 @@
         <div class="pro"><b>Pro</b>Sehr einfache Regeln bei &uuml;berraschend tiefer Strategie; kurze Partien laden sofort zur Revanche; hervorragend illustriert.</div>
         <div class="con"><b>Contra</b>Wer Bluffspiele nicht mag, wird hier nicht warm; f&uuml;r den reinen Materialumfang sind gut 20&nbsp;Euro sportlich.</div>
       </div>
-      <a class="buy" href="https://www.brettspiel-angebote.de/spiele/agent-avenue/6951/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
+      <div class="karte-fuss">
+  <a class="buy" href="https://www.brettspiel-angebote.de/spiele/agent-avenue/6951/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
+      <a class="video" href="https://www.youtube.com/watch?v=9xgVNdvOsr8" target="_blank" rel="noopener" title="Agent Avenue Regeln Anleitung Regelvideo Erklärt Kartenspiel 2024"><span class="play" aria-hidden="true">&#9654;</span> Regelvideo <span class="kanal">Brettspiel-Zimmer - Guru erklärt</span></a>
+      </div>
     </div>
-    <div data-reise="" data-zweier="100.0" class="card duel-card" data-kritiker="" data-community="70.7" data-name="Revolver Noir">
+    <div id="spiel-revolver-noir" data-reise="" data-zweier="100.0" class="card duel-card" data-kritiker="" data-community="70.7" data-name="Revolver Noir">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Revolver Noir">
@@ -1349,9 +1430,12 @@
         <div class="pro"><b>Pro</b>Erstaunliche Spieltiefe f&uuml;r ein Micro-Game aus 25 Karten; Erweiterung liegt bei; g&uuml;nstigster Duell-Einstieg dieser Liste nach Schotten Totten.</div>
         <div class="con"><b>Contra</b>Wer Doppeldenken und Bluff nicht mag, findet hier wenig; eine Partie ist nach einer Viertelstunde vorbei.</div>
       </div>
-      <a class="buy" href="https://www.brettspiel-angebote.de/spiele/revolver-noir/5927/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
+      <div class="karte-fuss">
+  <a class="buy" href="https://www.brettspiel-angebote.de/spiele/revolver-noir/5927/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
+      <a class="video" href="https://www.youtube.com/watch?v=qFp6KVpnQMo" target="_blank" rel="noopener" title="REVOLVER NOIR – Regelerklärung und Review – Spannendes 2-Spieler-Kartenduell"><span class="play" aria-hidden="true">&#9654;</span> Regelvideo <span class="kanal">Michael Will Spielen</span></a>
+      </div>
     </div>
-    <div data-reise="91.0" data-zweier="62.0" class="card duel-card" data-kritiker="" data-community="67.6" data-name="Köder">
+    <div id="spiel-koder" data-reise="91.0" data-zweier="62.0" class="card duel-card" data-kritiker="" data-community="67.6" data-name="Köder">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu K&ouml;der">
@@ -1418,9 +1502,12 @@
         <div class="pro"><b>Pro</b>In f&uuml;nf Minuten erkl&auml;rt, ab sieben Jahren mitspielbar; der Moment, in dem alle gleichzeitig die Faust &ouml;ffnen, tr&auml;gt den ganzen Abend.</div>
         <div class="con"><b>Contra</b>Als einziger Titel hier nicht f&uuml;r zwei gebaut &ndash; das gleichzeitige Bieten lebt von Konkurrenz und verliert zu zweit sp&uuml;rbar; dazu W&uuml;rfelgl&uuml;ck.</div>
       </div>
-      <a class="buy" href="https://www.brettspiel-angebote.de/spiele/koeder/7511/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
+      <div class="karte-fuss">
+  <a class="buy" href="https://www.brettspiel-angebote.de/spiele/koeder/7511/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
+      <a class="video" href="https://www.youtube.com/watch?v=bylEXVkpjiw" target="_blank" rel="noopener" title="KÖDER: Lohnt sich das neue Angel-Spiel? | Regelerklärung &amp; Review"><span class="play" aria-hidden="true">&#9654;</span> Regelvideo <span class="kanal">Michael Will Spielen</span></a>
+      </div>
     </div>
-    <div data-reise="85.4" data-zweier="100.0" class="card duel-card" data-kritiker="70.0" data-community="73.5" data-name="Jaipur">
+    <div id="spiel-jaipur" data-reise="85.4" data-zweier="100.0" class="card duel-card" data-kritiker="70.0" data-community="73.5" data-name="Jaipur">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Jaipur">
@@ -1481,9 +1568,12 @@
         <div class="pro"><b>Pro</b>In f&uuml;nf Minuten erkl&auml;rt und trotzdem taktisch; die Kamelregel ist ein kleines Meisterst&uuml;ck; kurze Partien laden zur Revanche.</div>
         <div class="con"><b>Contra</b>Sp&uuml;rbarer Gl&uuml;cksanteil beim Marktnachzug; f&uuml;r ein Kartenspiel mit Chips nicht ganz billig.</div>
       </div>
-      <a class="buy" href="https://www.brettspiel-angebote.de/spiele/jaipur-neuauflage/4181/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
+      <div class="karte-fuss">
+  <a class="buy" href="https://www.brettspiel-angebote.de/spiele/jaipur-neuauflage/4181/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
+      <a class="video" href="https://www.youtube.com/watch?v=CkAnWpq95sU" target="_blank" rel="noopener" title="Spielaufbau und Regelerklärung Jaipur"><span class="play" aria-hidden="true">&#9654;</span> Regelvideo <span class="kanal">Frank Schmidtsdorff</span></a>
+      </div>
     </div>
-    <div data-reise="62.6" data-zweier="100.0" class="card duel-card" data-kritiker="76.0" data-community="69.7" data-name="Lost Cities: Das Duell">
+    <div id="spiel-lost-cities-das-duell" data-reise="62.6" data-zweier="100.0" class="card duel-card" data-kritiker="76.0" data-community="69.7" data-name="Lost Cities: Das Duell">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Lost Cities: Das Duell">
@@ -1545,9 +1635,12 @@
         <div class="pro"><b>Pro</b>Eine einzige Entscheidung, immer wieder neu: anfangen oder lassen. Kurz, spannend, seit einem Vierteljahrhundert nicht gealtert.</div>
         <div class="con"><b>Contra</b>Kartengl&uuml;ck entscheidet Partien; Rot und Schwarz sowie Gr&uuml;n und Blau sind schlecht zu unterscheiden.</div>
       </div>
-      <a class="buy" href="https://www.brettspiel-angebote.de/spiele/lost-cities-das-duell/2927/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
+      <div class="karte-fuss">
+  <a class="buy" href="https://www.brettspiel-angebote.de/spiele/lost-cities-das-duell/2927/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
+      <a class="video" href="https://www.youtube.com/watch?v=YOlkji2GRP0" target="_blank" rel="noopener" title="Lost Cities! -Regeln und Einblicke in das Spiel"><span class="play" aria-hidden="true">&#9654;</span> Regelvideo <span class="kanal">Brettspielfamilie</span></a>
+      </div>
     </div>
-    <div data-reise="" data-zweier="100.0" class="card duel-card" data-kritiker="92.0" data-community="77.2" data-name="Watergate">
+    <div id="spiel-watergate" data-reise="" data-zweier="100.0" class="card duel-card" data-kritiker="92.0" data-community="77.2" data-name="Watergate">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Watergate">
@@ -1615,7 +1708,10 @@
         <div class="pro"><b>Pro</b>H&ouml;chste Redaktionswertung dieser Liste nach Codenames Duett; die Asymmetrie sorgt daf&uuml;r, dass sich beide Seiten v&ouml;llig anders spielen; historisch sorgf&auml;ltig gemacht.</div>
         <div class="con"><b>Contra</b>Wer mit US-Politik der Siebziger nichts anfangen kann, verliert einen gro&szlig;en Teil des Reizes; die Seiten sind unterschiedlich schwer zu spielen.</div>
       </div>
-      <a class="buy" href="https://www.brettspiel-angebote.de/spiele/watergate/3362/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
+      <div class="karte-fuss">
+  <a class="buy" href="https://www.brettspiel-angebote.de/spiele/watergate/3362/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
+      <a class="video" href="https://www.youtube.com/watch?v=48KX-NmoJdI" target="_blank" rel="noopener" title="Watergate - Vorstellung, Anleitung und Strategie-Tipps | Einfach Losspielen"><span class="play" aria-hidden="true">&#9654;</span> Regelvideo <span class="kanal">Einfach Losspielen - Brettspiel-Anleitungen</span></a>
+      </div>
     </div>
     </div>
 </section>
@@ -1698,8 +1794,9 @@
 <div id="bereich-rangliste" class="bereich" role="tabpanel" aria-labelledby="menue-rangliste" hidden>
   <div class="tafel">
     <h2 class="abschnitt">Rangliste</h2>
-    <p class="abschnitt-text">Alle 20 Titel nebeneinander. Ein Klick auf einen
-    Spaltenkopf sortiert danach; ungemessene Werte stehen immer am Ende.</p>
+    <p class="abschnitt-text">Alle 20 Titel nebeneinander. Ein Klick auf einen Spaltenkopf sortiert danach,
+    ein Klick auf einen Spielnamen f&uuml;hrt zur Karte. Ungemessene Werte stehen
+    immer am Ende.</p>
     <div class="tab-huelle">
       <table class="werte rang-tabelle">
         <thead><tr>
@@ -1710,26 +1807,26 @@
           <th class="mitte sortierbar" data-art="reise">Unterwegs</th>
         </tr></thead>
         <tbody>
-        <tr data-kritiker="86.0" data-community="79.9" data-zweier="100" data-reise="51.4"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> 7 Wonders Duel</td><td class="mitte">86,0</td><td class="mitte">79,9</td><td class="mitte">100,0</td><td class="mitte">51,4</td></tr>
-        <tr data-kritiker="92.0" data-community="77.6" data-zweier="100" data-reise="78.2"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> Splendor Duel</td><td class="mitte">92,0</td><td class="mitte">77,6</td><td class="mitte">100,0</td><td class="mitte">78,2</td></tr>
-        <tr data-kritiker="92.0" data-community="77.2" data-zweier="100" data-reise=""><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> Watergate</td><td class="mitte">92,0</td><td class="mitte">77,2</td><td class="mitte">100,0</td><td class="mitte"><span class="leer">&ndash;</span></td></tr>
-        <tr data-kritiker="94.0" data-community="76.4" data-zweier="100" data-reise="57.5"><td><span class="art-punkt" style="background:var(--coop)" title="kooperativ"></span> Codenames Duett</td><td class="mitte">94,0</td><td class="mitte">76,4</td><td class="mitte">100,0</td><td class="mitte">57,5</td></tr>
-        <tr data-kritiker="84.0" data-community="76.3" data-zweier="100" data-reise="59.2"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> Targi</td><td class="mitte">84,0</td><td class="mitte">76,3</td><td class="mitte">100,0</td><td class="mitte">59,2</td></tr>
-        <tr data-kritiker="82.0" data-community="76.1" data-zweier="100" data-reise="81.8"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> Hive Pocket</td><td class="mitte">82,0</td><td class="mitte">76,1</td><td class="mitte">100,0</td><td class="mitte">81,8</td></tr>
-        <tr data-kritiker="78.0" data-community="75.3" data-zweier="100" data-reise="56.2"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> Patchwork</td><td class="mitte">78,0</td><td class="mitte">75,3</td><td class="mitte">100,0</td><td class="mitte">56,2</td></tr>
-        <tr data-kritiker="" data-community="74.6" data-zweier="100" data-reise="97.9"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> Compile: Main 1</td><td class="mitte"><span class="leer">&ndash;</span></td><td class="mitte">74,6</td><td class="mitte">100,0</td><td class="mitte">97,9</td></tr>
-        <tr data-kritiker="60.0" data-community="74.5" data-zweier="100" data-reise="85.4"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> Mindbug</td><td class="mitte">60,0</td><td class="mitte">74,5</td><td class="mitte">100,0</td><td class="mitte">85,4</td></tr>
-        <tr data-kritiker="82.0" data-community="74.3" data-zweier="62" data-reise="39.1"><td><span class="art-punkt" style="background:var(--coop)" title="kooperativ"></span> Pandemie</td><td class="mitte">82,0</td><td class="mitte">74,3</td><td class="mitte">62,0</td><td class="mitte">39,1</td></tr>
-        <tr data-kritiker="82.0" data-community="74.0" data-zweier="100" data-reise="100"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> Schotten Totten</td><td class="mitte">82,0</td><td class="mitte">74,0</td><td class="mitte">100,0</td><td class="mitte">100,0</td></tr>
-        <tr data-kritiker="" data-community="73.7" data-zweier="88" data-reise="11.4"><td><span class="art-punkt" style="background:var(--coop)" title="kooperativ"></span> Paleo</td><td class="mitte"><span class="leer">&ndash;</span></td><td class="mitte">73,7</td><td class="mitte">88,0</td><td class="mitte">11,4</td></tr>
-        <tr data-kritiker="70.0" data-community="73.5" data-zweier="100" data-reise="85.4"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> Jaipur</td><td class="mitte">70,0</td><td class="mitte">73,5</td><td class="mitte">100,0</td><td class="mitte">85,4</td></tr>
-        <tr data-kritiker="86.0" data-community="72.7" data-zweier="100" data-reise="85.4"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> Agent Avenue</td><td class="mitte">86,0</td><td class="mitte">72,7</td><td class="mitte">100,0</td><td class="mitte">85,4</td></tr>
-        <tr data-kritiker="78.0" data-community="70.7" data-zweier="100" data-reise="59.4"><td><span class="art-punkt" style="background:var(--coop)" title="kooperativ"></span> MicroMacro: Crime City</td><td class="mitte">78,0</td><td class="mitte">70,7</td><td class="mitte">100,0</td><td class="mitte">59,4</td></tr>
-        <tr data-kritiker="" data-community="70.7" data-zweier="100" data-reise=""><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> Revolver Noir</td><td class="mitte"><span class="leer">&ndash;</span></td><td class="mitte">70,7</td><td class="mitte">100,0</td><td class="mitte"><span class="leer">&ndash;</span></td></tr>
-        <tr data-kritiker="76.0" data-community="69.7" data-zweier="100" data-reise="62.6"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> Lost Cities: Das Duell</td><td class="mitte">76,0</td><td class="mitte">69,7</td><td class="mitte">100,0</td><td class="mitte">62,6</td></tr>
-        <tr data-kritiker="" data-community="67.6" data-zweier="62" data-reise="91.0"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> Köder</td><td class="mitte"><span class="leer">&ndash;</span></td><td class="mitte">67,6</td><td class="mitte">62,0</td><td class="mitte">91,0</td></tr>
-        <tr data-kritiker="" data-community="67.6" data-zweier="100" data-reise=""><td><span class="art-punkt" style="background:var(--coop)" title="kooperativ"></span> Der Fuchs im Wald: Duett</td><td class="mitte"><span class="leer">&ndash;</span></td><td class="mitte">67,6</td><td class="mitte">100,0</td><td class="mitte"><span class="leer">&ndash;</span></td></tr>
-        <tr data-kritiker="70.0" data-community="65.8" data-zweier="62" data-reise="97.4"><td><span class="art-punkt" style="background:var(--coop)" title="kooperativ"></span> Hanabi</td><td class="mitte">70,0</td><td class="mitte">65,8</td><td class="mitte">62,0</td><td class="mitte">97,4</td></tr>
+        <tr data-kritiker="86.0" data-community="79.9" data-zweier="100" data-reise="51.4"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> <button class="zum-spiel" data-bereich="duell" data-spiel="spiel-7-wonders-duel">7 Wonders Duel</button></td><td class="mitte">86,0</td><td class="mitte">79,9</td><td class="mitte">100,0</td><td class="mitte">51,4</td></tr>
+        <tr data-kritiker="92.0" data-community="77.6" data-zweier="100" data-reise="78.2"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> <button class="zum-spiel" data-bereich="duell" data-spiel="spiel-splendor-duel">Splendor Duel</button></td><td class="mitte">92,0</td><td class="mitte">77,6</td><td class="mitte">100,0</td><td class="mitte">78,2</td></tr>
+        <tr data-kritiker="92.0" data-community="77.2" data-zweier="100" data-reise=""><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> <button class="zum-spiel" data-bereich="duell" data-spiel="spiel-watergate">Watergate</button></td><td class="mitte">92,0</td><td class="mitte">77,2</td><td class="mitte">100,0</td><td class="mitte"><span class="leer">&ndash;</span></td></tr>
+        <tr data-kritiker="94.0" data-community="76.4" data-zweier="100" data-reise="57.5"><td><span class="art-punkt" style="background:var(--coop)" title="kooperativ"></span> <button class="zum-spiel" data-bereich="koop" data-spiel="spiel-codenames-duett">Codenames Duett</button></td><td class="mitte">94,0</td><td class="mitte">76,4</td><td class="mitte">100,0</td><td class="mitte">57,5</td></tr>
+        <tr data-kritiker="84.0" data-community="76.3" data-zweier="100" data-reise="59.2"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> <button class="zum-spiel" data-bereich="duell" data-spiel="spiel-targi">Targi</button></td><td class="mitte">84,0</td><td class="mitte">76,3</td><td class="mitte">100,0</td><td class="mitte">59,2</td></tr>
+        <tr data-kritiker="82.0" data-community="76.1" data-zweier="100" data-reise="81.8"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> <button class="zum-spiel" data-bereich="duell" data-spiel="spiel-hive-pocket">Hive Pocket</button></td><td class="mitte">82,0</td><td class="mitte">76,1</td><td class="mitte">100,0</td><td class="mitte">81,8</td></tr>
+        <tr data-kritiker="78.0" data-community="75.3" data-zweier="100" data-reise="56.2"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> <button class="zum-spiel" data-bereich="duell" data-spiel="spiel-patchwork">Patchwork</button></td><td class="mitte">78,0</td><td class="mitte">75,3</td><td class="mitte">100,0</td><td class="mitte">56,2</td></tr>
+        <tr data-kritiker="" data-community="74.6" data-zweier="100" data-reise="97.9"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> <button class="zum-spiel" data-bereich="duell" data-spiel="spiel-compile-main-1">Compile: Main 1</button></td><td class="mitte"><span class="leer">&ndash;</span></td><td class="mitte">74,6</td><td class="mitte">100,0</td><td class="mitte">97,9</td></tr>
+        <tr data-kritiker="60.0" data-community="74.5" data-zweier="100" data-reise="85.4"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> <button class="zum-spiel" data-bereich="duell" data-spiel="spiel-mindbug">Mindbug</button></td><td class="mitte">60,0</td><td class="mitte">74,5</td><td class="mitte">100,0</td><td class="mitte">85,4</td></tr>
+        <tr data-kritiker="82.0" data-community="74.3" data-zweier="62" data-reise="39.1"><td><span class="art-punkt" style="background:var(--coop)" title="kooperativ"></span> <button class="zum-spiel" data-bereich="koop" data-spiel="spiel-pandemie">Pandemie</button></td><td class="mitte">82,0</td><td class="mitte">74,3</td><td class="mitte">62,0</td><td class="mitte">39,1</td></tr>
+        <tr data-kritiker="82.0" data-community="74.0" data-zweier="100" data-reise="100"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> <button class="zum-spiel" data-bereich="duell" data-spiel="spiel-schotten-totten">Schotten Totten</button></td><td class="mitte">82,0</td><td class="mitte">74,0</td><td class="mitte">100,0</td><td class="mitte">100,0</td></tr>
+        <tr data-kritiker="" data-community="73.7" data-zweier="88" data-reise="11.4"><td><span class="art-punkt" style="background:var(--coop)" title="kooperativ"></span> <button class="zum-spiel" data-bereich="koop" data-spiel="spiel-paleo">Paleo</button></td><td class="mitte"><span class="leer">&ndash;</span></td><td class="mitte">73,7</td><td class="mitte">88,0</td><td class="mitte">11,4</td></tr>
+        <tr data-kritiker="70.0" data-community="73.5" data-zweier="100" data-reise="85.4"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> <button class="zum-spiel" data-bereich="duell" data-spiel="spiel-jaipur">Jaipur</button></td><td class="mitte">70,0</td><td class="mitte">73,5</td><td class="mitte">100,0</td><td class="mitte">85,4</td></tr>
+        <tr data-kritiker="86.0" data-community="72.7" data-zweier="100" data-reise="85.4"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> <button class="zum-spiel" data-bereich="duell" data-spiel="spiel-agent-avenue">Agent Avenue</button></td><td class="mitte">86,0</td><td class="mitte">72,7</td><td class="mitte">100,0</td><td class="mitte">85,4</td></tr>
+        <tr data-kritiker="78.0" data-community="70.7" data-zweier="100" data-reise="59.4"><td><span class="art-punkt" style="background:var(--coop)" title="kooperativ"></span> <button class="zum-spiel" data-bereich="koop" data-spiel="spiel-micromacro-crime-city">MicroMacro: Crime City</button></td><td class="mitte">78,0</td><td class="mitte">70,7</td><td class="mitte">100,0</td><td class="mitte">59,4</td></tr>
+        <tr data-kritiker="" data-community="70.7" data-zweier="100" data-reise=""><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> <button class="zum-spiel" data-bereich="duell" data-spiel="spiel-revolver-noir">Revolver Noir</button></td><td class="mitte"><span class="leer">&ndash;</span></td><td class="mitte">70,7</td><td class="mitte">100,0</td><td class="mitte"><span class="leer">&ndash;</span></td></tr>
+        <tr data-kritiker="76.0" data-community="69.7" data-zweier="100" data-reise="62.6"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> <button class="zum-spiel" data-bereich="duell" data-spiel="spiel-lost-cities-das-duell">Lost Cities: Das Duell</button></td><td class="mitte">76,0</td><td class="mitte">69,7</td><td class="mitte">100,0</td><td class="mitte">62,6</td></tr>
+        <tr data-kritiker="" data-community="67.6" data-zweier="62" data-reise="91.0"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> <button class="zum-spiel" data-bereich="duell" data-spiel="spiel-koder">Köder</button></td><td class="mitte"><span class="leer">&ndash;</span></td><td class="mitte">67,6</td><td class="mitte">62,0</td><td class="mitte">91,0</td></tr>
+        <tr data-kritiker="" data-community="67.6" data-zweier="100" data-reise=""><td><span class="art-punkt" style="background:var(--coop)" title="kooperativ"></span> <button class="zum-spiel" data-bereich="koop" data-spiel="spiel-der-fuchs-im-wald-duett">Der Fuchs im Wald: Duett</button></td><td class="mitte"><span class="leer">&ndash;</span></td><td class="mitte">67,6</td><td class="mitte">100,0</td><td class="mitte"><span class="leer">&ndash;</span></td></tr>
+        <tr data-kritiker="70.0" data-community="65.8" data-zweier="62" data-reise="97.4"><td><span class="art-punkt" style="background:var(--coop)" title="kooperativ"></span> <button class="zum-spiel" data-bereich="koop" data-spiel="spiel-hanabi">Hanabi</button></td><td class="mitte">70,0</td><td class="mitte">65,8</td><td class="mitte">62,0</td><td class="mitte">97,4</td></tr>
         </tbody>
       </table>
     </div>
@@ -1975,6 +2072,24 @@
       zeilen.forEach(function(z){ koerper.appendChild(z); });
       rangKopf.forEach(function(k){ k.removeAttribute('aria-sort'); });
       th.setAttribute('aria-sort', 'descending');
+    });
+  });
+
+
+  // --- Aus der Rangliste zur Karte springen -------------------------------
+  Array.prototype.slice.call(document.querySelectorAll('.zum-spiel')).forEach(function(b){
+    b.addEventListener('click', function(){
+      var karte = document.getElementById(b.dataset.spiel);
+      if (!karte) return;
+      zeigeBereich(b.dataset.bereich);
+      // Hervorhebung sofort, damit sie nicht an einem Frame-Callback haengt.
+      karte.classList.remove('hervor');
+      void karte.offsetWidth;
+      karte.classList.add('hervor');
+      // Das Scrollen erst, wenn der Bereich sichtbar ist und eine Position hat.
+      setTimeout(function(){
+        karte.scrollIntoView({behavior: 'smooth', block: 'center'});
+      }, 60);
     });
   });
 

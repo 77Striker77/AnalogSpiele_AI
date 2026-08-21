@@ -4,7 +4,7 @@ Erzeugt von `werkzeug/ablage_pruefen.py` - nicht von Hand bearbeiten.
 
 | Ablage | Titel | Beschreibung | HTML | Zustand |
 | --- | --- | --- | --- | --- |
-| [2026-08-21-spiele-fuer-zwei](2026-08-21-spiele-fuer-zwei/) | Spiele für Zwei – Miteinander & Gegeneinander | Übersicht analoger Spiele für zwei – zwanzig Titel, sechs kooperative und vierzehn kompetitive, gegliedert in fünf Bereiche mit Menüführung. | index.html - 136.2 KB | vollständig |
+| [2026-08-21-spiele-fuer-zwei](2026-08-21-spiele-fuer-zwei/) | Spiele für Zwei – Miteinander & Gegeneinander | Übersicht analoger Spiele für zwei – zwanzig Titel, sechs kooperative und vierzehn kompetitive, gegliedert in fünf Bereiche mit Menüführung. | index.html - 147.5 KB | vollständig |
 
 ## Anmerkungen
 
