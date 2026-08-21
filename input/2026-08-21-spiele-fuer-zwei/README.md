@@ -1,25 +1,26 @@
 # Spiele für Zwei
 
-Einseitige Übersicht der zwölf besten analogen Zwei-Personen-Spiele –
-sechs kooperative, sechs kompetitive.
+Einseitige Übersicht analoger Spiele für zwei – siebzehn Titel,
+sechs kooperative und elf kompetitive.
 
 ## Spiel
 
-- **Titel:** kein einzelnes – eine Auswahl von zwölf Spielen
-- **Art:** Brettspiele und Kartenspiele gemischt
-- **Spieler:** alle zu zweit spielbar, mehrere auch für größere Runden
-- **Dauer:** 15–60 Min je nach Titel
+- **Titel:** kein einzelnes – eine Auswahl von siebzehn Spielen
+- **Art:** Brettspiele, Kartenspiele, ein Würfelspiel
+- **Spieler:** zu zweit spielbar, viele auch für größere Runden;
+  einzige Ausnahme ist Köder, das auf mehr Mitspieler ausgelegt ist
+- **Dauer:** 10–60 Min je nach Titel
 - **Preise:** 11,67 € bis 37,80 €, Stand 21.08.2026
 
 ## Was das Artefakt tut
 
-Eine statische Seite, die zwölf Spiele in zwei Blöcken gegenüberstellt:
+Eine statische Seite, die siebzehn Spiele in zwei Blöcken gegenüberstellt:
 *Miteinander* (kooperativ) und *Gegeneinander* (kompetitiv). Jede Karte trägt
 eine Metatabelle (Spieler, Alter, Dauer, Verlag, Reisetauglichkeit, Preis),
 eine Beschreibung, den vollständigen Schachtelinhalt, je ein Pro und Contra
 aus Reviews und einen Link zum Preisvergleich.
 
-Die Cover sind gezeichnet – zwölf Illustrationen als Inline-SVG, ohne ein
+Die Cover sind gezeichnet – siebzehn Illustrationen als Inline-SVG, ohne ein
 einziges Bitmap. Liegt eine echte Coverdatei in `covers/`, ersetzt sie die
 Zeichnung; fehlt sie, entfernt sich das `<img>` selbst und die Zeichnung
 bleibt stehen. Kein JavaScript, keine Interaktion.
@@ -30,16 +31,24 @@ bleibt stehen. Kein JavaScript, keine Interaktion.
 Tiefsee · Paleo · Hanabi · Pandemie
 
 **Gegeneinander:** 7 Wonders Duel · Splendor Duel · Targi · Patchwork ·
-Schotten Totten · Hive Pocket
+Schotten Totten · Hive Pocket · Mindbug · Compile: Main 1 · Agent Avenue ·
+Revolver Noir · Köder
 
 ## Woher
 
 - **Chat:** Claude-Chat, Artefakt als einzelne HTML-Datei
-- **Stand:** 2026-08-21
+- **Stand:** 2026-08-21, am selben Tag um fünf Titel erweitert
+  (Mindbug, Compile, Agent Avenue, Revolver Noir, Köder)
 
 ## Offen
 
-- Die zwölf Cover unter `covers/` sind nicht dabei – die Seite läuft ohne sie
+- Die siebzehn Cover unter `covers/` sind nicht dabei – die Seite läuft ohne sie.
+  Der Abschnitt weiter unten nennt nur die ersten zwölf Dateinamen; für die
+  Nachzügler gilt `mindbug.jpg`, `compile.jpg`, `agent-avenue.jpg`,
+  `revolver-noir.jpg`, `koeder.jpg`
+- Köder ist ein Spiel für zwei bis fünf Personen und steht als einziger Titel
+  nicht wegen, sondern trotz seiner Spielerzahl in der Liste; das gleichzeitige
+  Bieten verliert zu zweit an Reiz. Auf der Karte ist das vermerkt
 - Preise und Verfügbarkeit veralten; Stand ist der 21.08.2026
 
 ---
