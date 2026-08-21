@@ -12,18 +12,36 @@ sechs kooperative und elf kompetitive.
 - **Dauer:** 10–60 Min je nach Titel
 - **Preise:** 11,67 € bis 37,80 €, Stand 21.08.2026
 
+## Punkte
+
+Jedes Spiel trägt zwei Zahlen von 0 bis 100, aus zwei Richtungen gemessen:
+
+- **Kritik** — Redaktionswertung von H@LL9000 (Skala 1–6), linear gestreckt.
+  Liegt für 13 der 17 Titel vor.
+- **Community** — BoardGameGeek-Nutzerschnitt, nach Stimmenzahl gedämpft, plus
+  H@LL9000-Leserwertung mit einem Viertel Gewicht. Liegt für alle 17 vor.
+
+Die beiden Zahlen sind nicht untereinander vergleichbar, nur innerhalb ihrer
+Spalte. Formeln, Rohwerte und alle Quellen stehen im Reiter *Punkte & Quellen*
+der Seite selbst.
+
 ## Was das Artefakt tut
 
-Eine statische Seite, die siebzehn Spiele in zwei Blöcken gegenüberstellt:
+Eine Seite mit zwei Reitern. Der erste stellt siebzehn Spiele in zwei Blöcken
+gegenüber:
 *Miteinander* (kooperativ) und *Gegeneinander* (kompetitiv). Jede Karte trägt
 eine Metatabelle (Spieler, Alter, Dauer, Verlag, Reisetauglichkeit, Preis),
 eine Beschreibung, den vollständigen Schachtelinhalt, je ein Pro und Contra
 aus Reviews und einen Link zum Preisvergleich.
 
+Über den Blöcken lässt sich die Reihenfolge umschalten: nach Community, nach
+Kritik oder zurück in die ursprüngliche Anordnung. Der zweite Reiter erklärt die
+Punkte und listet die Quellen. Beide Reiter sind ohne Scrollen erreichbar.
+
 Die Cover sind gezeichnet – siebzehn Illustrationen als Inline-SVG, ohne ein
 einziges Bitmap. Liegt eine echte Coverdatei in `covers/`, ersetzt sie die
 Zeichnung; fehlt sie, entfernt sich das `<img>` selbst und die Zeichnung
-bleibt stehen. Kein JavaScript, keine Interaktion.
+bleibt stehen.
 
 ## Enthaltene Spiele
 
@@ -49,7 +67,9 @@ Revolver Noir · Köder
 - Köder ist ein Spiel für zwei bis fünf Personen und steht als einziger Titel
   nicht wegen, sondern trotz seiner Spielerzahl in der Liste; das gleichzeitige
   Bieten verliert zu zweit an Reiz. Auf der Karte ist das vermerkt
-- Preise und Verfügbarkeit veralten; Stand ist der 21.08.2026
+- Für Paleo, Compile, Revolver Noir und Köder gibt es keine Redaktionswertung;
+  sie zeigen bei *Kritik* einen Strich und stehen beim Sortieren danach am Ende
+- Wertungen und Preise veralten; Stand ist durchgehend der 21.08.2026
 
 ---
 
