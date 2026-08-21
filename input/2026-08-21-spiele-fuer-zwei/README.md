@@ -1,11 +1,11 @@
 # Spiele für Zwei
 
-Einseitige Übersicht analoger Spiele für zwei – siebzehn Titel,
-sechs kooperative und elf kompetitive.
+Übersicht analoger Spiele für zwei – zwanzig Titel, sechs kooperative
+und vierzehn kompetitive, gegliedert in fünf Bereiche mit Menüführung.
 
 ## Spiel
 
-- **Titel:** kein einzelnes – eine Auswahl von siebzehn Spielen
+- **Titel:** kein einzelnes – eine Auswahl von zwanzig Spielen
 - **Art:** Brettspiele, Kartenspiele, ein Würfelspiel
 - **Spieler:** zu zweit spielbar, viele auch für größere Runden;
   einzige Ausnahme ist Köder, das auf mehr Mitspieler ausgelegt ist
@@ -17,14 +17,14 @@ sechs kooperative und elf kompetitive.
 Jedes Spiel trägt vier Zahlen von 0 bis 100, aus vier Richtungen gemessen:
 
 - **Kritik** — Redaktionswertung von H@LL9000 (Skala 1–6), linear gestreckt.
-  Liegt für 13 der 17 Titel vor.
+  Liegt für 15 der 20 Titel vor.
 - **Community** — BoardGameGeek-Nutzerschnitt, nach Stimmenzahl gedämpft, plus
-  H@LL9000-Leserwertung mit einem Viertel Gewicht. Liegt für alle 17 vor.
+  H@LL9000-Leserwertung mit einem Viertel Gewicht. Liegt für alle 20 vor.
 - **Zu zweit** — aus der BGG-Spielerzahl-Umfrage: beste Besetzung 100, eine von
   mehreren besten 88, nur empfohlen 62, weder noch 28. Bei reinen Duellspielen
   ist die 100 trivial; solche Titel sind gedämpft dargestellt.
 - **Unterwegs** — Packmaß aus Schachtelmaßen und Gewicht (brettspielversand.de):
-  `100 − 75 × log₁₀(Liter ÷ 0,6)`, plus Abzug ab 500 g. Liegt für 16 der 17 vor.
+  `100 − 75 × log₁₀(Liter ÷ 0,6)`, plus Abzug ab 500 g. Liegt für 17 der 20 vor.
   Die benötigte Tischfläche misst diese Zahl nicht — die steht in der Zeile
   *Reisetauglich* auf den Karten.
 
@@ -46,25 +46,27 @@ Kritik, nach Zwei-Personen-Tauglichkeit oder zurück in die ursprüngliche
 Anordnung. Der zweite Reiter erklärt die
 Punkte und listet die Quellen. Beide Reiter sind ohne Scrollen erreichbar.
 
-Die Cover sind gezeichnet – siebzehn Illustrationen als Inline-SVG, ohne ein
+Die Cover sind gezeichnet – zwanzig Illustrationen als Inline-SVG, ohne ein
 einziges Bitmap. Liegt eine echte Coverdatei in `covers/`, ersetzt sie die
 Zeichnung; fehlt sie, entfernt sich das `<img>` selbst und die Zeichnung
 bleibt stehen.
 
 ## Enthaltene Spiele
 
-**Miteinander:** MicroMacro: Crime City · Codenames Duett · Die Crew: Mission
-Tiefsee · Paleo · Hanabi · Pandemie
+**Miteinander:** Codenames Duett · Pandemie · Paleo · MicroMacro: Crime City ·
+Der Fuchs im Wald: Duett · Hanabi
 
-**Gegeneinander:** 7 Wonders Duel · Splendor Duel · Targi · Patchwork ·
-Schotten Totten · Hive Pocket · Mindbug · Compile: Main 1 · Agent Avenue ·
-Revolver Noir · Köder
+**Gegeneinander:** 7 Wonders Duel · Splendor Duel · Watergate · Targi ·
+Hive Pocket · Patchwork · Compile: Main 1 · Mindbug · Schotten Totten ·
+Jaipur · Agent Avenue · Revolver Noir · Lost Cities: Das Duell · Köder
 
 ## Woher
 
 - **Chat:** Claude-Chat, Artefakt als einzelne HTML-Datei
-- **Stand:** 2026-08-21, am selben Tag um fünf Titel erweitert
-  (Mindbug, Compile, Agent Avenue, Revolver Noir, Köder)
+- **Stand:** 2026-08-21; am selben Tag um fünf Titel erweitert (Mindbug,
+  Compile, Agent Avenue, Revolver Noir, Köder), danach um vier weitere
+  (Der Fuchs im Wald: Duett, Jaipur, Lost Cities: Das Duell, Watergate)
+  bei gleichzeitiger Entfernung von Die Crew: Mission Tiefsee
 
 ## Offen
 
@@ -77,9 +79,9 @@ Revolver Noir · Köder
   Bieten verliert zu zweit an Reiz. Auf der Karte ist das vermerkt
 - Für Paleo, Compile, Revolver Noir und Köder gibt es keine Redaktionswertung;
   sie zeigen bei *Kritik* einen Strich und stehen beim Sortieren danach am Ende
-- Die Crew: Mission Tiefsee führt bei Kritik und Community, ist zu zweit laut
-  BGG-Umfrage aber weder beste noch empfohlene Besetzung (28 von 100). Der
-  Titel bleibt in der Liste, die Zahl sagt aber deutlich, was Sache ist
+- Die Crew: Mission Tiefsee wurde entfernt: höchste Redaktionswertung der
+  Liste, aber zu zweit laut BGG-Umfrage weder beste noch empfohlene Besetzung
+  (28 von 100) – ein gutes Spiel am falschen Platz
 - Für Revolver Noir gibt kein Shop Schachtelmaße her; *Unterwegs* bleibt dort leer
 - Wertungen und Preise veralten; Stand ist durchgehend der 21.08.2026
 

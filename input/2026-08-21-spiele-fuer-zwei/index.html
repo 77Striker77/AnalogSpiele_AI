@@ -174,6 +174,108 @@
   .punkt.zweier{grid-column:auto;}
   .punkt.reise .punkt-kopf b{color:#2F6B4A;}
   .punkt.reise .balken i{background:#2F6B4A;}
+
+  /* --- Menue --- */
+  .menue{
+    display:flex;gap:6px;justify-content:center;flex-wrap:wrap;
+    margin:0 0 26px;padding:6px;border-radius:999px;
+    background:rgba(0,0,0,.22);border:1px solid rgba(201,162,75,.22);
+    width:fit-content;margin-inline:auto;max-width:100%;
+  }
+  .menue button{
+    font:inherit;font-weight:600;font-size:.86rem;letter-spacing:.01em;
+    color:#C9D2C4;background:transparent;border:0;border-radius:999px;
+    padding:.55em 1.15em;cursor:pointer;transition:background .15s,color .15s;
+    white-space:nowrap;
+  }
+  .menue button:hover{background:rgba(255,255,255,.09);color:#F2EFE4;}
+  .menue button[aria-selected="true"]{background:var(--gold);color:#20402F;}
+  .menue button:focus-visible{outline:3px solid var(--gold);outline-offset:3px;}
+
+  /* --- Startseite --- */
+  .einleitung{
+    max-width:64ch;margin:0 auto 30px;text-align:center;
+    color:#D3DBCE;font-size:1.02rem;line-height:1.6;
+  }
+  .zahlenband{
+    display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:0 0 44px;
+  }
+  .zahlenband div{
+    background:rgba(255,255,255,.06);border:1px solid rgba(201,162,75,.2);
+    border-radius:10px;padding:12px 20px;text-align:center;min-width:104px;
+  }
+  .zahlenband b{
+    display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;
+    font-size:1.5rem;color:var(--gold);line-height:1.1;
+  }
+  .zahlenband span{
+    display:block;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;
+    color:#A9B6A6;margin-top:3px;
+  }
+  h2.abschnitt{
+    font-family:'Bricolage Grotesque',sans-serif;font-size:1.5rem;color:#F2EFE4;
+    text-align:center;margin:0 0 8px;
+  }
+  .abschnitt-text{
+    text-align:center;color:#A9B6A6;font-size:.9rem;max-width:56ch;margin:0 auto 22px;
+  }
+  .spitzen{
+    display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+    margin-bottom:46px;
+  }
+  .spitze{
+    background:var(--paper);border-radius:12px;padding:16px 18px 18px;
+    border-top:4px solid var(--ton);box-shadow:0 8px 20px rgba(0,0,0,.2);
+  }
+  .spitze-art{
+    display:block;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--ink-soft);font-weight:700;margin-bottom:6px;
+  }
+  .spitze strong{
+    display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:1.06rem;
+    line-height:1.2;margin-bottom:4px;
+  }
+  .spitze-wert{
+    display:block;font-size:1.9rem;font-weight:800;line-height:1;color:var(--ton);
+    font-variant-numeric:tabular-nums;margin:2px 0 6px;
+  }
+  .spitze small{display:block;font-size:.76rem;color:var(--ink-soft);line-height:1.4;}
+  .wege{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));}
+  .weg{
+    text-align:left;font:inherit;cursor:pointer;
+    background:rgba(255,255,255,.06);border:1px solid rgba(201,162,75,.22);
+    border-radius:12px;padding:18px 20px;color:#F2EFE4;
+    transition:background .16s,transform .16s,border-color .16s;
+  }
+  .weg:hover{background:rgba(255,255,255,.12);transform:translateY(-2px);border-color:var(--gold);}
+  .weg:focus-visible{outline:3px solid var(--gold);outline-offset:3px;}
+  .weg-punkt{display:inline-block;width:9px;height:9px;border-radius:50%;margin-bottom:8px;}
+  .weg strong{
+    display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:1.1rem;margin-bottom:5px;
+  }
+  .weg small{display:block;color:#B7C2B4;font-size:.84rem;line-height:1.45;}
+  .stand-zeile{text-align:center;color:#96A798;font-size:.78rem;margin-top:34px;}
+
+  /* --- Rangliste --- */
+  .rang-tabelle th.sortierbar{cursor:pointer;user-select:none;white-space:nowrap;}
+  .rang-tabelle th.sortierbar:hover{color:var(--ink);}
+  .rang-tabelle th.sortierbar::after{content:" \2195";opacity:.35;font-size:.9em;}
+  .rang-tabelle th.sortierbar[aria-sort="descending"]{color:var(--ink);}
+  .rang-tabelle th.sortierbar[aria-sort="descending"]::after{content:" \2193";opacity:1;}
+  .rang-tabelle td:first-child{white-space:nowrap;}
+  .art-punkt{
+    display:inline-block;width:8px;height:8px;border-radius:50%;
+    margin-right:5px;vertical-align:middle;
+  }
+  /* Auf heller Tafel brauchen Ueberschriften dunkle Schrift. */
+  .tafel h2.abschnitt{color:var(--ink);}
+  .tafel .abschnitt-text{color:var(--ink-soft);}
+  .legende-zeile{margin-top:14px;font-size:.78rem;color:var(--ink-soft);}
+  .bereich[hidden]{display:none !important;}
+  @media (max-width:560px){
+    .menue{border-radius:14px;}
+    .menue button{font-size:.8rem;padding:.5em .85em;}
+  }
 </style>
 </head>
 <body>
@@ -182,7 +284,6 @@
 <header>
   <span class="eyebrow">Analoge Spiele &middot; Karten &amp; Brett &middot; reisetauglich</span>
   <h1>Miteinander <span class="vs">vs.</span> Gegeneinander</h1>
-  <p>Die besten Spiele f&uuml;r genau zwei Personen &ndash; kuratiert aus aktuellen Bestenlisten, Reviews und Community-Wertungen. Jeder Titel tr&auml;gt vier Punktzahlen: Kritik, Community, wie gut er zu zweit wirklich funktioniert und wie sperrig die Schachtel ist. Wie sie zustande kommen, steht unter <i>Punkte &amp; Quellen</i>. Alle Titel sind kompakt genug zum Mitnehmen, ohne reine Travel Games zu sein.</p>
   <div class="legend">
     <span><span class="dot" style="background:var(--coop)"></span> Kooperativ</span>
     <span><span class="dot" style="background:var(--duel)"></span> Kompetitiv</span>
@@ -190,10 +291,13 @@
   </div>
 </header>
 
-<div class="reiter" role="tablist" aria-label="Ansicht">
-  <button role="tab" id="reiter-spiele" data-ziel="spiele" aria-selected="true" aria-controls="tafel-spiele">Die Spiele</button>
-  <button role="tab" id="reiter-quellen" data-ziel="quellen" aria-selected="false" aria-controls="tafel-quellen" tabindex="-1">Punkte &amp; Quellen</button>
-</div>
+<nav class="menue" role="tablist" aria-label="Bereiche">
+  <button role="tab" id="menue-start" data-ziel="start" aria-selected="true" aria-controls="bereich-start">Start</button>
+  <button role="tab" id="menue-koop" data-ziel="koop" aria-selected="false" tabindex="-1" aria-controls="bereich-koop">Miteinander</button>
+  <button role="tab" id="menue-duell" data-ziel="duell" aria-selected="false" tabindex="-1" aria-controls="bereich-duell">Gegeneinander</button>
+  <button role="tab" id="menue-rangliste" data-ziel="rangliste" aria-selected="false" tabindex="-1" aria-controls="bereich-rangliste">Rangliste</button>
+  <button role="tab" id="menue-quellen" data-ziel="quellen" aria-selected="false" tabindex="-1" aria-controls="bereich-quellen">Punkte &amp; Quellen</button>
+</nav>
 
 <div class="sortleiste">
   <span>Reihenfolge in beiden Bl&ouml;cken</span>
@@ -206,8 +310,8 @@
   </div>
 </div>
 
-<div id="tafel-spiele" role="tabpanel" aria-labelledby="reiter-spiele">
 
+<div id="bereich-koop" class="bereich" role="tabpanel" aria-labelledby="menue-koop" hidden>
 <section>
   <div class="cat-head">
     <svg width="34" height="34" viewBox="0 0 24 24"><circle cx="9" cy="9" r="4" fill="#2A6496"/><circle cx="15" cy="15" r="4" fill="#4E86B4"/></svg>
@@ -250,7 +354,7 @@
         <div class="punkt gemeinde">
           <div class="punkt-kopf"><span>Community</span><b>70,7</b></div>
           <div class="balken"><i style="width:70.7%"></i></div>
-          <small>BGG 7,44 aus 20.121 Stimmen &middot; H@LL9000-Leser 4,4 von 6</small>
+          <small>BGG 7,4 aus 20.121 Stimmen &middot; H@LL9000-Leser 4,4 von 6</small>
         </div>
         <div class="punkt zweier">
           <div class="punkt-kopf"><span>Zu zweit</span><b>100,0</b></div>
@@ -318,7 +422,7 @@
         <div class="punkt gemeinde">
           <div class="punkt-kopf"><span>Community</span><b>76,4</b></div>
           <div class="balken"><i style="width:76.4%"></i></div>
-          <small>BGG 7,41 aus 27.070 Stimmen &middot; H@LL9000-Leser 5,6 von 6</small>
+          <small>BGG 7,4 aus 27.070 Stimmen &middot; H@LL9000-Leser 5,6 von 6</small>
         </div>
         <div class="punkt zweier trivial">
           <div class="punkt-kopf"><span>Zu zweit</span><b>100,0</b></div>
@@ -346,67 +450,6 @@
         <div class="con"><b>Contra</b>Braucht &auml;hnliches Assoziationsdenken &ndash; bei sehr unterschiedlichen K&ouml;pfen kann's frustrieren.</div>
       </div>
       <a class="buy" href="https://www.brettspiel-angebote.de/spiele/codenames-duett/2282/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
-    </div>
-    <div data-reise="85.4" data-zweier="28.0" class="card coop-card" data-kritiker="100.0" data-community="79.9" data-name="Die Crew: Mission Tiefsee">
-      <span class="rang" hidden></span>
-      <div class="cover">
-        <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Die Crew: Mission Tiefsee">
-<defs><linearGradient id="seag" x1="0" y1="0" x2="0" y2="1">
-<stop offset="0%" stop-color="#1D6A7A"/><stop offset="100%" stop-color="#062A38"/></linearGradient></defs>
-<rect width="320" height="150" fill="url(#seag)"/>
-<g fill="#FFFFFF" opacity=".22">
-<circle cx="60" cy="30" r="7"/><circle cx="84" cy="16" r="4"/><circle cx="42" cy="52" r="4"/>
-<circle cx="246" cy="112" r="6"/><circle cx="268" cy="96" r="3.5"/></g>
-<g transform="translate(96 52)">
-<rect x="0" y="12" width="120" height="42" rx="21" fill="#E8C24C"/>
-<rect x="46" y="-2" width="26" height="18" rx="5" fill="#E8C24C"/>
-<path d="M118 22 l22 -12 v46 l-22 -12Z" fill="#C89C2E"/>
-<circle cx="30" cy="33" r="9" fill="#0B3B4A"/><circle cx="30" cy="33" r="5" fill="#7FD4E8"/>
-<circle cx="62" cy="33" r="9" fill="#0B3B4A"/><circle cx="62" cy="33" r="5" fill="#7FD4E8"/>
-<circle cx="94" cy="33" r="9" fill="#0B3B4A"/><circle cx="94" cy="33" r="5" fill="#7FD4E8"/>
-</g>
-<path d="M0 132 q40 -12 80 0 t80 0 t80 0 t80 0 v18 H0Z" fill="#04202B"/>
-</svg>
-        <img class="real" src="covers/die-crew.jpg" alt="" onerror="this.remove()">
-      </div>
-      <div class="card-top"><h3>Die Crew: Mission Tiefsee</h3><span class="award">&#127942; Reihe: Kennerspiel 2020</span></div>
-      <div class="punkte">
-        <div class="punkt">
-          <div class="punkt-kopf"><span>Kritik</span><b>100,0</b></div>
-          <div class="balken"><i style="width:100.0%"></i></div>
-          <small>H@LL9000-Redaktion 6,0 von 6</small>
-        </div>
-        <div class="punkt gemeinde">
-          <div class="punkt-kopf"><span>Community</span><b>79,9</b></div>
-          <div class="balken"><i style="width:79.9%"></i></div>
-          <small>BGG 8,04 aus 26.355 Stimmen &middot; H@LL9000-Leser 5,3 von 6</small>
-        </div>
-        <div class="punkt zweier">
-          <div class="punkt-kopf"><span>Zu zweit</span><b>28,0</b></div>
-          <div class="balken"><i style="width:28%"></i></div>
-          <small>beste Besetzung ist 4, zu zweit nicht empfohlen (368 Stimmen)</small>
-        </div>
-        <div class="punkt reise">
-          <div class="punkt-kopf"><span>Unterwegs</span><b>85,4</b></div>
-          <div class="balken"><i style="width:85%"></i></div>
-          <small>130 &times; 180 &times; 40 mm, 350 g &ndash; 0,94 Liter</small>
-        </div>
-      </div>
-      <table class="meta">
-        <tr><td>Spieler</td><td>2&ndash;5 (zu zweit mit Sonderregel)</td></tr>
-        <tr><td>Alter</td><td>ab 10</td></tr>
-        <tr><td>Dauer</td><td>ca. 20 Min</td></tr>
-        <tr><td>Verlag</td><td>KOSMOS</td></tr>
-        <tr><td>Reisetauglich</td><td><span class="travel"><span class="pip"></span><span class="pip"></span><span class="pip"></span></span> kleine Schachtel</td></tr>
-        <tr><td>Preis</td><td>ab 12,38 &euro;</td></tr>
-      </table>
-      <p class="desc">Kooperatives Stichspiel mit 32 Missionen: Ihr m&uuml;sst Auftr&auml;ge erf&uuml;llen, ohne &uuml;ber eure Handkarten reden zu d&uuml;rfen. Der Vorg&auml;nger gewann das Kennerspiel des Jahres 2020, Tiefsee gilt vielen als die rundere Version.</p>
-      <div class="mat"><b>Material in der Schachtel</b>Spielkarten in vier Farben plus Trumpf-U-Boote, 96 Auftragskarten, Sonar- und Notfallpl&auml;ttchen, Erinnerungskarten, U-Boot-Aufsteller und das Logbuch mit 32 Missionen.</div>
-      <div class="pro-con">
-        <div class="pro"><b>Pro</b>Genial einfache Regeln mit gro&szlig;er Tiefe, g&uuml;nstig, ultraportabel, Missionssystem motiviert.</div>
-        <div class="con"><b>Contra</b>Zu zweit nur mit Dummy-Spieler-Sonderregel &ndash; gut spielbar, aber am st&auml;rksten zu dritt/viert.</div>
-      </div>
-      <a class="buy" href="https://www.brettspiel-angebote.de/spiele/die-crew-mission-tiefsee/4314/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
     </div>
     <div data-reise="11.4" data-zweier="88.0" class="card coop-card" data-kritiker="" data-community="73.7" data-name="Paleo">
       <span class="rang" hidden></span>
@@ -441,7 +484,7 @@
         <div class="punkt gemeinde">
           <div class="punkt-kopf"><span>Community</span><b>73,7</b></div>
           <div class="balken"><i style="width:73.7%"></i></div>
-          <small>BGG 7,64 aus 16.412 Stimmen</small>
+          <small>BGG 7,6 aus 16.412 Stimmen</small>
         </div>
         <div class="punkt zweier">
           <div class="punkt-kopf"><span>Zu zweit</span><b>88,0</b></div>
@@ -503,7 +546,7 @@
         <div class="punkt gemeinde">
           <div class="punkt-kopf"><span>Community</span><b>65,8</b></div>
           <div class="balken"><i style="width:65.8%"></i></div>
-          <small>BGG 7,03 aus 52.987 Stimmen &middot; H@LL9000-Leser 4,1 von 6</small>
+          <small>BGG 7,0 aus 52.987 Stimmen &middot; H@LL9000-Leser 4,1 von 6</small>
         </div>
         <div class="punkt zweier">
           <div class="punkt-kopf"><span>Zu zweit</span><b>62,0</b></div>
@@ -561,7 +604,7 @@
         <div class="punkt gemeinde">
           <div class="punkt-kopf"><span>Community</span><b>74,3</b></div>
           <div class="balken"><i style="width:74.3%"></i></div>
-          <small>BGG 7,51 aus 136.046 Stimmen &middot; H@LL9000-Leser 5,0 von 6</small>
+          <small>BGG 7,5 aus 136.046 Stimmen &middot; H@LL9000-Leser 5,0 von 6</small>
         </div>
         <div class="punkt zweier">
           <div class="punkt-kopf"><span>Zu zweit</span><b>62,0</b></div>
@@ -589,9 +632,78 @@
         <div class="con"><b>Contra</b>Die größte Box dieser Liste und damit kaum reisetauglich; lädt zum „Alpha-Spieler“ ein, der alle Züge durchdirigiert.</div>
       </div>
       <a class="buy" href="https://www.brettspiel-angebote.de/spiele/pandemie/274/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
-    </div></div>
+    </div>
+    <div data-reise="" data-zweier="100.0" class="card coop-card" data-kritiker="" data-community="67.6" data-name="Der Fuchs im Wald: Duett">
+      <span class="rang" hidden></span>
+      <div class="cover">
+        <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Der Fuchs im Wald: Duett">
+<rect width="320" height="150" fill="#1E3A2E"/>
+<g fill="#162C22">
+<path d="M20 150 L44 50 L68 150Z"/><path d="M74 150 L96 66 L118 150Z"/>
+<path d="M212 150 L234 62 L256 150Z"/><path d="M268 150 L292 48 L316 150Z"/></g>
+<g fill="#27503C">
+<path d="M44 46 l-16 34 h32Z"/><path d="M96 62 l-14 30 h28Z"/>
+<path d="M234 58 l-14 30 h28Z"/><path d="M292 44 l-16 34 h32Z"/></g>
+<g transform="translate(132 60)">
+<ellipse cx="28" cy="46" rx="26" ry="20" fill="#D0763A"/>
+<path d="M8 34 q20 -22 40 0 q-6 -30 -20 -32 q-14 2 -20 32Z" fill="#E08A47"/>
+<path d="M10 12 l-4 -18 l16 8Z" fill="#D0763A"/><path d="M46 12 l4 -18 l-16 8Z" fill="#D0763A"/>
+<path d="M14 22 q14 -12 28 0 q-14 10 -28 0Z" fill="#F2EFE4"/>
+<circle cx="20" cy="18" r="3" fill="#1E3A2E"/><circle cx="36" cy="18" r="3" fill="#1E3A2E"/>
+<path d="M24 28 h8 l-4 5Z" fill="#1E3A2E"/>
+<path d="M54 50 q22 -6 20 -26 q10 18 -6 32Z" fill="#E08A47"/></g>
+<g fill="#7FD4C1">
+<path d="M40 116 l7 -11 l7 11 l-7 10Z"/><path d="M270 106 l7 -11 l7 11 l-7 10Z"/>
+<path d="M96 128 l6 -9 l6 9 l-6 9Z"/><path d="M226 124 l6 -9 l6 9 l-6 9Z"/></g>
+<g fill="#C9A24B" opacity=".55">
+<circle cx="64" cy="26" r="2.5"/><circle cx="150" cy="18" r="2"/><circle cx="252" cy="24" r="2.5"/></g>
+</svg>
+        <img class="real" src="covers/fuchs-im-wald-duett.jpg" alt="" onerror="this.remove()">
+      </div>
+      <div class="card-top"><h3>Der Fuchs im Wald: Duett</h3></div>
+      <div class="punkte">
+        <div class="punkt fehlt">
+          <div class="punkt-kopf"><span>Kritik</span><b>&ndash;</b></div>
+          <div class="balken"><i style="width:0.0%"></i></div>
+          <small>keine Redaktionswertung gefunden</small>
+        </div>
+        <div class="punkt gemeinde">
+          <div class="punkt-kopf"><span>Community</span><b>67,6</b></div>
+          <div class="balken"><i style="width:67.6%"></i></div>
+          <small>BGG 7,0 aus 4.463 Stimmen</small>
+        </div>
+        <div class="punkt zweier trivial">
+          <div class="punkt-kopf"><span>Zu zweit</span><b>100,0</b></div>
+          <div class="balken"><i style="width:100%"></i></div>
+          <small>Duellspiel &ndash; Bestnote ohne Alternative</small>
+        </div>
+        <div class="punkt reise fehlt">
+          <div class="punkt-kopf"><span>Unterwegs</span><b>&ndash;</b></div>
+          <div class="balken"><i style="width:0%"></i></div>
+          <small>keine Ma&szlig;e gefunden</small>
+        </div>
+      </div>
+      <table class="meta">
+        <tr><td>Spieler</td><td>exakt 2</td></tr>
+        <tr><td>Alter</td><td>ab 10</td></tr>
+        <tr><td>Dauer</td><td>ca. 30 Min</td></tr>
+        <tr><td>Verlag</td><td>Schwerkraft-Verlag (Leichtkraft)</td></tr>
+        <tr><td>Reisetauglich</td><td><span class="travel"><span class="pip"></span><span class="pip"></span><span class="pip off"></span></span> Karten plus kleines Brett</td></tr>
+        <tr><td>Preis</td><td>ab 17,99 &euro;</td></tr>
+      </table>
+      <p class="desc">Ein kooperatives Stichspiel &ndash; eine seltene Gattung. Ihr spielt Stiche wie gewohnt, aber wer den Stich macht, entscheidet, in welche Richtung sich euer gemeinsamer Marker durch den Wald bewegt. Ziel ist, alle Edelsteine einzusammeln, bevor nach der dritten Runde die Zeit abl&auml;uft. Karten mit ungeradem Wert haben Sonderf&auml;higkeiten, die vorgeben, was der Partner spielen darf.</p>
+      <div class="mat"><b>Material in der Schachtel</b>30 Spielkarten, 1 Wald-Spielbrett, 22 Edelsteinmarker, 4 Waldpl&auml;ttchen, 1 Teammarker, 2 Spielhilfen und 1 Regelheft.</div>
+      <div class="pro-con">
+        <div class="pro"><b>Pro</b>Kooperatives Stichspiel f&uuml;r genau zwei &ndash; daf&uuml;r gibt es kaum Alternativen; jede Partie ist ein anderes Puzzle; wunderbar illustriert.</div>
+        <div class="con"><b>Contra</b>Ohne Absprache kommunizieren muss man m&ouml;gen; wer Stichspiele nicht mag, findet hier keinen Zugang; keine Redaktionswertung als Gegenprobe.</div>
+      </div>
+      <a class="buy" href="https://www.brettspiel-angebote.de/spiele/der-fuchs-im-wald-duett/4209/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
+    </div>
+    </div>
 </section>
+</div>
 
+<div id="bereich-duell" class="bereich" role="tabpanel" aria-labelledby="menue-duell" hidden>
 <section>
   <div class="cat-head">
     <svg width="34" height="34" viewBox="0 0 24 24"><path d="M4 4l7 7-2 2-7-7 2-2zM20 4l-7 7 2 2 7-7-2-2z" fill="#A83226"/><circle cx="12" cy="17" r="3" fill="#C85A4E"/></svg>
@@ -635,7 +747,7 @@
         <div class="punkt gemeinde">
           <div class="punkt-kopf"><span>Community</span><b>79,9</b></div>
           <div class="balken"><i style="width:79.9%"></i></div>
-          <small>BGG 8,07 aus 110.158 Stimmen &middot; H@LL9000-Leser 5,2 von 6</small>
+          <small>BGG 8,1 aus 110.158 Stimmen &middot; H@LL9000-Leser 5,2 von 6</small>
         </div>
         <div class="punkt zweier trivial">
           <div class="punkt-kopf"><span>Zu zweit</span><b>100,0</b></div>
@@ -698,7 +810,7 @@
         <div class="punkt gemeinde">
           <div class="punkt-kopf"><span>Community</span><b>77,6</b></div>
           <div class="balken"><i style="width:77.6%"></i></div>
-          <small>BGG 7,88 aus 20.196 Stimmen &middot; H@LL9000-Leser 5,1 von 6</small>
+          <small>BGG 7,9 aus 20.196 Stimmen &middot; H@LL9000-Leser 5,1 von 6</small>
         </div>
         <div class="punkt zweier trivial">
           <div class="punkt-kopf"><span>Zu zweit</span><b>100,0</b></div>
@@ -727,7 +839,7 @@
       </div>
       <a class="buy" href="https://www.brettspiel-angebote.de/spiele/splendor-duel/5394/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
     </div>
-    <div data-reise="59.2" data-zweier="100.0" class="card duel-card" data-kritiker="84.0" data-community="76.4" data-name="Targi">
+    <div data-reise="59.2" data-zweier="100.0" class="card duel-card" data-kritiker="84.0" data-community="76.3" data-name="Targi">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Targi">
@@ -754,9 +866,9 @@
           <small>H@LL9000-Redaktion 5,2 von 6</small>
         </div>
         <div class="punkt gemeinde">
-          <div class="punkt-kopf"><span>Community</span><b>76,4</b></div>
-          <div class="balken"><i style="width:76.4%"></i></div>
-          <small>BGG 7,58 aus 26.996 Stimmen &middot; H@LL9000-Leser 5,3 von 6</small>
+          <div class="punkt-kopf"><span>Community</span><b>76,3</b></div>
+          <div class="balken"><i style="width:76.3%"></i></div>
+          <small>BGG 7,6 aus 26.996 Stimmen &middot; H@LL9000-Leser 5,3 von 6</small>
         </div>
         <div class="punkt zweier trivial">
           <div class="punkt-kopf"><span>Zu zweit</span><b>100,0</b></div>
@@ -822,7 +934,7 @@
         <div class="punkt gemeinde">
           <div class="punkt-kopf"><span>Community</span><b>75,3</b></div>
           <div class="balken"><i style="width:75.3%"></i></div>
-          <small>BGG 7,58 aus 74.802 Stimmen &middot; H@LL9000-Leser 5,1 von 6</small>
+          <small>BGG 7,6 aus 74.802 Stimmen &middot; H@LL9000-Leser 5,1 von 6</small>
         </div>
         <div class="punkt zweier trivial">
           <div class="punkt-kopf"><span>Zu zweit</span><b>100,0</b></div>
@@ -851,7 +963,7 @@
       </div>
       <a class="buy" href="https://www.brettspiel-angebote.de/spiele/patchwork/121/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
     </div>
-    <div data-reise="100.0" data-zweier="100.0" class="card duel-card" data-kritiker="82.0" data-community="74.1" data-name="Schotten Totten">
+    <div data-reise="100.0" data-zweier="100.0" class="card duel-card" data-kritiker="82.0" data-community="74.0" data-name="Schotten Totten">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Schotten Totten">
@@ -883,9 +995,9 @@
           <small>H@LL9000-Redaktion 5,1 von 6</small>
         </div>
         <div class="punkt gemeinde">
-          <div class="punkt-kopf"><span>Community</span><b>74,1</b></div>
-          <div class="balken"><i style="width:74.1%"></i></div>
-          <small>BGG 7,35 aus 14.479 Stimmen &middot; H@LL9000-Leser 5,2 von 6</small>
+          <div class="punkt-kopf"><span>Community</span><b>74,0</b></div>
+          <div class="balken"><i style="width:74.0%"></i></div>
+          <small>BGG 7,4 aus 14.479 Stimmen &middot; H@LL9000-Leser 5,2 von 6</small>
         </div>
         <div class="punkt zweier trivial">
           <div class="punkt-kopf"><span>Zu zweit</span><b>100,0</b></div>
@@ -945,7 +1057,7 @@
         <div class="punkt gemeinde">
           <div class="punkt-kopf"><span>Community</span><b>76,1</b></div>
           <div class="balken"><i style="width:76.1%"></i></div>
-          <small>BGG 7,69 aus 15.333 Stimmen &middot; H@LL9000-Leser 5,1 von 6</small>
+          <small>BGG 7,7 aus 15.333 Stimmen &middot; H@LL9000-Leser 5,1 von 6</small>
         </div>
         <div class="punkt zweier trivial">
           <div class="punkt-kopf"><span>Zu zweit</span><b>100,0</b></div>
@@ -974,7 +1086,7 @@
       </div>
       <a class="buy" href="https://www.brettspiel-angebote.de/spiele/hive-pocket/931/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
     </div>
-    <div data-reise="85.4" data-zweier="100.0" class="card duel-card" data-kritiker="60.0" data-community="74.6" data-name="Mindbug">
+    <div data-reise="85.4" data-zweier="100.0" class="card duel-card" data-kritiker="60.0" data-community="74.5" data-name="Mindbug">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Mindbug">
@@ -1009,9 +1121,9 @@
           <small>H@LL9000-Redaktion 4,0 von 6</small>
         </div>
         <div class="punkt gemeinde">
-          <div class="punkt-kopf"><span>Community</span><b>74,6</b></div>
-          <div class="balken"><i style="width:74.6%"></i></div>
-          <small>BGG 7,55 aus 9.377 Stimmen &middot; H@LL9000-Leser 5,0 von 6</small>
+          <div class="punkt-kopf"><span>Community</span><b>74,5</b></div>
+          <div class="balken"><i style="width:74.5%"></i></div>
+          <small>BGG 7,5 aus 9.377 Stimmen &middot; H@LL9000-Leser 5,0 von 6</small>
         </div>
         <div class="punkt zweier trivial">
           <div class="punkt-kopf"><span>Zu zweit</span><b>100,0</b></div>
@@ -1040,7 +1152,7 @@
       </div>
       <a class="buy" href="https://www.brettspiel-angebote.de/spiele/mindbug/5400/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
     </div>
-    <div data-reise="97.9" data-zweier="100.0" class="card duel-card" data-kritiker="" data-community="74.7" data-name="Compile: Main 1">
+    <div data-reise="97.9" data-zweier="100.0" class="card duel-card" data-kritiker="" data-community="74.6" data-name="Compile: Main 1">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Compile">
@@ -1077,9 +1189,9 @@
           <small>keine Redaktionswertung gefunden</small>
         </div>
         <div class="punkt gemeinde">
-          <div class="punkt-kopf"><span>Community</span><b>74,7</b></div>
-          <div class="balken"><i style="width:74.7%"></i></div>
-          <small>BGG 7,79 aus 4.483 Stimmen</small>
+          <div class="punkt-kopf"><span>Community</span><b>74,6</b></div>
+          <div class="balken"><i style="width:74.6%"></i></div>
+          <small>BGG 7,8 aus 4.483 Stimmen</small>
         </div>
         <div class="punkt zweier trivial">
           <div class="punkt-kopf"><span>Zu zweit</span><b>100,0</b></div>
@@ -1108,7 +1220,7 @@
       </div>
       <a class="buy" href="https://www.brettspiel-angebote.de/spiele/compile/7426/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
     </div>
-    <div data-reise="85.4" data-zweier="100.0" class="card duel-card" data-kritiker="86.0" data-community="72.8" data-name="Agent Avenue">
+    <div data-reise="85.4" data-zweier="100.0" class="card duel-card" data-kritiker="86.0" data-community="72.7" data-name="Agent Avenue">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Agent Avenue">
@@ -1145,9 +1257,9 @@
           <small>H@LL9000-Redaktion 5,3 von 6</small>
         </div>
         <div class="punkt gemeinde">
-          <div class="punkt-kopf"><span>Community</span><b>72,8</b></div>
-          <div class="balken"><i style="width:72.8%"></i></div>
-          <small>BGG 7,51 aus 7.201 Stimmen &middot; H@LL9000-Leser 4,7 von 6</small>
+          <div class="punkt-kopf"><span>Community</span><b>72,7</b></div>
+          <div class="balken"><i style="width:72.7%"></i></div>
+          <small>BGG 7,5 aus 7.201 Stimmen &middot; H@LL9000-Leser 4,7 von 6</small>
         </div>
         <div class="punkt zweier">
           <div class="punkt-kopf"><span>Zu zweit</span><b>100,0</b></div>
@@ -1176,7 +1288,7 @@
       </div>
       <a class="buy" href="https://www.brettspiel-angebote.de/spiele/agent-avenue/6951/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
     </div>
-    <div data-reise="" data-zweier="100.0" class="card duel-card" data-kritiker="" data-community="71.1" data-name="Revolver Noir">
+    <div data-reise="" data-zweier="100.0" class="card duel-card" data-kritiker="" data-community="70.7" data-name="Revolver Noir">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Revolver Noir">
@@ -1208,9 +1320,9 @@
           <small>keine Redaktionswertung gefunden</small>
         </div>
         <div class="punkt gemeinde">
-          <div class="punkt-kopf"><span>Community</span><b>71,1</b></div>
-          <div class="balken"><i style="width:71.1%"></i></div>
-          <small>BGG 7,19 aus 954 Stimmen</small>
+          <div class="punkt-kopf"><span>Community</span><b>70,7</b></div>
+          <div class="balken"><i style="width:70.7%"></i></div>
+          <small>BGG 7,2 aus 954 Stimmen</small>
         </div>
         <div class="punkt zweier trivial">
           <div class="punkt-kopf"><span>Zu zweit</span><b>100,0</b></div>
@@ -1239,7 +1351,7 @@
       </div>
       <a class="buy" href="https://www.brettspiel-angebote.de/spiele/revolver-noir/5927/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
     </div>
-    <div data-reise="91.0" data-zweier="62.0" class="card duel-card" data-kritiker="" data-community="67.8" data-name="Köder">
+    <div data-reise="91.0" data-zweier="62.0" class="card duel-card" data-kritiker="" data-community="67.6" data-name="Köder">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu K&ouml;der">
@@ -1277,9 +1389,9 @@
           <small>keine Redaktionswertung gefunden</small>
         </div>
         <div class="punkt gemeinde">
-          <div class="punkt-kopf"><span>Community</span><b>67,8</b></div>
-          <div class="balken"><i style="width:67.8%"></i></div>
-          <small>BGG 6,83 aus 2.381 Stimmen</small>
+          <div class="punkt-kopf"><span>Community</span><b>67,6</b></div>
+          <div class="balken"><i style="width:67.6%"></i></div>
+          <small>BGG 6,8 aus 2.381 Stimmen</small>
         </div>
         <div class="punkt zweier">
           <div class="punkt-kopf"><span>Zu zweit</span><b>62,0</b></div>
@@ -1308,20 +1420,328 @@
       </div>
       <a class="buy" href="https://www.brettspiel-angebote.de/spiele/koeder/7511/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
     </div>
-</div>
+    <div data-reise="85.4" data-zweier="100.0" class="card duel-card" data-kritiker="70.0" data-community="73.5" data-name="Jaipur">
+      <span class="rang" hidden></span>
+      <div class="cover">
+        <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Jaipur">
+<rect width="320" height="150" fill="#8C3A1E"/>
+<g opacity=".22" stroke="#F2C56B" stroke-width="1.5" fill="none">
+<path d="M0 30 H320"/><path d="M0 122 H320"/></g>
+<g fill="#B85428">
+<path d="M0 150 V96 q40 -22 80 0 V150Z"/><path d="M240 150 V92 q40 -24 80 0 V150Z"/></g>
+<g transform="translate(96 40)">
+<path d="M20 62 q-2 -26 14 -30 q6 -14 16 -4 q12 -6 14 8 q16 6 14 26 l-8 30 h-8 l-4 -20 h-16 l-4 20 h-8Z" fill="#E8C48A"/>
+<path d="M34 32 q6 -12 14 -10 q-4 8 -14 10Z" fill="#D9AE६E"/>
+<circle cx="40" cy="24" r="3" fill="#5A2A12"/>
+<path d="M26 20 q-8 -6 -10 -16 q10 4 14 14Z" fill="#E8C48A"/></g>
+<g fill="#F2C56B">
+<circle cx="34" cy="46" r="11"/><circle cx="60" cy="34" r="9"/><circle cx="46" cy="70" r="8"/></g>
+<g fill="#C0392B"><circle cx="272" cy="42" r="10"/><circle cx="248" cy="62" r="8"/></g>
+<g fill="#2F6B4A"><circle cx="290" cy="66" r="8"/><circle cx="266" cy="82" r="7"/></g>
+<g fill="#F2EFE4" opacity=".9">
+<rect x="14" y="100" width="28" height="38" rx="3" transform="rotate(-8 28 119)"/>
+<rect x="278" y="102" width="28" height="38" rx="3" transform="rotate(7 292 121)"/></g>
+</svg>
+        <img class="real" src="covers/jaipur.jpg" alt="" onerror="this.remove()">
+      </div>
+      <div class="card-top"><h3>Jaipur</h3></div>
+      <div class="punkte">
+        <div class="punkt">
+          <div class="punkt-kopf"><span>Kritik</span><b>70,0</b></div>
+          <div class="balken"><i style="width:70.0%"></i></div>
+          <small>H@LL9000-Redaktion 4,5 von 6</small>
+        </div>
+        <div class="punkt gemeinde">
+          <div class="punkt-kopf"><span>Community</span><b>73,5</b></div>
+          <div class="balken"><i style="width:73.5%"></i></div>
+          <small>BGG 7,5 aus 58.824 Stimmen &middot; H@LL9000-Leser 4,9 von 6</small>
+        </div>
+        <div class="punkt zweier trivial">
+          <div class="punkt-kopf"><span>Zu zweit</span><b>100,0</b></div>
+          <div class="balken"><i style="width:100%"></i></div>
+          <small>Duellspiel &ndash; Bestnote ohne Alternative</small>
+        </div>
+        <div class="punkt reise">
+          <div class="punkt-kopf"><span>Unterwegs</span><b>85,4</b></div>
+          <div class="balken"><i style="width:85%"></i></div>
+          <small>130 &times; 180 &times; 40 mm, 370 g &ndash; 0,94 Liter</small>
+        </div>
+      </div>
+      <table class="meta">
+        <tr><td>Spieler</td><td>exakt 2</td></tr>
+        <tr><td>Alter</td><td>ab 10</td></tr>
+        <tr><td>Dauer</td><td>ca. 30 Min</td></tr>
+        <tr><td>Verlag</td><td>Space Cowboys</td></tr>
+        <tr><td>Reisetauglich</td><td><span class="travel"><span class="pip"></span><span class="pip"></span><span class="pip"></span></span> Karten und Chips</td></tr>
+        <tr><td>Preis</td><td>ab 19,48 &euro;</td></tr>
+      </table>
+      <p class="desc">Zwei H&auml;ndler am Hof des Maharadscha. Ihr nehmt Waren vom Markt oder verkauft gesammelte Sorten &ndash; je mehr auf einmal, desto besser die Bonuschips. Der Kniff sind die Kamele: Sie z&auml;hlen nicht als Handkarten, erlauben aber, mehrere Waren auf einmal zu tauschen. Wer zwei von drei Runden gewinnt, holt das Exzellenz-Siegel.</p>
+      <div class="mat"><b>Material in der Schachtel</b>55 Karten in sechs Warensorten plus Kamele, 38 Warenchips, 18 Bonuschips, 1 Kamelchip und 3 Exzellenz-Siegel.</div>
+      <div class="pro-con">
+        <div class="pro"><b>Pro</b>In f&uuml;nf Minuten erkl&auml;rt und trotzdem taktisch; die Kamelregel ist ein kleines Meisterst&uuml;ck; kurze Partien laden zur Revanche.</div>
+        <div class="con"><b>Contra</b>Sp&uuml;rbarer Gl&uuml;cksanteil beim Marktnachzug; f&uuml;r ein Kartenspiel mit Chips nicht ganz billig.</div>
+      </div>
+      <a class="buy" href="https://www.brettspiel-angebote.de/spiele/jaipur-neuauflage/4181/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
+    </div>
+    <div data-reise="62.6" data-zweier="100.0" class="card duel-card" data-kritiker="76.0" data-community="69.7" data-name="Lost Cities: Das Duell">
+      <span class="rang" hidden></span>
+      <div class="cover">
+        <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Lost Cities: Das Duell">
+<rect width="320" height="150" fill="#1C3B4A"/>
+<g fill="#16303C">
+<path d="M0 150 L46 66 L92 150Z"/><path d="M228 150 L274 58 L320 150Z"/></g>
+<g fill="#2A5568">
+<rect x="112" y="72" width="26" height="78"/><rect x="146" y="58" width="26" height="92"/>
+<rect x="180" y="80" width="26" height="70"/></g>
+<g fill="#3E7186">
+<rect x="108" y="64" width="34" height="10" rx="2"/><rect x="142" y="50" width="34" height="10" rx="2"/>
+<rect x="176" y="72" width="34" height="10" rx="2"/></g>
+<g stroke="#C9A24B" stroke-width="2.5" fill="none" stroke-dasharray="7 6">
+<path d="M18 138 q60 -26 130 -34 q70 -8 154 -40"/></g>
+<g fill="#C9A24B">
+<circle cx="18" cy="138" r="4"/><circle cx="148" cy="104" r="4"/><circle cx="302" cy="64" r="5"/></g>
+<g fill="#E8C48A" opacity=".9">
+<rect x="34" y="24" width="24" height="34" rx="3" transform="rotate(-10 46 41)"/>
+<rect x="62" y="18" width="24" height="34" rx="3" transform="rotate(4 74 35)"/></g>
+<g fill="#7FBFD4" opacity=".55">
+<circle cx="236" cy="30" r="3"/><circle cx="256" cy="20" r="2"/><circle cx="212" cy="24" r="2"/></g>
+</svg>
+        <img class="real" src="covers/lost-cities.jpg" alt="" onerror="this.remove()">
+      </div>
+      <div class="card-top"><h3>Lost Cities: Das Duell</h3></div>
+      <div class="punkte">
+        <div class="punkt">
+          <div class="punkt-kopf"><span>Kritik</span><b>76,0</b></div>
+          <div class="balken"><i style="width:76.0%"></i></div>
+          <small>H@LL9000-Redaktion 4,8 von 6</small>
+        </div>
+        <div class="punkt gemeinde">
+          <div class="punkt-kopf"><span>Community</span><b>69,7</b></div>
+          <div class="balken"><i style="width:69.7%"></i></div>
+          <small>BGG 7,3 aus 51.399 Stimmen &middot; H@LL9000-Leser 4,5 von 6</small>
+        </div>
+        <div class="punkt zweier trivial">
+          <div class="punkt-kopf"><span>Zu zweit</span><b>100,0</b></div>
+          <div class="balken"><i style="width:100%"></i></div>
+          <small>Duellspiel &ndash; Bestnote ohne Alternative</small>
+        </div>
+        <div class="punkt reise">
+          <div class="punkt-kopf"><span>Unterwegs</span><b>62,6</b></div>
+          <div class="balken"><i style="width:63%"></i></div>
+          <small>205 &times; 205 &times; 45 mm, 470 g &ndash; 1,89 Liter</small>
+        </div>
+      </div>
+      <table class="meta">
+        <tr><td>Spieler</td><td>exakt 2</td></tr>
+        <tr><td>Alter</td><td>ab 10</td></tr>
+        <tr><td>Dauer</td><td>ca. 30 Min</td></tr>
+        <tr><td>Verlag</td><td>KOSMOS</td></tr>
+        <tr><td>Reisetauglich</td><td><span class="travel"><span class="pip"></span><span class="pip"></span><span class="pip off"></span></span> flache Schachtel, kleiner Plan</td></tr>
+        <tr><td>Preis</td><td>ab 14,15 &euro;</td></tr>
+      </table>
+      <p class="desc">Reiner Knizia, 1999, und noch immer eines der meistgespielten Zweipersonenspiele &uuml;berhaupt. Ihr startet Expeditionen in f&uuml;nf Farben und legt Karten in aufsteigender Reihenfolge ab. Jede begonnene Expedition kostet erst einmal 20&nbsp;Punkte &ndash; die Frage ist immer, ob ihr genug Karten nachbekommt, um ins Plus zu kommen. Wettkarten verdoppeln Gewinn wie Verlust.</p>
+      <div class="mat"><b>Material in der Schachtel</b>60 Karten in f&uuml;nf Farben &ndash; je drei Wettkarten und die Zahlen 2 bis 10 &ndash; sowie ein kleiner Spielplan mit f&uuml;nf Ablagefeldern.</div>
+      <div class="pro-con">
+        <div class="pro"><b>Pro</b>Eine einzige Entscheidung, immer wieder neu: anfangen oder lassen. Kurz, spannend, seit einem Vierteljahrhundert nicht gealtert.</div>
+        <div class="con"><b>Contra</b>Kartengl&uuml;ck entscheidet Partien; Rot und Schwarz sowie Gr&uuml;n und Blau sind schlecht zu unterscheiden.</div>
+      </div>
+      <a class="buy" href="https://www.brettspiel-angebote.de/spiele/lost-cities-das-duell/2927/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
+    </div>
+    <div data-reise="" data-zweier="100.0" class="card duel-card" data-kritiker="92.0" data-community="77.2" data-name="Watergate">
+      <span class="rang" hidden></span>
+      <div class="cover">
+        <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Watergate">
+<rect width="320" height="150" fill="#171A20"/>
+<path d="M0 0 H320 V150 H0Z" fill="url(#wg)" opacity="0"/>
+<g fill="#232830">
+<rect x="0" y="18" width="118" height="132"/><rect x="202" y="30" width="118" height="120"/></g>
+<g fill="#C9A24B" opacity=".7">
+<rect x="14" y="32" width="12" height="14"/><rect x="34" y="32" width="12" height="14"/>
+<rect x="14" y="58" width="12" height="14"/><rect x="54" y="58" width="12" height="14"/>
+<rect x="216" y="44" width="12" height="14"/><rect x="236" y="44" width="12" height="14"/>
+<rect x="216" y="70" width="12" height="14"/></g>
+<g transform="translate(126 44)">
+<rect x="0" y="26" width="68" height="40" rx="3" fill="#E8E2D2"/>
+<rect x="6" y="12" width="56" height="18" rx="2" fill="#F2EFE4"/>
+<g fill="#3A3F49">
+<rect x="12" y="18" width="44" height="3"/><rect x="12" y="24" width="30" height="3"/></g>
+<g fill="#5A6070">
+<rect x="8" y="46" width="8" height="6" rx="1"/><rect x="20" y="46" width="8" height="6" rx="1"/>
+<rect x="32" y="46" width="8" height="6" rx="1"/><rect x="44" y="46" width="8" height="6" rx="1"/>
+<rect x="56" y="46" width="6" height="6" rx="1"/>
+<rect x="14" y="56" width="8" height="6" rx="1"/><rect x="26" y="56" width="8" height="6" rx="1"/>
+<rect x="38" y="56" width="8" height="6" rx="1"/><rect x="50" y="56" width="8" height="6" rx="1"/></g></g>
+<g stroke="#A83226" stroke-width="2.5" fill="none">
+<circle cx="46" cy="118" r="13"/><circle cx="274" cy="118" r="13"/>
+<path d="M59 118 H261"/></g>
+<circle cx="46" cy="118" r="4" fill="#A83226"/><circle cx="274" cy="118" r="4" fill="#A83226"/>
+</svg>
+        <img class="real" src="covers/watergate.jpg" alt="" onerror="this.remove()">
+      </div>
+      <div class="card-top"><h3>Watergate</h3></div>
+      <div class="punkte">
+        <div class="punkt">
+          <div class="punkt-kopf"><span>Kritik</span><b>92,0</b></div>
+          <div class="balken"><i style="width:92.0%"></i></div>
+          <small>H@LL9000-Redaktion 5,6 von 6</small>
+        </div>
+        <div class="punkt gemeinde">
+          <div class="punkt-kopf"><span>Community</span><b>77,2</b></div>
+          <div class="balken"><i style="width:77.2%"></i></div>
+          <small>BGG 7,7 aus 14.556 Stimmen &middot; H@LL9000-Leser 5,3 von 6</small>
+        </div>
+        <div class="punkt zweier trivial">
+          <div class="punkt-kopf"><span>Zu zweit</span><b>100,0</b></div>
+          <div class="balken"><i style="width:100%"></i></div>
+          <small>Duellspiel &ndash; Bestnote ohne Alternative</small>
+        </div>
+        <div class="punkt reise fehlt">
+          <div class="punkt-kopf"><span>Unterwegs</span><b>&ndash;</b></div>
+          <div class="balken"><i style="width:0%"></i></div>
+          <small>keine Ma&szlig;e gefunden</small>
+        </div>
+      </div>
+      <table class="meta">
+        <tr><td>Spieler</td><td>exakt 2</td></tr>
+        <tr><td>Alter</td><td>ab 12</td></tr>
+        <tr><td>Dauer</td><td>30&ndash;60 Min</td></tr>
+        <tr><td>Verlag</td><td>Frosted Games</td></tr>
+        <tr><td>Reisetauglich</td><td><span class="travel"><span class="pip"></span><span class="pip"></span><span class="pip off"></span></span> Plan und Marker</td></tr>
+        <tr><td>Preis</td><td>ab 13,80 &euro;</td></tr>
+      </table>
+      <p class="desc">Asymmetrisches Tauziehen um den gr&ouml;&szlig;ten Politskandal der USA: Einer spielt Nixon und versucht, die Sache auszusitzen, der andere die Redaktion der Washington Post und will Beweise mit Informanten verkn&uuml;pfen. Jede Karte stellt vor dieselbe Frage &ndash; nutzt ihr ihren Wert f&uuml;r das Tauziehen oder ihre starke Sonderf&auml;higkeit?</p>
+      <div class="mat"><b>Material in der Schachtel</b>Zwei v&ouml;llig verschiedene Kartendecks, ein Spielplan mit Leisten f&uuml;r Beweise und Informanten, Marker sowie ein Regelheft mit einem ausf&uuml;hrlichen historischen Teil, der die Aff&auml;re und alle Beteiligten erkl&auml;rt.</div>
+      <div class="pro-con">
+        <div class="pro"><b>Pro</b>H&ouml;chste Redaktionswertung dieser Liste nach Codenames Duett; die Asymmetrie sorgt daf&uuml;r, dass sich beide Seiten v&ouml;llig anders spielen; historisch sorgf&auml;ltig gemacht.</div>
+        <div class="con"><b>Contra</b>Wer mit US-Politik der Siebziger nichts anfangen kann, verliert einen gro&szlig;en Teil des Reizes; die Seiten sind unterschiedlich schwer zu spielen.</div>
+      </div>
+      <a class="buy" href="https://www.brettspiel-angebote.de/spiele/watergate/3362/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
+    </div>
+    </div>
 </section>
-
-<div class="hint">
-  <b>Echte Cover einsetzen:</b> Lege einen Ordner <code>covers</code> neben diese Datei und speichere die Bilder als
-  <code>micromacro.jpg</code>, <code>codenames.jpg</code>, <code>die-crew.jpg</code>, <code>paleo.jpg</code>,
-  <code>hanabi.jpg</code>, <code>pandemie.jpg</code>, <code>7-wonders-duel.jpg</code>,
-  <code>splendor-duel.jpg</code>, <code>targi.jpg</code>, <code>patchwork.jpg</code>,
-  <code>schotten-totten.jpg</code>, <code>hive.jpg</code>, <code>mindbug.jpg</code>, <code>compile.jpg</code>, <code>agent-avenue.jpg</code>, <code>revolver-noir.jpg</code>, <code>koeder.jpg</code>. Vorhandene Bilder ersetzen die Illustration automatisch, fehlende fallen darauf zur&uuml;ck.
 </div>
 
+
+<div id="bereich-start" class="bereich" role="tabpanel" aria-labelledby="menue-start">
+
+  <p class="einleitung">Die besten Spiele f&uuml;r genau zwei Personen &ndash; kuratiert aus
+  Bestenlisten, Rezensionen und Community-Wertungen. Jeder Titel tr&auml;gt vier Punktzahlen:
+  was die Kritik sagt, was die Community sagt, wie gut er zu zweit wirklich funktioniert und
+  wie sperrig die Schachtel ist.</p>
+
+  <div class="zahlenband">
+    <div><b>20</b><span>Spiele</span></div>
+    <div><b>6</b><span>Miteinander</span></div>
+    <div><b>14</b><span>Gegeneinander</span></div>
+    <div><b>11,67&ndash;37,80&nbsp;&euro;</b><span>Preisspanne</span></div>
+    <div><b>10&ndash;60</b><span>Minuten</span></div>
+  </div>
+
+  <h2 class="abschnitt">Die Spitzenreiter</h2>
+  <p class="abschnitt-text">Vier Skalen, vier verschiedene Sieger &ndash; kein Titel f&uuml;hrt
+  &uuml;berall.</p>
+  <div class="spitzen">
+      <div class="spitze" style="--ton:#A83226">
+        <span class="spitze-art">Kritik</span>
+        <strong>Codenames Duett</strong>
+        <span class="spitze-wert">94,0</span>
+        <small>h&ouml;chste Redaktionswertung</small>
+      </div>
+      <div class="spitze" style="--ton:#2A6496">
+        <span class="spitze-art">Community</span>
+        <strong>7 Wonders Duel</strong>
+        <span class="spitze-wert">79,9</span>
+        <small>beste Nutzerwertung</small>
+      </div>
+      <div class="spitze" style="--ton:#8A5A2B">
+        <span class="spitze-art">Zu zweit</span>
+        <strong>MicroMacro: Crime City</strong>
+        <span class="spitze-wert">100,0</span>
+        <small>stark zu zweit, obwohl f&uuml;r mehr gebaut</small>
+      </div>
+      <div class="spitze" style="--ton:#2F6B4A">
+        <span class="spitze-art">Unterwegs</span>
+        <strong>Schotten Totten</strong>
+        <span class="spitze-wert">100,0</span>
+        <small>kleinste Schachtel der Liste</small>
+      </div>
+  </div>
+
+  <h2 class="abschnitt">Wohin?</h2>
+  <div class="wege">
+    <button class="weg" data-ziel="koop">
+      <span class="weg-punkt" style="background:var(--coop)"></span>
+      <strong>Miteinander</strong>
+      <small>6 kooperative Spiele. Ihr gewinnt oder verliert gemeinsam gegen das Spiel.</small>
+    </button>
+    <button class="weg" data-ziel="duell">
+      <span class="weg-punkt" style="background:var(--duel)"></span>
+      <strong>Gegeneinander</strong>
+      <small>14 Duelle. Kopf an Kopf, die meisten exakt f&uuml;r zwei ausbalanciert.</small>
+    </button>
+    <button class="weg" data-ziel="rangliste">
+      <span class="weg-punkt" style="background:var(--gold)"></span>
+      <strong>Rangliste</strong>
+      <small>Alle 20 Titel in einer Tabelle. Nach jeder Spalte sortierbar.</small>
+    </button>
+    <button class="weg" data-ziel="quellen">
+      <span class="weg-punkt" style="background:#8C7A5C"></span>
+      <strong>Punkte &amp; Quellen</strong>
+      <small>Wie die vier Zahlen entstehen, mit Formeln, Rohwerten und allen Quellen.</small>
+    </button>
+  </div>
+
+  <p class="stand-zeile">Alle Wertungen und Preise mit Stand 21.08.2026.</p>
+
 </div>
 
-<section id="tafel-quellen" class="tafel" role="tabpanel" aria-labelledby="reiter-quellen" hidden>
+<div id="bereich-rangliste" class="bereich" role="tabpanel" aria-labelledby="menue-rangliste" hidden>
+  <div class="tafel">
+    <h2 class="abschnitt">Rangliste</h2>
+    <p class="abschnitt-text">Alle 20 Titel nebeneinander. Ein Klick auf einen
+    Spaltenkopf sortiert danach; ungemessene Werte stehen immer am Ende.</p>
+    <div class="tab-huelle">
+      <table class="werte rang-tabelle">
+        <thead><tr>
+          <th>Spiel</th>
+          <th class="mitte sortierbar" data-art="kritiker">Kritik</th>
+          <th class="mitte sortierbar" data-art="community">Community</th>
+          <th class="mitte sortierbar" data-art="zweier">Zu zweit</th>
+          <th class="mitte sortierbar" data-art="reise">Unterwegs</th>
+        </tr></thead>
+        <tbody>
+        <tr data-kritiker="86.0" data-community="79.9" data-zweier="100" data-reise="51.4"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> 7 Wonders Duel</td><td class="mitte">86,0</td><td class="mitte">79,9</td><td class="mitte">100,0</td><td class="mitte">51,4</td></tr>
+        <tr data-kritiker="92.0" data-community="77.6" data-zweier="100" data-reise="78.2"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> Splendor Duel</td><td class="mitte">92,0</td><td class="mitte">77,6</td><td class="mitte">100,0</td><td class="mitte">78,2</td></tr>
+        <tr data-kritiker="92.0" data-community="77.2" data-zweier="100" data-reise=""><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> Watergate</td><td class="mitte">92,0</td><td class="mitte">77,2</td><td class="mitte">100,0</td><td class="mitte"><span class="leer">&ndash;</span></td></tr>
+        <tr data-kritiker="94.0" data-community="76.4" data-zweier="100" data-reise="57.5"><td><span class="art-punkt" style="background:var(--coop)" title="kooperativ"></span> Codenames Duett</td><td class="mitte">94,0</td><td class="mitte">76,4</td><td class="mitte">100,0</td><td class="mitte">57,5</td></tr>
+        <tr data-kritiker="84.0" data-community="76.3" data-zweier="100" data-reise="59.2"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> Targi</td><td class="mitte">84,0</td><td class="mitte">76,3</td><td class="mitte">100,0</td><td class="mitte">59,2</td></tr>
+        <tr data-kritiker="82.0" data-community="76.1" data-zweier="100" data-reise="81.8"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> Hive Pocket</td><td class="mitte">82,0</td><td class="mitte">76,1</td><td class="mitte">100,0</td><td class="mitte">81,8</td></tr>
+        <tr data-kritiker="78.0" data-community="75.3" data-zweier="100" data-reise="56.2"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> Patchwork</td><td class="mitte">78,0</td><td class="mitte">75,3</td><td class="mitte">100,0</td><td class="mitte">56,2</td></tr>
+        <tr data-kritiker="" data-community="74.6" data-zweier="100" data-reise="97.9"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> Compile: Main 1</td><td class="mitte"><span class="leer">&ndash;</span></td><td class="mitte">74,6</td><td class="mitte">100,0</td><td class="mitte">97,9</td></tr>
+        <tr data-kritiker="60.0" data-community="74.5" data-zweier="100" data-reise="85.4"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> Mindbug</td><td class="mitte">60,0</td><td class="mitte">74,5</td><td class="mitte">100,0</td><td class="mitte">85,4</td></tr>
+        <tr data-kritiker="82.0" data-community="74.3" data-zweier="62" data-reise="39.1"><td><span class="art-punkt" style="background:var(--coop)" title="kooperativ"></span> Pandemie</td><td class="mitte">82,0</td><td class="mitte">74,3</td><td class="mitte">62,0</td><td class="mitte">39,1</td></tr>
+        <tr data-kritiker="82.0" data-community="74.0" data-zweier="100" data-reise="100"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> Schotten Totten</td><td class="mitte">82,0</td><td class="mitte">74,0</td><td class="mitte">100,0</td><td class="mitte">100,0</td></tr>
+        <tr data-kritiker="" data-community="73.7" data-zweier="88" data-reise="11.4"><td><span class="art-punkt" style="background:var(--coop)" title="kooperativ"></span> Paleo</td><td class="mitte"><span class="leer">&ndash;</span></td><td class="mitte">73,7</td><td class="mitte">88,0</td><td class="mitte">11,4</td></tr>
+        <tr data-kritiker="70.0" data-community="73.5" data-zweier="100" data-reise="85.4"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> Jaipur</td><td class="mitte">70,0</td><td class="mitte">73,5</td><td class="mitte">100,0</td><td class="mitte">85,4</td></tr>
+        <tr data-kritiker="86.0" data-community="72.7" data-zweier="100" data-reise="85.4"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> Agent Avenue</td><td class="mitte">86,0</td><td class="mitte">72,7</td><td class="mitte">100,0</td><td class="mitte">85,4</td></tr>
+        <tr data-kritiker="78.0" data-community="70.7" data-zweier="100" data-reise="59.4"><td><span class="art-punkt" style="background:var(--coop)" title="kooperativ"></span> MicroMacro: Crime City</td><td class="mitte">78,0</td><td class="mitte">70,7</td><td class="mitte">100,0</td><td class="mitte">59,4</td></tr>
+        <tr data-kritiker="" data-community="70.7" data-zweier="100" data-reise=""><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> Revolver Noir</td><td class="mitte"><span class="leer">&ndash;</span></td><td class="mitte">70,7</td><td class="mitte">100,0</td><td class="mitte"><span class="leer">&ndash;</span></td></tr>
+        <tr data-kritiker="76.0" data-community="69.7" data-zweier="100" data-reise="62.6"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> Lost Cities: Das Duell</td><td class="mitte">76,0</td><td class="mitte">69,7</td><td class="mitte">100,0</td><td class="mitte">62,6</td></tr>
+        <tr data-kritiker="" data-community="67.6" data-zweier="62" data-reise="91.0"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> Köder</td><td class="mitte"><span class="leer">&ndash;</span></td><td class="mitte">67,6</td><td class="mitte">62,0</td><td class="mitte">91,0</td></tr>
+        <tr data-kritiker="" data-community="67.6" data-zweier="100" data-reise=""><td><span class="art-punkt" style="background:var(--coop)" title="kooperativ"></span> Der Fuchs im Wald: Duett</td><td class="mitte"><span class="leer">&ndash;</span></td><td class="mitte">67,6</td><td class="mitte">100,0</td><td class="mitte"><span class="leer">&ndash;</span></td></tr>
+        <tr data-kritiker="70.0" data-community="65.8" data-zweier="62" data-reise="97.4"><td><span class="art-punkt" style="background:var(--coop)" title="kooperativ"></span> Hanabi</td><td class="mitte">70,0</td><td class="mitte">65,8</td><td class="mitte">62,0</td><td class="mitte">97,4</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="legende-zeile">
+      <span class="art-punkt" style="background:var(--coop)"></span> kooperativ &nbsp;&nbsp;
+      <span class="art-punkt" style="background:var(--duel)"></span> kompetitiv
+    </p>
+  </div>
+</div>
+
+<div id="bereich-quellen" class="bereich" role="tabpanel" aria-labelledby="menue-quellen" hidden>
+  <section class="tafel">
 
   <div class="quell-kopf">
     <h2>Woher die Punkte kommen</h2>
@@ -1344,7 +1764,7 @@
       anders zählen. Auszeichnungen wie <i>Spiel des Jahres</i> stehen auf den Karten,
       fließen aber nicht in die Punkte ein &ndash; ein Preis misst den Zeitpunkt der
       Vergabe, nicht die Qualität heute.</p>
-      <p class="luecke"><b>Lücke:</b> Für Paleo, Compile: Main 1, Revolver Noir, Köder liegt keine Redaktionswertung vor
+      <p class="luecke"><b>Lücke:</b> Für Paleo, Compile: Main 1, Revolver Noir, Köder und Der Fuchs im Wald: Duett liegt keine Redaktionswertung vor
       &ndash; zu neu oder nicht besprochen. Diese Titel zeigen einen Strich statt einer
       Zahl und stehen beim Sortieren nach Kritik am Ende. Sie sind nicht schlechter,
       sie sind ungemessen.</p>
@@ -1357,8 +1777,8 @@
       <p>Rohdurchschnitte sind unfair: Revolver Noir hat 954 Stimmen, Pandemie 136.046.
       Wenige Stimmen schlagen leicht nach oben oder unten aus. Deshalb wird jeder Wert
       zum Mittel aller Titel gezogen, und zwar umso stärker, je weniger Stimmen er hat:</p>
-      <p class="formel">gewichtet = (v &times; Wertung + 1500 &times; 7,54) &divide; (v + 1500)</p>
-      <p>v ist die Stimmenzahl, 7,54 der Durchschnitt aller siebzehn Titel, 1500 die
+      <p class="formel">gewichtet = (v &times; Wertung + 1500 &times; 7,47) &divide; (v + 1500)</p>
+      <p>v ist die Stimmenzahl, 7,54 der Durchschnitt aller zwanzig Titel, 1500 die
       Stärke dieser Dämpfung. Bei 136.046 Stimmen ändert sie fast nichts, bei 954
       Stimmen zieht sie deutlich zur Mitte. Danach:</p>
       <p class="formel">Punkte = (gewichtet &minus; 1) &divide; 9 &times; 100</p>
@@ -1377,9 +1797,7 @@
       gekennzeichnet. Aussagekr&auml;ftig ist die Zahl dort, wo ein Spiel auch zu dritt
       oder zu viert ginge und die Community trotzdem zu zweit bevorzugt &ndash; oder eben
       nicht.</p>
-      <p class="luecke"><b>Der gr&ouml;&szlig;te Ausrei&szlig;er:</b> Die Crew: Mission Tiefsee
-      f&uuml;hrt bei Kritik und Community, ist zu zweit aber weder beste noch empfohlene
-      Besetzung. Wer zu zweit spielt, greift laut Umfrage besser woanders hin.</p>
+      <p class="luecke"><b>Was diese Zahl bewirkt hat:</b> Die Crew: Mission Tiefsee stand hier lange &ndash; h&ouml;chste Redaktionswertung der Liste, starke Community-Wertung, aber zu zweit weder beste noch empfohlene Besetzung (28&nbsp;von&nbsp;100). Ein hervorragendes Spiel am falschen Platz. Es ist deshalb aus der Liste geflogen. Geblieben sind Pandemie, Hanabi und K&ouml;der mit je 62 &ndash; zu zweit empfohlen, aber nicht die beste Besetzung.</p>
     </article>
     <article>
       <h3>Unterwegs</h3>
@@ -1396,7 +1814,7 @@
       MicroMacro passt in den Rucksack, braucht am Zielort aber einen Plan von
       75&nbsp;&times;&nbsp;110&nbsp;cm. Diese zweite Dimension steht weiter in der
       Zeile <i>Reisetauglich</i> auf jeder Karte und in Pro und Contra.
-      F&uuml;r Revolver Noir gibt kein Shop Ma&szlig;e her.</p>
+      F&uuml;r Revolver Noir, Watergate und Der Fuchs im Wald: Duett gibt kein Shop Ma&szlig;e her.</p>
     </article>
   </div>
 
@@ -1409,22 +1827,25 @@
         <th class="mitte">Kritik</th><th class="mitte">Community</th><th class="mitte">Zu zweit</th><th class="mitte">Unterwegs</th>
       </tr></thead>
       <tbody>
-        <tr><td>Die Crew: Mission Tiefsee</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/324856/" target="_blank" rel="noopener">8,04</a> <span class="leise">(26.355)</span></td><td class="mitte"><a href="https://www.hall9000.de/html/spiel/die_crew_mission_tiefsee" target="_blank" rel="noopener">6,0 / 5,3</a></td><td class="mitte"><b>100,0</b></td><td class="mitte"><b>79,9</b></td><td class="mitte"><b>28,0</b></td><td class="mitte"><b>85,4</b></td></tr>
         <tr><td>7 Wonders Duel</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/173346/" target="_blank" rel="noopener">8,07</a> <span class="leise">(110.158)</span></td><td class="mitte"><a href="https://www.hall9000.de/html/spiel/7_wonders_duel" target="_blank" rel="noopener">5,3 / 5,2</a></td><td class="mitte"><b>86,0</b></td><td class="mitte"><b>79,9</b></td><td class="mitte"><b>100,0</b></td><td class="mitte"><b>51,4</b></td></tr>
         <tr><td>Splendor Duel</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/364073/" target="_blank" rel="noopener">7,88</a> <span class="leise">(20.196)</span></td><td class="mitte"><a href="https://www.hall9000.de/html/spiel/splendor_duel" target="_blank" rel="noopener">5,6 / 5,1</a></td><td class="mitte"><b>92,0</b></td><td class="mitte"><b>77,6</b></td><td class="mitte"><b>100,0</b></td><td class="mitte"><b>78,2</b></td></tr>
+        <tr><td>Watergate</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/274364/" target="_blank" rel="noopener">7,70</a> <span class="leise">(14.556)</span></td><td class="mitte"><a href="https://www.hall9000.de/html/spiel/watergate" target="_blank" rel="noopener">5,6 / 5,3</a></td><td class="mitte"><b>92,0</b></td><td class="mitte"><b>77,2</b></td><td class="mitte"><b>100,0</b></td><td class="mitte"><b>&ndash;</b></td></tr>
         <tr><td>Codenames Duett</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/224037/" target="_blank" rel="noopener">7,41</a> <span class="leise">(27.070)</span></td><td class="mitte"><a href="https://www.hall9000.de/html/spiel/codenames_duett" target="_blank" rel="noopener">5,7 / 5,6</a></td><td class="mitte"><b>94,0</b></td><td class="mitte"><b>76,4</b></td><td class="mitte"><b>100,0</b></td><td class="mitte"><b>57,5</b></td></tr>
-        <tr><td>Targi</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/118048/" target="_blank" rel="noopener">7,58</a> <span class="leise">(26.996)</span></td><td class="mitte"><a href="https://www.hall9000.de/html/spiel/targi" target="_blank" rel="noopener">5,2 / 5,3</a></td><td class="mitte"><b>84,0</b></td><td class="mitte"><b>76,4</b></td><td class="mitte"><b>100,0</b></td><td class="mitte"><b>59,2</b></td></tr>
+        <tr><td>Targi</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/118048/" target="_blank" rel="noopener">7,58</a> <span class="leise">(26.996)</span></td><td class="mitte"><a href="https://www.hall9000.de/html/spiel/targi" target="_blank" rel="noopener">5,2 / 5,3</a></td><td class="mitte"><b>84,0</b></td><td class="mitte"><b>76,3</b></td><td class="mitte"><b>100,0</b></td><td class="mitte"><b>59,2</b></td></tr>
         <tr><td>Hive Pocket</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/154597/" target="_blank" rel="noopener">7,69</a> <span class="leise">(15.333)</span></td><td class="mitte"><a href="https://www.hall9000.de/html/spiel/hive" target="_blank" rel="noopener">5,1 / 5,1</a></td><td class="mitte"><b>82,0</b></td><td class="mitte"><b>76,1</b></td><td class="mitte"><b>100,0</b></td><td class="mitte"><b>81,8</b></td></tr>
         <tr><td>Patchwork</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/163412/" target="_blank" rel="noopener">7,58</a> <span class="leise">(74.802)</span></td><td class="mitte"><a href="https://www.hall9000.de/html/spiel/patchwork" target="_blank" rel="noopener">4,9 / 5,1</a></td><td class="mitte"><b>78,0</b></td><td class="mitte"><b>75,3</b></td><td class="mitte"><b>100,0</b></td><td class="mitte"><b>56,2</b></td></tr>
-        <tr><td>Compile: Main 1</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/406652/" target="_blank" rel="noopener">7,79</a> <span class="leise">(4.483)</span></td><td class="mitte">&ndash;</td><td class="mitte"><b>&ndash;</b></td><td class="mitte"><b>74,7</b></td><td class="mitte"><b>100,0</b></td><td class="mitte"><b>97,9</b></td></tr>
-        <tr><td>Mindbug</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/345584/" target="_blank" rel="noopener">7,55</a> <span class="leise">(9.377)</span></td><td class="mitte"><a href="https://www.hall9000.de/html/spiel/mindbug" target="_blank" rel="noopener">4,0 / 5,0</a></td><td class="mitte"><b>60,0</b></td><td class="mitte"><b>74,6</b></td><td class="mitte"><b>100,0</b></td><td class="mitte"><b>85,4</b></td></tr>
+        <tr><td>Compile: Main 1</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/406652/" target="_blank" rel="noopener">7,79</a> <span class="leise">(4.483)</span></td><td class="mitte">&ndash;</td><td class="mitte"><b>&ndash;</b></td><td class="mitte"><b>74,6</b></td><td class="mitte"><b>100,0</b></td><td class="mitte"><b>97,9</b></td></tr>
+        <tr><td>Mindbug</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/345584/" target="_blank" rel="noopener">7,55</a> <span class="leise">(9.377)</span></td><td class="mitte"><a href="https://www.hall9000.de/html/spiel/mindbug" target="_blank" rel="noopener">4,0 / 5,0</a></td><td class="mitte"><b>60,0</b></td><td class="mitte"><b>74,5</b></td><td class="mitte"><b>100,0</b></td><td class="mitte"><b>85,4</b></td></tr>
         <tr><td>Pandemie</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/30549/" target="_blank" rel="noopener">7,51</a> <span class="leise">(136.046)</span></td><td class="mitte"><a href="https://www.hall9000.de/html/spiel/pandemie" target="_blank" rel="noopener">5,1 / 5,0</a></td><td class="mitte"><b>82,0</b></td><td class="mitte"><b>74,3</b></td><td class="mitte"><b>62,0</b></td><td class="mitte"><b>39,1</b></td></tr>
-        <tr><td>Schotten Totten</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/372/" target="_blank" rel="noopener">7,35</a> <span class="leise">(14.479)</span></td><td class="mitte"><a href="https://www.hall9000.de/html/spiel/schotten_totten" target="_blank" rel="noopener">5,1 / 5,2</a></td><td class="mitte"><b>82,0</b></td><td class="mitte"><b>74,1</b></td><td class="mitte"><b>100,0</b></td><td class="mitte"><b>100,0</b></td></tr>
+        <tr><td>Schotten Totten</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/372/" target="_blank" rel="noopener">7,35</a> <span class="leise">(14.479)</span></td><td class="mitte"><a href="https://www.hall9000.de/html/spiel/schotten_totten" target="_blank" rel="noopener">5,1 / 5,2</a></td><td class="mitte"><b>82,0</b></td><td class="mitte"><b>74,0</b></td><td class="mitte"><b>100,0</b></td><td class="mitte"><b>100,0</b></td></tr>
         <tr><td>Paleo</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/300531/" target="_blank" rel="noopener">7,64</a> <span class="leise">(16.412)</span></td><td class="mitte">&ndash;</td><td class="mitte"><b>&ndash;</b></td><td class="mitte"><b>73,7</b></td><td class="mitte"><b>88,0</b></td><td class="mitte"><b>11,4</b></td></tr>
-        <tr><td>Agent Avenue</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/422732/" target="_blank" rel="noopener">7,51</a> <span class="leise">(7.201)</span></td><td class="mitte"><a href="https://www.hall9000.de/html/spiel/agent_avenue" target="_blank" rel="noopener">5,3 / 4,7</a></td><td class="mitte"><b>86,0</b></td><td class="mitte"><b>72,8</b></td><td class="mitte"><b>100,0</b></td><td class="mitte"><b>85,4</b></td></tr>
-        <tr><td>Revolver Noir</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/322697/" target="_blank" rel="noopener">7,19</a> <span class="leise">(954)</span></td><td class="mitte">&ndash;</td><td class="mitte"><b>&ndash;</b></td><td class="mitte"><b>71,1</b></td><td class="mitte"><b>100,0</b></td><td class="mitte"><b>&ndash;</b></td></tr>
+        <tr><td>Jaipur</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/54043/" target="_blank" rel="noopener">7,48</a> <span class="leise">(58.824)</span></td><td class="mitte"><a href="https://www.hall9000.de/html/spiel/jaipur" target="_blank" rel="noopener">4,5 / 4,9</a></td><td class="mitte"><b>70,0</b></td><td class="mitte"><b>73,5</b></td><td class="mitte"><b>100,0</b></td><td class="mitte"><b>85,4</b></td></tr>
+        <tr><td>Agent Avenue</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/422732/" target="_blank" rel="noopener">7,51</a> <span class="leise">(7.201)</span></td><td class="mitte"><a href="https://www.hall9000.de/html/spiel/agent_avenue" target="_blank" rel="noopener">5,3 / 4,7</a></td><td class="mitte"><b>86,0</b></td><td class="mitte"><b>72,7</b></td><td class="mitte"><b>100,0</b></td><td class="mitte"><b>85,4</b></td></tr>
         <tr><td>MicroMacro: Crime City</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/318977/" target="_blank" rel="noopener">7,44</a> <span class="leise">(20.121)</span></td><td class="mitte"><a href="https://www.hall9000.de/html/spiel/micromacro_crime_city" target="_blank" rel="noopener">4,9 / 4,4</a></td><td class="mitte"><b>78,0</b></td><td class="mitte"><b>70,7</b></td><td class="mitte"><b>100,0</b></td><td class="mitte"><b>59,4</b></td></tr>
-        <tr><td>Köder</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/415780/" target="_blank" rel="noopener">6,83</a> <span class="leise">(2.381)</span></td><td class="mitte">&ndash;</td><td class="mitte"><b>&ndash;</b></td><td class="mitte"><b>67,8</b></td><td class="mitte"><b>62,0</b></td><td class="mitte"><b>91,0</b></td></tr>
+        <tr><td>Revolver Noir</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/322697/" target="_blank" rel="noopener">7,19</a> <span class="leise">(954)</span></td><td class="mitte">&ndash;</td><td class="mitte"><b>&ndash;</b></td><td class="mitte"><b>70,7</b></td><td class="mitte"><b>100,0</b></td><td class="mitte"><b>&ndash;</b></td></tr>
+        <tr><td>Lost Cities: Das Duell</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/50/" target="_blank" rel="noopener">7,26</a> <span class="leise">(51.399)</span></td><td class="mitte"><a href="https://www.hall9000.de/html/spiel/lost_cities" target="_blank" rel="noopener">4,8 / 4,5</a></td><td class="mitte"><b>76,0</b></td><td class="mitte"><b>69,7</b></td><td class="mitte"><b>100,0</b></td><td class="mitte"><b>62,6</b></td></tr>
+        <tr><td>Köder</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/415780/" target="_blank" rel="noopener">6,83</a> <span class="leise">(2.381)</span></td><td class="mitte">&ndash;</td><td class="mitte"><b>&ndash;</b></td><td class="mitte"><b>67,6</b></td><td class="mitte"><b>62,0</b></td><td class="mitte"><b>91,0</b></td></tr>
+        <tr><td>Der Fuchs im Wald: Duett</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/288169/" target="_blank" rel="noopener">6,96</a> <span class="leise">(4.463)</span></td><td class="mitte">&ndash;</td><td class="mitte"><b>&ndash;</b></td><td class="mitte"><b>67,6</b></td><td class="mitte"><b>100,0</b></td><td class="mitte"><b>&ndash;</b></td></tr>
         <tr><td>Hanabi</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/98778/" target="_blank" rel="noopener">7,03</a> <span class="leise">(52.987)</span></td><td class="mitte"><a href="https://www.hall9000.de/html/spiel/hanabi" target="_blank" rel="noopener">4,5 / 4,1</a></td><td class="mitte"><b>70,0</b></td><td class="mitte"><b>65,8</b></td><td class="mitte"><b>62,0</b></td><td class="mitte"><b>97,4</b></td></tr>
       </tbody>
     </table>
@@ -1480,7 +1901,15 @@
     </div>
   </div>
 
-</section>
+  </section>
+<div class="hint">
+  <b>Echte Cover einsetzen:</b> Lege einen Ordner <code>covers</code> neben diese Datei und speichere die Bilder als
+  <code>micromacro.jpg</code>, <code>codenames.jpg</code>, <code>paleo.jpg</code>,
+  <code>hanabi.jpg</code>, <code>pandemie.jpg</code>, <code>7-wonders-duel.jpg</code>,
+  <code>splendor-duel.jpg</code>, <code>targi.jpg</code>, <code>patchwork.jpg</code>,
+  <code>schotten-totten.jpg</code>, <code>hive.jpg</code>, <code>mindbug.jpg</code>, <code>compile.jpg</code>, <code>agent-avenue.jpg</code>, <code>revolver-noir.jpg</code>, <code>koeder.jpg</code>, <code>fuchs-im-wald-duett.jpg</code>, <code>jaipur.jpg</code>, <code>lost-cities.jpg</code>, <code>watergate.jpg</code>. Vorhandene Bilder ersetzen die Illustration automatisch, fehlende fallen darauf zur&uuml;ck.
+</div>
+</div>
 
 <footer>
   Quellen: Bestenlisten &amp; Reviews u.&nbsp;a. von abenteuer-brettspiele.de, heldenderfreizeit.com, spiele.tips,
@@ -1493,29 +1922,63 @@
 (function(){
   "use strict";
 
-  // --- Reiter umschalten ---------------------------------------------------
-  var reiter = Array.prototype.slice.call(document.querySelectorAll('.reiter button'));
-  function zeige(name){
-    reiter.forEach(function(b){
+  // --- Menue: fuenf Bereiche ---------------------------------------------
+  var menue = Array.prototype.slice.call(document.querySelectorAll('.menue button'));
+  var bereiche = ['start', 'koop', 'duell', 'rangliste', 'quellen'];
+
+  function zeigeBereich(name){
+    menue.forEach(function(b){
       var an = b.dataset.ziel === name;
       b.setAttribute('aria-selected', an ? 'true' : 'false');
       b.tabIndex = an ? 0 : -1;
     });
-    document.getElementById('tafel-spiele').hidden = (name !== 'spiele');
-    document.getElementById('tafel-quellen').hidden = (name !== 'quellen');
-    document.querySelector('.sortleiste').hidden = (name !== 'spiele');
+    bereiche.forEach(function(n){
+      var el = document.getElementById('bereich-' + n);
+      if (el) el.hidden = (n !== name);
+    });
+    // Die Sortierleiste gehoert zu den beiden Kartenlisten.
+    var sl = document.querySelector('.sortleiste');
+    if (sl) sl.hidden = (name !== 'koop' && name !== 'duell');
     window.scrollTo({top: 0, behavior: 'smooth'});
   }
-  reiter.forEach(function(b, i){
-    b.addEventListener('click', function(){ zeige(b.dataset.ziel); });
+
+  menue.forEach(function(b, i){
+    b.addEventListener('click', function(){ zeigeBereich(b.dataset.ziel); });
     b.addEventListener('keydown', function(e){
       var n = e.key === 'ArrowRight' ? i + 1 : e.key === 'ArrowLeft' ? i - 1 : -1;
-      if (n < 0 || n >= reiter.length) return;
+      if (n < 0 || n >= menue.length) return;
       e.preventDefault();
-      reiter[n].focus();
-      zeige(reiter[n].dataset.ziel);
+      menue[n].focus();
+      zeigeBereich(menue[n].dataset.ziel);
     });
   });
+
+  Array.prototype.slice.call(document.querySelectorAll('.weg')).forEach(function(w){
+    w.addEventListener('click', function(){ zeigeBereich(w.dataset.ziel); });
+  });
+
+  // --- Rangliste sortieren ------------------------------------------------
+  var rangKopf = Array.prototype.slice.call(document.querySelectorAll('.rang-tabelle th.sortierbar'));
+  rangKopf.forEach(function(th){
+    th.addEventListener('click', function(){
+      var art = th.dataset.art;
+      var koerper = th.closest('table').querySelector('tbody');
+      var zeilen = Array.prototype.slice.call(koerper.children);
+      zeilen.sort(function(a, b){
+        var wa = parseFloat(a.dataset[art]);
+        var wb = parseFloat(b.dataset[art]);
+        if (isNaN(wa) && isNaN(wb)) return 0;
+        if (isNaN(wa)) return 1;
+        if (isNaN(wb)) return -1;
+        return wb - wa;
+      });
+      zeilen.forEach(function(z){ koerper.appendChild(z); });
+      rangKopf.forEach(function(k){ k.removeAttribute('aria-sort'); });
+      th.setAttribute('aria-sort', 'descending');
+    });
+  });
+
+  zeigeBereich('start');
 
   // --- Sortieren -----------------------------------------------------------
   var knoepfe = Array.prototype.slice.call(document.querySelectorAll('.sortleiste button'));
