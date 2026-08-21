@@ -28,8 +28,22 @@ Jedes Spiel trägt vier Zahlen von 0 bis 100, aus vier Richtungen gemessen:
   Die benötigte Tischfläche misst diese Zahl nicht — die steht in der Zeile
   *Reisetauglich* auf den Karten.
 
-Die Zahlen sind nicht untereinander vergleichbar, nur innerhalb ihrer
-Spalte. Formeln, Rohwerte und alle Quellen stehen im Reiter *Punkte & Quellen*
+Die vier Zahlen sind nicht untereinander vergleichbar, nur innerhalb ihrer
+Spalte. Für eine Reihenfolge braucht es trotzdem eine einzige Zahl:
+
+**Gesamt** = `0,35 × Kritik + 0,35 × Community + 0,20 × Zu zweit + 0,10 × Unterwegs`
+
+Kritik und Community wiegen zusammen 70 % — das Urteil über das Spiel selbst.
+*Zu zweit* bekommt 20 %, weil genau das der Zweck der Liste ist, das Packmaß
+als Zusatznutzen 10 %. Die Gewichtung ist eine Entscheidung, keine Messung.
+
+Fehlt ein Wert, tritt der Median aller gemessenen an seine Stelle. Sonst
+profitierte ein Titel davon, dass ihm ausgerechnet seine schwächste Skala
+fehlt — im ersten Rechenversuch stand Watergate genau deshalb an der Spitze,
+weil ihm als einzigem Spitzentitel das Packmaß fehlte. Die Spalte *Basis* in
+der Rangliste zeigt, auf wie vielen der vier Skalen ein Wert wirklich beruht.
+
+Formeln, Rohwerte und alle Quellen stehen im Bereich *Punkte & Quellen*
 der Seite selbst.
 
 ## Was das Artefakt tut
@@ -39,10 +53,10 @@ jeder ohne Scrollen erreichbar:
 
 | Bereich | Inhalt |
 | --- | --- |
-| **Start** | Kennzahlen, die Spitzenreiter je Skala, Einstiege in die Bereiche |
+| **Start** | Kennzahlen, die Gesamtwertung, die Spitzenreiter je Skala, Einstiege |
 | **Miteinander** | 6 kooperative Titel als Karten |
 | **Gegeneinander** | 14 Duelle als Karten |
-| **Rangliste** | alle 20 in einer Tabelle, je Spalte sortierbar; ein Klick auf den Spielnamen führt zur Karte |
+| **Rangliste** | alle 20 in einer Tabelle, vorsortiert nach *Gesamt*, je Spalte sortierbar; ein Klick auf den Spielnamen führt zur Karte |
 | **Punkte & Quellen** | Methode, Formeln, Rohwerte, Quellenliste |
 
 Jede Karte trägt eine Metatabelle (Spieler, Alter, Dauer, Verlag,
@@ -50,8 +64,8 @@ Reisetauglichkeit, Preis), die vier Punktzahlen mit ihren Belegen, eine
 Beschreibung, den vollständigen Schachtelinhalt, je ein Pro und Contra aus
 Rezensionen, einen Link zum Preisvergleich und ein Regelvideo.
 
-In den beiden Kartenbereichen lässt sich die Reihenfolge nach jeder der vier
-Skalen umschalten oder in die ursprüngliche Anordnung zurücksetzen.
+In den beiden Kartenbereichen lässt sich die Reihenfolge nach *Gesamt*, nach
+jeder der vier Einzelskalen oder zurück in die ursprüngliche Anordnung schalten.
 
 Die Cover sind gezeichnet – zwanzig Illustrationen als Inline-SVG, ohne ein
 einziges Bitmap. Liegt eine echte Coverdatei in `covers/`, ersetzt sie die

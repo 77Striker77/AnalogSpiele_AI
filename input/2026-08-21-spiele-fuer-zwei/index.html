@@ -312,6 +312,32 @@
   @media (prefers-reduced-motion: reduce){
     .card.hervor{animation:none;box-shadow:0 0 0 4px var(--gold);}
   }
+
+  .rang-tabelle td.gesamt{font-weight:800;font-size:1.02rem;color:var(--ink);}
+  .rang-tabelle th.gesamt-kopf{color:var(--ink);}
+  .basis{
+    display:inline-block;font-size:.72rem;font-variant-numeric:tabular-nums;
+    color:var(--ink-soft);background:#EDE9DC;border-radius:5px;padding:1px 6px;
+  }
+  .basis.knapp{background:#F5E7D2;color:#7A5A28;}
+
+  .sieger{
+    background:var(--paper);border-radius:14px;padding:20px 24px 22px;
+    border-top:5px solid var(--gold);box-shadow:0 12px 28px rgba(0,0,0,.26);
+    margin:0 auto 30px;max-width:560px;text-align:center;
+  }
+  .sieger-zeile{
+    display:flex;align-items:baseline;justify-content:center;gap:14px;
+    flex-wrap:wrap;margin:4px 0 8px;
+  }
+  .sieger-zeile strong{
+    font-family:'Bricolage Grotesque',sans-serif;font-size:1.5rem;line-height:1.15;
+  }
+  .sieger-wert{
+    font-size:2.5rem;font-weight:800;line-height:1;color:#8A6A1E;
+    font-variant-numeric:tabular-nums;
+  }
+  .sieger small{display:block;font-size:.8rem;color:var(--ink-soft);line-height:1.5;}
 </style>
 </head>
 <body>
@@ -338,7 +364,8 @@
 <div class="sortleiste">
   <span>Reihenfolge in beiden Bl&ouml;cken</span>
   <div class="knoepfe">
-    <button data-art="community" aria-pressed="true">Community</button>
+    <button data-art="gesamt" aria-pressed="true">Gesamt</button>
+    <button data-art="community" aria-pressed="false">Community</button>
     <button data-art="kritiker" aria-pressed="false">Kritik</button>
     <button data-art="zweier" aria-pressed="false">Zu zweit</button>
     <button data-art="reise" aria-pressed="false">Unterwegs</button>
@@ -355,7 +382,7 @@
     <div class="rule"></div>
   </div>
   <div class="grid">
-    <div id="spiel-micromacro-crime-city" data-reise="59.4" data-zweier="100.0" class="card coop-card" data-kritiker="78.0" data-community="70.7" data-name="MicroMacro: Crime City">
+    <div data-gesamt="78.0" id="spiel-micromacro-crime-city" data-reise="59.4" data-zweier="100.0" class="card coop-card" data-kritiker="78.0" data-community="70.7" data-name="MicroMacro: Crime City">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu MicroMacro: Crime City">
@@ -422,7 +449,7 @@
       <a class="video" href="https://www.youtube.com/watch?v=So2UsuYs4QE" target="_blank" rel="noopener" title="MicroMacro Crime city - Regeln + Review"><span class="play" aria-hidden="true">&#9654;</span> Regelvideo <span class="kanal">Brettspielguru</span></a>
       </div>
     </div>
-    <div id="spiel-codenames-duett" data-reise="57.5" data-zweier="100.0" class="card coop-card" data-kritiker="94.0" data-community="76.4" data-name="Codenames Duett">
+    <div data-gesamt="85.4" id="spiel-codenames-duett" data-reise="57.5" data-zweier="100.0" class="card coop-card" data-kritiker="94.0" data-community="76.4" data-name="Codenames Duett">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Codenames Duett">
@@ -493,7 +520,7 @@
       <a class="video" href="https://www.youtube.com/watch?v=XEMM2PZJWZE" target="_blank" rel="noopener" title="Spielregeln Codenames Duett - Czech Games Edition"><span class="play" aria-hidden="true">&#9654;</span> Regelvideo <span class="kanal">Heimspiel Köln</span></a>
       </div>
     </div>
-    <div id="spiel-paleo" data-reise="11.4" data-zweier="88.0" class="card coop-card" data-kritiker="" data-community="73.7" data-name="Paleo">
+    <div data-gesamt="73.2" id="spiel-paleo" data-reise="11.4" data-zweier="88.0" class="card coop-card" data-kritiker="" data-community="73.7" data-name="Paleo">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Paleo">
@@ -558,7 +585,7 @@
       <a class="video" href="https://www.youtube.com/watch?v=2KWUDkqGzhM" target="_blank" rel="noopener" title="Paleo Regeln Anleitung Regelerklärung Regelvideo Kennerspiel des Jahres 2021"><span class="play" aria-hidden="true">&#9654;</span> Regelvideo <span class="kanal">Brettspiel-Zimmer - Guru erklärt</span></a>
       </div>
     </div>
-    <div id="spiel-hanabi" data-reise="97.4" data-zweier="62.0" class="card coop-card" data-kritiker="70.0" data-community="65.8" data-name="Hanabi">
+    <div data-gesamt="69.7" id="spiel-hanabi" data-reise="97.4" data-zweier="62.0" class="card coop-card" data-kritiker="70.0" data-community="65.8" data-name="Hanabi">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Hanabi">
@@ -623,7 +650,7 @@
       <a class="video" href="https://www.youtube.com/watch?v=FdIPpgmtt_k" target="_blank" rel="noopener" title="Hanabi Regeln Anleitung Kartenspiel Erklärung Spiel des Jahres 2013"><span class="play" aria-hidden="true">&#9654;</span> Regelvideo <span class="kanal">Brettspiel-Zimmer - Guru erklärt</span></a>
       </div>
     </div>
-    <div id="spiel-pandemie" data-reise="39.1" data-zweier="62.0" class="card coop-card" data-kritiker="82.0" data-community="74.3" data-name="Pandemie">
+    <div data-gesamt="71.0" id="spiel-pandemie" data-reise="39.1" data-zweier="62.0" class="card coop-card" data-kritiker="82.0" data-community="74.3" data-name="Pandemie">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Pandemie">
@@ -684,7 +711,7 @@
       <a class="video" href="https://www.youtube.com/watch?v=_ecskoWNaMc" target="_blank" rel="noopener" title="Pandemie Regeln Anleitung Regelerklärung Regelvideo Brettspiel"><span class="play" aria-hidden="true">&#9654;</span> Regelvideo <span class="kanal">Brettspiel-Zimmer - Guru erklärt</span></a>
       </div>
     </div>
-    <div id="spiel-der-fuchs-im-wald-duett" data-reise="" data-zweier="100.0" class="card coop-card" data-kritiker="" data-community="67.6" data-name="Der Fuchs im Wald: Duett">
+    <div data-gesamt="80.2" id="spiel-der-fuchs-im-wald-duett" data-reise="" data-zweier="100.0" class="card coop-card" data-kritiker="" data-community="67.6" data-name="Der Fuchs im Wald: Duett">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Der Fuchs im Wald: Duett">
@@ -765,7 +792,7 @@
     <div class="rule"></div>
   </div>
   <div class="grid">
-    <div id="spiel-7-wonders-duel" data-reise="51.4" data-zweier="100.0" class="card duel-card" data-kritiker="86.0" data-community="79.9" data-name="7 Wonders Duel">
+    <div data-gesamt="83.2" id="spiel-7-wonders-duel" data-reise="51.4" data-zweier="100.0" class="card duel-card" data-kritiker="86.0" data-community="79.9" data-name="7 Wonders Duel">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu 7 Wonders Duel">
@@ -833,7 +860,7 @@
       <a class="video" href="https://www.youtube.com/watch?v=73vSxih8uvo" target="_blank" rel="noopener" title="7 Wonders Duel Regeln Anleitung Regelerklärung Erklärung Kartenspiel"><span class="play" aria-hidden="true">&#9654;</span> Regelvideo <span class="kanal">Brettspiel-Zimmer - Guru erklärt</span></a>
       </div>
     </div>
-    <div id="spiel-splendor-duel" data-reise="78.2" data-zweier="100.0" class="card duel-card" data-kritiker="92.0" data-community="77.6" data-name="Splendor Duel">
+    <div data-gesamt="87.2" id="spiel-splendor-duel" data-reise="78.2" data-zweier="100.0" class="card duel-card" data-kritiker="92.0" data-community="77.6" data-name="Splendor Duel">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Splendor Duel">
@@ -899,7 +926,7 @@
       <a class="video" href="https://www.youtube.com/watch?v=gKkUIBvD5yg" target="_blank" rel="noopener" title="Splendor Duel 👑 Regeln Anleitung Erklärung 💎 Brettspiel Spiel zu zweit"><span class="play" aria-hidden="true">&#9654;</span> Regelvideo <span class="kanal">Brettspiel-Zimmer - Guru erklärt</span></a>
       </div>
     </div>
-    <div id="spiel-targi" data-reise="59.2" data-zweier="100.0" class="card duel-card" data-kritiker="84.0" data-community="76.3" data-name="Targi">
+    <div data-gesamt="82.0" id="spiel-targi" data-reise="59.2" data-zweier="100.0" class="card duel-card" data-kritiker="84.0" data-community="76.3" data-name="Targi">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Targi">
@@ -960,7 +987,7 @@
       <a class="video" href="https://www.youtube.com/watch?v=XWpUl25o_Kg" target="_blank" rel="noopener" title="Targi von KOSMOS - Regeln + Review - Brettspiel - Die Brettspieltester"><span class="play" aria-hidden="true">&#9654;</span> Regelvideo <span class="kanal">Die Brettspieltester</span></a>
       </div>
     </div>
-    <div id="spiel-patchwork" data-reise="56.2" data-zweier="100.0" class="card duel-card" data-kritiker="78.0" data-community="75.3" data-name="Patchwork">
+    <div data-gesamt="79.3" id="spiel-patchwork" data-reise="56.2" data-zweier="100.0" class="card duel-card" data-kritiker="78.0" data-community="75.3" data-name="Patchwork">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Patchwork">
@@ -1029,7 +1056,7 @@
       <a class="video" href="https://www.youtube.com/watch?v=lskOe5sujeU" target="_blank" rel="noopener" title="Patchwork Regeln Anleitung Erklärung - Spiel für Zwei - Duell Brettspiel"><span class="play" aria-hidden="true">&#9654;</span> Regelvideo <span class="kanal">Brettspiel-Zimmer - Guru erklärt</span></a>
       </div>
     </div>
-    <div id="spiel-schotten-totten" data-reise="100.0" data-zweier="100.0" class="card duel-card" data-kritiker="82.0" data-community="74.0" data-name="Schotten Totten">
+    <div data-gesamt="84.6" id="spiel-schotten-totten" data-reise="100.0" data-zweier="100.0" class="card duel-card" data-kritiker="82.0" data-community="74.0" data-name="Schotten Totten">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Schotten Totten">
@@ -1095,7 +1122,7 @@
       <a class="video" href="https://www.youtube.com/watch?v=tm1_JBOjx_k" target="_blank" rel="noopener" title="How to Play Schotten Totten | Board Game Rules &amp; Instructions"><span class="play" aria-hidden="true">&#9654;</span> Regelvideo <span class="kanal">Boardgaimz</span></a>
       </div>
     </div>
-    <div id="spiel-hive-pocket" data-reise="81.8" data-zweier="100.0" class="card duel-card" data-kritiker="82.0" data-community="76.1" data-name="Hive Pocket">
+    <div data-gesamt="83.5" id="spiel-hive-pocket" data-reise="81.8" data-zweier="100.0" class="card duel-card" data-kritiker="82.0" data-community="76.1" data-name="Hive Pocket">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Hive Pocket">
@@ -1158,7 +1185,7 @@
       <a class="video" href="https://www.youtube.com/watch?v=K9PQlqPdGRw" target="_blank" rel="noopener" title="How to Play Hive | Board Game Rules &amp; Instructions"><span class="play" aria-hidden="true">&#9654;</span> Regelvideo <span class="kanal">Boardgaimz</span></a>
       </div>
     </div>
-    <div id="spiel-mindbug" data-reise="85.4" data-zweier="100.0" class="card duel-card" data-kritiker="60.0" data-community="74.5" data-name="Mindbug">
+    <div data-gesamt="75.6" id="spiel-mindbug" data-reise="85.4" data-zweier="100.0" class="card duel-card" data-kritiker="60.0" data-community="74.5" data-name="Mindbug">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Mindbug">
@@ -1227,7 +1254,7 @@
       <a class="video" href="https://www.youtube.com/watch?v=1VYVHOCXitw" target="_blank" rel="noopener" title="Mindbug Regeln Anleitung Erklärung - Kartenspiel Kennerspiel - TCG"><span class="play" aria-hidden="true">&#9654;</span> Regelvideo <span class="kanal">Brettspiel-Zimmer - Guru erklärt</span></a>
       </div>
     </div>
-    <div id="spiel-compile-main-1" data-reise="97.9" data-zweier="100.0" class="card duel-card" data-kritiker="" data-community="74.6" data-name="Compile: Main 1">
+    <div data-gesamt="84.6" id="spiel-compile-main-1" data-reise="97.9" data-zweier="100.0" class="card duel-card" data-kritiker="" data-community="74.6" data-name="Compile: Main 1">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Compile">
@@ -1298,7 +1325,7 @@
       <a class="video" href="https://www.youtube.com/watch?v=xBH8m2jSBjM" target="_blank" rel="noopener" title="COMPILE – Regelerklärung und Review – Das aktuell beste Zwei-Spieler-Kartenspiel"><span class="play" aria-hidden="true">&#9654;</span> Regelvideo <span class="kanal">Michael Will Spielen</span></a>
       </div>
     </div>
-    <div id="spiel-agent-avenue" data-reise="85.4" data-zweier="100.0" class="card duel-card" data-kritiker="86.0" data-community="72.7" data-name="Agent Avenue">
+    <div data-gesamt="84.1" id="spiel-agent-avenue" data-reise="85.4" data-zweier="100.0" class="card duel-card" data-kritiker="86.0" data-community="72.7" data-name="Agent Avenue">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Agent Avenue">
@@ -1369,7 +1396,7 @@
       <a class="video" href="https://www.youtube.com/watch?v=9xgVNdvOsr8" target="_blank" rel="noopener" title="Agent Avenue Regeln Anleitung Regelvideo Erklärt Kartenspiel 2024"><span class="play" aria-hidden="true">&#9654;</span> Regelvideo <span class="kanal">Brettspiel-Zimmer - Guru erklärt</span></a>
       </div>
     </div>
-    <div id="spiel-revolver-noir" data-reise="" data-zweier="100.0" class="card duel-card" data-kritiker="" data-community="70.7" data-name="Revolver Noir">
+    <div data-gesamt="81.3" id="spiel-revolver-noir" data-reise="" data-zweier="100.0" class="card duel-card" data-kritiker="" data-community="70.7" data-name="Revolver Noir">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Revolver Noir">
@@ -1435,7 +1462,7 @@
       <a class="video" href="https://www.youtube.com/watch?v=qFp6KVpnQMo" target="_blank" rel="noopener" title="REVOLVER NOIR – Regelerklärung und Review – Spannendes 2-Spieler-Kartenduell"><span class="play" aria-hidden="true">&#9654;</span> Regelvideo <span class="kanal">Michael Will Spielen</span></a>
       </div>
     </div>
-    <div id="spiel-koder" data-reise="91.0" data-zweier="62.0" class="card duel-card" data-kritiker="" data-community="67.6" data-name="Köder">
+    <div data-gesamt="73.9" id="spiel-koder" data-reise="91.0" data-zweier="62.0" class="card duel-card" data-kritiker="" data-community="67.6" data-name="Köder">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu K&ouml;der">
@@ -1507,7 +1534,7 @@
       <a class="video" href="https://www.youtube.com/watch?v=bylEXVkpjiw" target="_blank" rel="noopener" title="KÖDER: Lohnt sich das neue Angel-Spiel? | Regelerklärung &amp; Review"><span class="play" aria-hidden="true">&#9654;</span> Regelvideo <span class="kanal">Michael Will Spielen</span></a>
       </div>
     </div>
-    <div id="spiel-jaipur" data-reise="85.4" data-zweier="100.0" class="card duel-card" data-kritiker="70.0" data-community="73.5" data-name="Jaipur">
+    <div data-gesamt="78.8" id="spiel-jaipur" data-reise="85.4" data-zweier="100.0" class="card duel-card" data-kritiker="70.0" data-community="73.5" data-name="Jaipur">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Jaipur">
@@ -1573,7 +1600,7 @@
       <a class="video" href="https://www.youtube.com/watch?v=CkAnWpq95sU" target="_blank" rel="noopener" title="Spielaufbau und Regelerklärung Jaipur"><span class="play" aria-hidden="true">&#9654;</span> Regelvideo <span class="kanal">Frank Schmidtsdorff</span></a>
       </div>
     </div>
-    <div id="spiel-lost-cities-das-duell" data-reise="62.6" data-zweier="100.0" class="card duel-card" data-kritiker="76.0" data-community="69.7" data-name="Lost Cities: Das Duell">
+    <div data-gesamt="77.3" id="spiel-lost-cities-das-duell" data-reise="62.6" data-zweier="100.0" class="card duel-card" data-kritiker="76.0" data-community="69.7" data-name="Lost Cities: Das Duell">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Lost Cities: Das Duell">
@@ -1640,7 +1667,7 @@
       <a class="video" href="https://www.youtube.com/watch?v=YOlkji2GRP0" target="_blank" rel="noopener" title="Lost Cities! -Regeln und Einblicke in das Spiel"><span class="play" aria-hidden="true">&#9654;</span> Regelvideo <span class="kanal">Brettspielfamilie</span></a>
       </div>
     </div>
-    <div id="spiel-watergate" data-reise="" data-zweier="100.0" class="card duel-card" data-kritiker="92.0" data-community="77.2" data-name="Watergate">
+    <div data-gesamt="87.0" id="spiel-watergate" data-reise="" data-zweier="100.0" class="card duel-card" data-kritiker="92.0" data-community="77.2" data-name="Watergate">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Watergate">
@@ -1733,9 +1760,20 @@
     <div><b>10&ndash;60</b><span>Minuten</span></div>
   </div>
 
+  <div class="sieger">
+    <span class="spitze-art">Gesamtwertung</span>
+    <div class="sieger-zeile">
+      <strong>Splendor Duel</strong>
+      <span class="sieger-wert">87,2</span>
+    </div>
+    <small>Aus allen vier Skalen gewichtet &ndash; knapp vor
+    Watergate (87,0).
+    Wie gerechnet wird, steht unter <i>Punkte &amp; Quellen</i>.</small>
+  </div>
+
   <h2 class="abschnitt">Die Spitzenreiter</h2>
   <p class="abschnitt-text">Vier Skalen, vier verschiedene Sieger &ndash; kein Titel f&uuml;hrt
-  &uuml;berall.</p>
+  &uuml;berall. Deshalb gibt es zus&auml;tzlich die gewichtete Gesamtwertung oben.</p>
   <div class="spitzen">
       <div class="spitze" style="--ton:#A83226">
         <span class="spitze-art">Kritik</span>
@@ -1794,39 +1832,41 @@
 <div id="bereich-rangliste" class="bereich" role="tabpanel" aria-labelledby="menue-rangliste" hidden>
   <div class="tafel">
     <h2 class="abschnitt">Rangliste</h2>
-    <p class="abschnitt-text">Alle 20 Titel nebeneinander. Ein Klick auf einen Spaltenkopf sortiert danach,
+    <p class="abschnitt-text">Alle 20 Titel nebeneinander. Vorsortiert nach <i>Gesamt</i>. Ein Klick auf einen Spaltenkopf sortiert um,
     ein Klick auf einen Spielnamen f&uuml;hrt zur Karte. Ungemessene Werte stehen
     immer am Ende.</p>
     <div class="tab-huelle">
       <table class="werte rang-tabelle">
         <thead><tr>
           <th>Spiel</th>
+          <th class="mitte sortierbar gesamt-kopf" data-art="gesamt" aria-sort="descending">Gesamt</th>
+          <th class="mitte">Basis</th>
           <th class="mitte sortierbar" data-art="kritiker">Kritik</th>
           <th class="mitte sortierbar" data-art="community">Community</th>
           <th class="mitte sortierbar" data-art="zweier">Zu zweit</th>
           <th class="mitte sortierbar" data-art="reise">Unterwegs</th>
         </tr></thead>
         <tbody>
-        <tr data-kritiker="86.0" data-community="79.9" data-zweier="100" data-reise="51.4"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> <button class="zum-spiel" data-bereich="duell" data-spiel="spiel-7-wonders-duel">7 Wonders Duel</button></td><td class="mitte">86,0</td><td class="mitte">79,9</td><td class="mitte">100,0</td><td class="mitte">51,4</td></tr>
-        <tr data-kritiker="92.0" data-community="77.6" data-zweier="100" data-reise="78.2"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> <button class="zum-spiel" data-bereich="duell" data-spiel="spiel-splendor-duel">Splendor Duel</button></td><td class="mitte">92,0</td><td class="mitte">77,6</td><td class="mitte">100,0</td><td class="mitte">78,2</td></tr>
-        <tr data-kritiker="92.0" data-community="77.2" data-zweier="100" data-reise=""><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> <button class="zum-spiel" data-bereich="duell" data-spiel="spiel-watergate">Watergate</button></td><td class="mitte">92,0</td><td class="mitte">77,2</td><td class="mitte">100,0</td><td class="mitte"><span class="leer">&ndash;</span></td></tr>
-        <tr data-kritiker="94.0" data-community="76.4" data-zweier="100" data-reise="57.5"><td><span class="art-punkt" style="background:var(--coop)" title="kooperativ"></span> <button class="zum-spiel" data-bereich="koop" data-spiel="spiel-codenames-duett">Codenames Duett</button></td><td class="mitte">94,0</td><td class="mitte">76,4</td><td class="mitte">100,0</td><td class="mitte">57,5</td></tr>
-        <tr data-kritiker="84.0" data-community="76.3" data-zweier="100" data-reise="59.2"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> <button class="zum-spiel" data-bereich="duell" data-spiel="spiel-targi">Targi</button></td><td class="mitte">84,0</td><td class="mitte">76,3</td><td class="mitte">100,0</td><td class="mitte">59,2</td></tr>
-        <tr data-kritiker="82.0" data-community="76.1" data-zweier="100" data-reise="81.8"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> <button class="zum-spiel" data-bereich="duell" data-spiel="spiel-hive-pocket">Hive Pocket</button></td><td class="mitte">82,0</td><td class="mitte">76,1</td><td class="mitte">100,0</td><td class="mitte">81,8</td></tr>
-        <tr data-kritiker="78.0" data-community="75.3" data-zweier="100" data-reise="56.2"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> <button class="zum-spiel" data-bereich="duell" data-spiel="spiel-patchwork">Patchwork</button></td><td class="mitte">78,0</td><td class="mitte">75,3</td><td class="mitte">100,0</td><td class="mitte">56,2</td></tr>
-        <tr data-kritiker="" data-community="74.6" data-zweier="100" data-reise="97.9"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> <button class="zum-spiel" data-bereich="duell" data-spiel="spiel-compile-main-1">Compile: Main 1</button></td><td class="mitte"><span class="leer">&ndash;</span></td><td class="mitte">74,6</td><td class="mitte">100,0</td><td class="mitte">97,9</td></tr>
-        <tr data-kritiker="60.0" data-community="74.5" data-zweier="100" data-reise="85.4"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> <button class="zum-spiel" data-bereich="duell" data-spiel="spiel-mindbug">Mindbug</button></td><td class="mitte">60,0</td><td class="mitte">74,5</td><td class="mitte">100,0</td><td class="mitte">85,4</td></tr>
-        <tr data-kritiker="82.0" data-community="74.3" data-zweier="62" data-reise="39.1"><td><span class="art-punkt" style="background:var(--coop)" title="kooperativ"></span> <button class="zum-spiel" data-bereich="koop" data-spiel="spiel-pandemie">Pandemie</button></td><td class="mitte">82,0</td><td class="mitte">74,3</td><td class="mitte">62,0</td><td class="mitte">39,1</td></tr>
-        <tr data-kritiker="82.0" data-community="74.0" data-zweier="100" data-reise="100"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> <button class="zum-spiel" data-bereich="duell" data-spiel="spiel-schotten-totten">Schotten Totten</button></td><td class="mitte">82,0</td><td class="mitte">74,0</td><td class="mitte">100,0</td><td class="mitte">100,0</td></tr>
-        <tr data-kritiker="" data-community="73.7" data-zweier="88" data-reise="11.4"><td><span class="art-punkt" style="background:var(--coop)" title="kooperativ"></span> <button class="zum-spiel" data-bereich="koop" data-spiel="spiel-paleo">Paleo</button></td><td class="mitte"><span class="leer">&ndash;</span></td><td class="mitte">73,7</td><td class="mitte">88,0</td><td class="mitte">11,4</td></tr>
-        <tr data-kritiker="70.0" data-community="73.5" data-zweier="100" data-reise="85.4"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> <button class="zum-spiel" data-bereich="duell" data-spiel="spiel-jaipur">Jaipur</button></td><td class="mitte">70,0</td><td class="mitte">73,5</td><td class="mitte">100,0</td><td class="mitte">85,4</td></tr>
-        <tr data-kritiker="86.0" data-community="72.7" data-zweier="100" data-reise="85.4"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> <button class="zum-spiel" data-bereich="duell" data-spiel="spiel-agent-avenue">Agent Avenue</button></td><td class="mitte">86,0</td><td class="mitte">72,7</td><td class="mitte">100,0</td><td class="mitte">85,4</td></tr>
-        <tr data-kritiker="78.0" data-community="70.7" data-zweier="100" data-reise="59.4"><td><span class="art-punkt" style="background:var(--coop)" title="kooperativ"></span> <button class="zum-spiel" data-bereich="koop" data-spiel="spiel-micromacro-crime-city">MicroMacro: Crime City</button></td><td class="mitte">78,0</td><td class="mitte">70,7</td><td class="mitte">100,0</td><td class="mitte">59,4</td></tr>
-        <tr data-kritiker="" data-community="70.7" data-zweier="100" data-reise=""><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> <button class="zum-spiel" data-bereich="duell" data-spiel="spiel-revolver-noir">Revolver Noir</button></td><td class="mitte"><span class="leer">&ndash;</span></td><td class="mitte">70,7</td><td class="mitte">100,0</td><td class="mitte"><span class="leer">&ndash;</span></td></tr>
-        <tr data-kritiker="76.0" data-community="69.7" data-zweier="100" data-reise="62.6"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> <button class="zum-spiel" data-bereich="duell" data-spiel="spiel-lost-cities-das-duell">Lost Cities: Das Duell</button></td><td class="mitte">76,0</td><td class="mitte">69,7</td><td class="mitte">100,0</td><td class="mitte">62,6</td></tr>
-        <tr data-kritiker="" data-community="67.6" data-zweier="62" data-reise="91.0"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> <button class="zum-spiel" data-bereich="duell" data-spiel="spiel-koder">Köder</button></td><td class="mitte"><span class="leer">&ndash;</span></td><td class="mitte">67,6</td><td class="mitte">62,0</td><td class="mitte">91,0</td></tr>
-        <tr data-kritiker="" data-community="67.6" data-zweier="100" data-reise=""><td><span class="art-punkt" style="background:var(--coop)" title="kooperativ"></span> <button class="zum-spiel" data-bereich="koop" data-spiel="spiel-der-fuchs-im-wald-duett">Der Fuchs im Wald: Duett</button></td><td class="mitte"><span class="leer">&ndash;</span></td><td class="mitte">67,6</td><td class="mitte">100,0</td><td class="mitte"><span class="leer">&ndash;</span></td></tr>
-        <tr data-kritiker="70.0" data-community="65.8" data-zweier="62" data-reise="97.4"><td><span class="art-punkt" style="background:var(--coop)" title="kooperativ"></span> <button class="zum-spiel" data-bereich="koop" data-spiel="spiel-hanabi">Hanabi</button></td><td class="mitte">70,0</td><td class="mitte">65,8</td><td class="mitte">62,0</td><td class="mitte">97,4</td></tr>
+        <tr data-gesamt="87.2" data-kritiker="92.0" data-community="77.6" data-zweier="100" data-reise="78.2"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> <button class="zum-spiel" data-bereich="duell" data-spiel="spiel-splendor-duel">Splendor Duel</button></td><td class="mitte gesamt">87,2</td><td class="mitte"><span class="basis" title="auf allen vier Skalen gemessen">4/4</span></td><td class="mitte">92,0</td><td class="mitte">77,6</td><td class="mitte">100,0</td><td class="mitte">78,2</td></tr>
+        <tr data-gesamt="87.0" data-kritiker="92.0" data-community="77.2" data-zweier="100" data-reise=""><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> <button class="zum-spiel" data-bereich="duell" data-spiel="spiel-watergate">Watergate</button></td><td class="mitte gesamt">87,0</td><td class="mitte"><span class="basis knapp" title="ersetzt durch den Median: Unterwegs">3/4</span></td><td class="mitte">92,0</td><td class="mitte">77,2</td><td class="mitte">100,0</td><td class="mitte"><span class="leer">&ndash;</span></td></tr>
+        <tr data-gesamt="85.4" data-kritiker="94.0" data-community="76.4" data-zweier="100" data-reise="57.5"><td><span class="art-punkt" style="background:var(--coop)" title="kooperativ"></span> <button class="zum-spiel" data-bereich="koop" data-spiel="spiel-codenames-duett">Codenames Duett</button></td><td class="mitte gesamt">85,4</td><td class="mitte"><span class="basis" title="auf allen vier Skalen gemessen">4/4</span></td><td class="mitte">94,0</td><td class="mitte">76,4</td><td class="mitte">100,0</td><td class="mitte">57,5</td></tr>
+        <tr data-gesamt="84.6" data-kritiker="" data-community="74.6" data-zweier="100" data-reise="97.9"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> <button class="zum-spiel" data-bereich="duell" data-spiel="spiel-compile-main-1">Compile: Main 1</button></td><td class="mitte gesamt">84,6</td><td class="mitte"><span class="basis knapp" title="ersetzt durch den Median: Kritik">3/4</span></td><td class="mitte"><span class="leer">&ndash;</span></td><td class="mitte">74,6</td><td class="mitte">100,0</td><td class="mitte">97,9</td></tr>
+        <tr data-gesamt="84.6" data-kritiker="82.0" data-community="74.0" data-zweier="100" data-reise="100"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> <button class="zum-spiel" data-bereich="duell" data-spiel="spiel-schotten-totten">Schotten Totten</button></td><td class="mitte gesamt">84,6</td><td class="mitte"><span class="basis" title="auf allen vier Skalen gemessen">4/4</span></td><td class="mitte">82,0</td><td class="mitte">74,0</td><td class="mitte">100,0</td><td class="mitte">100,0</td></tr>
+        <tr data-gesamt="84.1" data-kritiker="86.0" data-community="72.7" data-zweier="100" data-reise="85.4"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> <button class="zum-spiel" data-bereich="duell" data-spiel="spiel-agent-avenue">Agent Avenue</button></td><td class="mitte gesamt">84,1</td><td class="mitte"><span class="basis" title="auf allen vier Skalen gemessen">4/4</span></td><td class="mitte">86,0</td><td class="mitte">72,7</td><td class="mitte">100,0</td><td class="mitte">85,4</td></tr>
+        <tr data-gesamt="83.5" data-kritiker="82.0" data-community="76.1" data-zweier="100" data-reise="81.8"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> <button class="zum-spiel" data-bereich="duell" data-spiel="spiel-hive-pocket">Hive Pocket</button></td><td class="mitte gesamt">83,5</td><td class="mitte"><span class="basis" title="auf allen vier Skalen gemessen">4/4</span></td><td class="mitte">82,0</td><td class="mitte">76,1</td><td class="mitte">100,0</td><td class="mitte">81,8</td></tr>
+        <tr data-gesamt="83.2" data-kritiker="86.0" data-community="79.9" data-zweier="100" data-reise="51.4"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> <button class="zum-spiel" data-bereich="duell" data-spiel="spiel-7-wonders-duel">7 Wonders Duel</button></td><td class="mitte gesamt">83,2</td><td class="mitte"><span class="basis" title="auf allen vier Skalen gemessen">4/4</span></td><td class="mitte">86,0</td><td class="mitte">79,9</td><td class="mitte">100,0</td><td class="mitte">51,4</td></tr>
+        <tr data-gesamt="82.0" data-kritiker="84.0" data-community="76.3" data-zweier="100" data-reise="59.2"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> <button class="zum-spiel" data-bereich="duell" data-spiel="spiel-targi">Targi</button></td><td class="mitte gesamt">82,0</td><td class="mitte"><span class="basis" title="auf allen vier Skalen gemessen">4/4</span></td><td class="mitte">84,0</td><td class="mitte">76,3</td><td class="mitte">100,0</td><td class="mitte">59,2</td></tr>
+        <tr data-gesamt="81.3" data-kritiker="" data-community="70.7" data-zweier="100" data-reise=""><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> <button class="zum-spiel" data-bereich="duell" data-spiel="spiel-revolver-noir">Revolver Noir</button></td><td class="mitte gesamt">81,3</td><td class="mitte"><span class="basis knapp" title="ersetzt durch den Median: Kritik, Unterwegs">2/4</span></td><td class="mitte"><span class="leer">&ndash;</span></td><td class="mitte">70,7</td><td class="mitte">100,0</td><td class="mitte"><span class="leer">&ndash;</span></td></tr>
+        <tr data-gesamt="80.2" data-kritiker="" data-community="67.6" data-zweier="100" data-reise=""><td><span class="art-punkt" style="background:var(--coop)" title="kooperativ"></span> <button class="zum-spiel" data-bereich="koop" data-spiel="spiel-der-fuchs-im-wald-duett">Der Fuchs im Wald: Duett</button></td><td class="mitte gesamt">80,2</td><td class="mitte"><span class="basis knapp" title="ersetzt durch den Median: Kritik, Unterwegs">2/4</span></td><td class="mitte"><span class="leer">&ndash;</span></td><td class="mitte">67,6</td><td class="mitte">100,0</td><td class="mitte"><span class="leer">&ndash;</span></td></tr>
+        <tr data-gesamt="79.3" data-kritiker="78.0" data-community="75.3" data-zweier="100" data-reise="56.2"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> <button class="zum-spiel" data-bereich="duell" data-spiel="spiel-patchwork">Patchwork</button></td><td class="mitte gesamt">79,3</td><td class="mitte"><span class="basis" title="auf allen vier Skalen gemessen">4/4</span></td><td class="mitte">78,0</td><td class="mitte">75,3</td><td class="mitte">100,0</td><td class="mitte">56,2</td></tr>
+        <tr data-gesamt="78.8" data-kritiker="70.0" data-community="73.5" data-zweier="100" data-reise="85.4"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> <button class="zum-spiel" data-bereich="duell" data-spiel="spiel-jaipur">Jaipur</button></td><td class="mitte gesamt">78,8</td><td class="mitte"><span class="basis" title="auf allen vier Skalen gemessen">4/4</span></td><td class="mitte">70,0</td><td class="mitte">73,5</td><td class="mitte">100,0</td><td class="mitte">85,4</td></tr>
+        <tr data-gesamt="78.0" data-kritiker="78.0" data-community="70.7" data-zweier="100" data-reise="59.4"><td><span class="art-punkt" style="background:var(--coop)" title="kooperativ"></span> <button class="zum-spiel" data-bereich="koop" data-spiel="spiel-micromacro-crime-city">MicroMacro: Crime City</button></td><td class="mitte gesamt">78,0</td><td class="mitte"><span class="basis" title="auf allen vier Skalen gemessen">4/4</span></td><td class="mitte">78,0</td><td class="mitte">70,7</td><td class="mitte">100,0</td><td class="mitte">59,4</td></tr>
+        <tr data-gesamt="77.3" data-kritiker="76.0" data-community="69.7" data-zweier="100" data-reise="62.6"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> <button class="zum-spiel" data-bereich="duell" data-spiel="spiel-lost-cities-das-duell">Lost Cities: Das Duell</button></td><td class="mitte gesamt">77,3</td><td class="mitte"><span class="basis" title="auf allen vier Skalen gemessen">4/4</span></td><td class="mitte">76,0</td><td class="mitte">69,7</td><td class="mitte">100,0</td><td class="mitte">62,6</td></tr>
+        <tr data-gesamt="75.6" data-kritiker="60.0" data-community="74.5" data-zweier="100" data-reise="85.4"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> <button class="zum-spiel" data-bereich="duell" data-spiel="spiel-mindbug">Mindbug</button></td><td class="mitte gesamt">75,6</td><td class="mitte"><span class="basis" title="auf allen vier Skalen gemessen">4/4</span></td><td class="mitte">60,0</td><td class="mitte">74,5</td><td class="mitte">100,0</td><td class="mitte">85,4</td></tr>
+        <tr data-gesamt="73.9" data-kritiker="" data-community="67.6" data-zweier="62" data-reise="91.0"><td><span class="art-punkt" style="background:var(--duel)" title="kompetitiv"></span> <button class="zum-spiel" data-bereich="duell" data-spiel="spiel-koder">Köder</button></td><td class="mitte gesamt">73,9</td><td class="mitte"><span class="basis knapp" title="ersetzt durch den Median: Kritik">3/4</span></td><td class="mitte"><span class="leer">&ndash;</span></td><td class="mitte">67,6</td><td class="mitte">62,0</td><td class="mitte">91,0</td></tr>
+        <tr data-gesamt="73.2" data-kritiker="" data-community="73.7" data-zweier="88" data-reise="11.4"><td><span class="art-punkt" style="background:var(--coop)" title="kooperativ"></span> <button class="zum-spiel" data-bereich="koop" data-spiel="spiel-paleo">Paleo</button></td><td class="mitte gesamt">73,2</td><td class="mitte"><span class="basis knapp" title="ersetzt durch den Median: Kritik">3/4</span></td><td class="mitte"><span class="leer">&ndash;</span></td><td class="mitte">73,7</td><td class="mitte">88,0</td><td class="mitte">11,4</td></tr>
+        <tr data-gesamt="71.0" data-kritiker="82.0" data-community="74.3" data-zweier="62" data-reise="39.1"><td><span class="art-punkt" style="background:var(--coop)" title="kooperativ"></span> <button class="zum-spiel" data-bereich="koop" data-spiel="spiel-pandemie">Pandemie</button></td><td class="mitte gesamt">71,0</td><td class="mitte"><span class="basis" title="auf allen vier Skalen gemessen">4/4</span></td><td class="mitte">82,0</td><td class="mitte">74,3</td><td class="mitte">62,0</td><td class="mitte">39,1</td></tr>
+        <tr data-gesamt="69.7" data-kritiker="70.0" data-community="65.8" data-zweier="62" data-reise="97.4"><td><span class="art-punkt" style="background:var(--coop)" title="kooperativ"></span> <button class="zum-spiel" data-bereich="koop" data-spiel="spiel-hanabi">Hanabi</button></td><td class="mitte gesamt">69,7</td><td class="mitte"><span class="basis" title="auf allen vier Skalen gemessen">4/4</span></td><td class="mitte">70,0</td><td class="mitte">65,8</td><td class="mitte">62,0</td><td class="mitte">97,4</td></tr>
         </tbody>
       </table>
     </div>
@@ -1912,6 +1952,24 @@
       75&nbsp;&times;&nbsp;110&nbsp;cm. Diese zweite Dimension steht weiter in der
       Zeile <i>Reisetauglich</i> auf jeder Karte und in Pro und Contra.
       F&uuml;r Revolver Noir, Watergate und Der Fuchs im Wald: Duett gibt kein Shop Ma&szlig;e her.</p>
+    </article>
+    <article class="gesamt-methode">
+      <h3>Gesamt</h3>
+      <p>Die vier Skalen messen Verschiedenes und sind untereinander nicht
+      vergleichbar. F&uuml;r eine Reihenfolge braucht es trotzdem eine Zahl &ndash;
+      also eine Gewichtung, und die ist eine Entscheidung, keine Messung:</p>
+      <p class="formel">Gesamt = 0,35 &times; Kritik + 0,35 &times; Community<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ 0,20 &times; Zu zweit + 0,10 &times; Unterwegs</p>
+      <p>Was Kritik und Community sagen, wiegt zusammen 70 Prozent &ndash; das ist das
+      Urteil &uuml;ber das Spiel selbst. <i>Zu zweit</i> bekommt 20 Prozent, weil genau
+      das der Zweck dieser Liste ist. Das Packma&szlig; ist ein Zusatznutzen und wiegt
+      10 Prozent.</p>
+      <p class="luecke"><b>Fehlende Messungen:</b> Wo ein Wert fehlt, tritt der Median
+      aller gemessenen an seine Stelle (Kritik 82,0 &middot; Community 74,2 &middot; Zu zweit 100,0 &middot; Unterwegs 78,2). Sonst w&uuml;rde ein Titel davon
+      profitieren, dass ihm ausgerechnet seine schw&auml;chste Skala fehlt &ndash; beim
+      ersten Rechenversuch stand Watergate genau deshalb an der Spitze. Die Spalte
+      <i>Basis</i> zeigt, auf wie vielen der vier Skalen ein Wert wirklich beruht;
+      alles unter 4/4 ist eingef&auml;rbt.</p>
     </article>
   </div>
 
@@ -2133,7 +2191,7 @@
     b.addEventListener('click', function(){ sortiere(b.dataset.art); });
   });
 
-  sortiere('community');
+  sortiere('gesamt');
 })();
 </script>
 </body>
