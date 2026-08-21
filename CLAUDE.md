@@ -6,6 +6,7 @@ Ausgangsmaterial sind HTML-Artefakte und READMEs, die in Claude-Chats entstehen.
 ## Aufbau
 
     input/       Ablagebereich - ein Ordner je Artefakt aus dem Chat
+    docs/        Veröffentlichungsbereich für GitHub Pages - erzeugt, nie von Hand
     werkzeug/    Prüf- und Hilfsskripte (Python 3, ohne Fremdpakete)
     .claude/     Agenten, Fähigkeiten, Befehle für diese Umgebung
 
@@ -29,8 +30,13 @@ Ordnung - sie laden nichts nach.
     python werkzeug/ablage_pruefen.py            prüft input/, schreibt UEBERSICHT.md
     python werkzeug/ablage_pruefen.py --streng   Rückgabecode 1 bei Mängeln
 
+    python werkzeug/veroeffentlichen.py          stellt geprüfte Ablagen nach docs/
+    python werkzeug/veroeffentlichen.py --trocken   zeigt nur, was passieren würde
+
 Nach jeder Änderung an `input/` das Prüfwerkzeug laufen lassen, damit
-`UEBERSICHT.md` stimmt.
+`UEBERSICHT.md` stimmt. `docs/` wird bei jedem Lauf komplett neu erzeugt -
+dort nichts von Hand ablegen, es geht verloren. Nur Ablagen ohne Fehler
+kommen hinein.
 
 ## Sprache
 

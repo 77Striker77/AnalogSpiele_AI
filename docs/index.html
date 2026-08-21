@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AnalogSpiele &ndash; Spielhilfen und &Uuml;bersichten</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Public+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --filz:#20402F; --filz-tief:#17301F; --papier:#FBFAF5;
+    --tinte:#23241F; --tinte-leise:#5C5E54; --gold:#C9A24B; --linie:#E3E1D6;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family:'Public Sans',system-ui,-apple-system,sans-serif;
+    background:var(--filz);
+    background-image:radial-gradient(ellipse at 50% -10%, #2A5039 0%, var(--filz) 55%, var(--filz-tief) 100%);
+    background-attachment:fixed;
+    color:var(--tinte); line-height:1.55; padding:0 16px 64px; min-height:100vh;
+  }
+  .rahmen { max-width:900px; margin:0 auto; }
+  header { text-align:center; color:#F2EFE4; padding:56px 8px 40px; }
+  .ueberzeile {
+    display:inline-block; font-size:.75rem; letter-spacing:.22em;
+    text-transform:uppercase; color:var(--gold); font-weight:700; margin-bottom:14px;
+  }
+  h1 {
+    font-family:'Bricolage Grotesque',system-ui,sans-serif; font-weight:800; font-size:clamp(2rem,5.5vw,3.2rem);
+    line-height:1.05; letter-spacing:-.01em;
+  }
+  header p { max-width:620px; margin:16px auto 0; color:#C9D2C4; font-size:.95rem; }
+  .liste { display:grid; gap:18px; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); }
+  .karte {
+    display:block; background:var(--papier); border-radius:12px; padding:22px 24px;
+    text-decoration:none; color:inherit; border:1px solid var(--linie);
+    box-shadow:0 10px 24px rgba(0,0,0,.22);
+    transition:transform .16s ease, box-shadow .16s ease;
+  }
+  .karte:hover, .karte:focus-visible {
+    transform:translateY(-3px); box-shadow:0 16px 32px rgba(0,0,0,.3);
+  }
+  .karte:focus-visible { outline:3px solid var(--gold); outline-offset:3px; }
+  .karte h2 { font-family:'Bricolage Grotesque',system-ui,sans-serif; font-size:1.15rem; line-height:1.25; margin-bottom:8px; }
+  .karte p { font-size:.9rem; color:var(--tinte-leise); }
+  .fuss {
+    display:block; margin-top:14px; font-size:.75rem; letter-spacing:.12em;
+    text-transform:uppercase; color:var(--tinte-leise);
+  }
+  .leer { color:#C9D2C4; text-align:center; padding:40px 0; }
+  footer { text-align:center; color:#8FA091; font-size:.8rem; margin-top:48px; }
+  footer a { color:var(--gold); }
+</style>
+</head>
+<body>
+  <div class="rahmen">
+    <header>
+      <span class="ueberzeile">Analoge Spiele</span>
+      <h1>Spielhilfen &amp; &Uuml;bersichten</h1>
+      <p>Was am Spieltisch hilft: Auswahllisten, Punktez&auml;hler, Regel&uuml;bersichten.
+      Eine Seite.</p>
+    </header>
+    <main class="liste">
+    <a class="karte" href="spiele-fuer-zwei/">
+      <h2>Spiele für Zwei – Miteinander &amp; Gegeneinander</h2>
+      <p>Einseitige Übersicht der zwölf besten analogen Zwei-Personen-Spiele – sechs kooperative, sechs kompetitive.</p>
+      <span class="fuss">21.08.2026</span>
+    </a>
+    </main>
+    <footer>
+      Erzeugt aus <a href="https://github.com/77Striker77/AnalogSpiele_AI">AnalogSpiele_AI</a>
+    </footer>
+  </div>
+</body>
+</html>
