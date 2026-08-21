@@ -34,22 +34,39 @@ der Seite selbst.
 
 ## Was das Artefakt tut
 
-Eine Seite mit zwei Reitern. Der erste stellt siebzehn Spiele in zwei Blöcken
-gegenüber:
-*Miteinander* (kooperativ) und *Gegeneinander* (kompetitiv). Jede Karte trägt
-eine Metatabelle (Spieler, Alter, Dauer, Verlag, Reisetauglichkeit, Preis),
-eine Beschreibung, den vollständigen Schachtelinhalt, je ein Pro und Contra
-aus Reviews und einen Link zum Preisvergleich.
+Eine Seite mit fünf Bereichen, zwischen denen eine Menüleiste umschaltet –
+jeder ohne Scrollen erreichbar:
 
-Über den Blöcken lässt sich die Reihenfolge umschalten: nach Community, nach
-Kritik, nach Zwei-Personen-Tauglichkeit oder zurück in die ursprüngliche
-Anordnung. Der zweite Reiter erklärt die
-Punkte und listet die Quellen. Beide Reiter sind ohne Scrollen erreichbar.
+| Bereich | Inhalt |
+| --- | --- |
+| **Start** | Kennzahlen, die Spitzenreiter je Skala, Einstiege in die Bereiche |
+| **Miteinander** | 6 kooperative Titel als Karten |
+| **Gegeneinander** | 14 Duelle als Karten |
+| **Rangliste** | alle 20 in einer Tabelle, je Spalte sortierbar; ein Klick auf den Spielnamen führt zur Karte |
+| **Punkte & Quellen** | Methode, Formeln, Rohwerte, Quellenliste |
+
+Jede Karte trägt eine Metatabelle (Spieler, Alter, Dauer, Verlag,
+Reisetauglichkeit, Preis), die vier Punktzahlen mit ihren Belegen, eine
+Beschreibung, den vollständigen Schachtelinhalt, je ein Pro und Contra aus
+Rezensionen, einen Link zum Preisvergleich und ein Regelvideo.
+
+In den beiden Kartenbereichen lässt sich die Reihenfolge nach jeder der vier
+Skalen umschalten oder in die ursprüngliche Anordnung zurücksetzen.
 
 Die Cover sind gezeichnet – zwanzig Illustrationen als Inline-SVG, ohne ein
 einziges Bitmap. Liegt eine echte Coverdatei in `covers/`, ersetzt sie die
 Zeichnung; fehlt sie, entfernt sich das `<img>` selbst und die Zeichnung
 bleibt stehen.
+
+## Videos
+
+Zu jedem der zwanzig Titel ist ein Regelvideo verlinkt, gesucht über die
+YouTube-Trefferliste und zweifach geprüft: Der Videotitel muss den Spielnamen
+enthalten, und die oembed-Schnittstelle muss das Video als abrufbar melden.
+Achtzehn sind deutschsprachig. Bei Schotten Totten und Hive steht ein
+englisches *How to Play* – die deutschen Treffer führten zum Nachfolger
+beziehungsweise zu einer anderen Ausgabe, und ein englisches Video zum
+richtigen Spiel ist besser als ein deutsches zum falschen.
 
 ## Enthaltene Spiele
 
