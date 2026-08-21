@@ -130,7 +130,7 @@
   .tafel{background:var(--paper);border-radius:14px;padding:32px 30px 36px;margin-bottom:28px;}
   .quell-kopf h2{font-family:'Bricolage Grotesque',sans-serif;font-size:1.6rem;margin-bottom:10px;}
   .quell-kopf p{max-width:62ch;color:var(--ink-soft);font-size:.94rem;}
-  .methode{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;margin:26px 0 6px;}
+  .methode{display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:22px;margin:26px 0 6px;}
   .methode article{background:#F4F2EA;border:1px solid var(--line);border-radius:10px;padding:18px 20px;}
   .methode h3{font-family:'Bricolage Grotesque',sans-serif;font-size:1.1rem;margin-bottom:8px;}
   .methode p{font-size:.88rem;margin-bottom:9px;color:var(--ink);}
@@ -170,6 +170,10 @@
   .punkt.zweier .balken i{background:#8A5A2B;}
   .punkt.zweier.trivial .punkt-kopf b{color:#8C7A5C;}
   .punkt.zweier.trivial .balken i{background:#BCAA8A;}
+
+  .punkt.zweier{grid-column:auto;}
+  .punkt.reise .punkt-kopf b{color:#2F6B4A;}
+  .punkt.reise .balken i{background:#2F6B4A;}
 </style>
 </head>
 <body>
@@ -178,7 +182,7 @@
 <header>
   <span class="eyebrow">Analoge Spiele &middot; Karten &amp; Brett &middot; reisetauglich</span>
   <h1>Miteinander <span class="vs">vs.</span> Gegeneinander</h1>
-  <p>Die besten Spiele f&uuml;r genau zwei Personen &ndash; kuratiert aus aktuellen Bestenlisten, Reviews und Community-Wertungen. Jeder Titel tr&auml;gt drei Punktzahlen: eine aus der Kritik, eine aus der Community und eine daf&uuml;r, wie gut er zu zweit wirklich funktioniert. Wie sie zustande kommen, steht unter <i>Punkte &amp; Quellen</i>. Alle Titel sind kompakt genug zum Mitnehmen, ohne reine Travel Games zu sein.</p>
+  <p>Die besten Spiele f&uuml;r genau zwei Personen &ndash; kuratiert aus aktuellen Bestenlisten, Reviews und Community-Wertungen. Jeder Titel tr&auml;gt vier Punktzahlen: Kritik, Community, wie gut er zu zweit wirklich funktioniert und wie sperrig die Schachtel ist. Wie sie zustande kommen, steht unter <i>Punkte &amp; Quellen</i>. Alle Titel sind kompakt genug zum Mitnehmen, ohne reine Travel Games zu sein.</p>
   <div class="legend">
     <span><span class="dot" style="background:var(--coop)"></span> Kooperativ</span>
     <span><span class="dot" style="background:var(--duel)"></span> Kompetitiv</span>
@@ -197,6 +201,7 @@
     <button data-art="community" aria-pressed="true">Community</button>
     <button data-art="kritiker" aria-pressed="false">Kritik</button>
     <button data-art="zweier" aria-pressed="false">Zu zweit</button>
+    <button data-art="reise" aria-pressed="false">Unterwegs</button>
     <button data-art="liste" aria-pressed="false">Ursprung</button>
   </div>
 </div>
@@ -210,7 +215,7 @@
     <div class="rule"></div>
   </div>
   <div class="grid">
-    <div data-zweier="100.0" class="card coop-card" data-kritiker="78.0" data-community="70.7" data-name="MicroMacro: Crime City">
+    <div data-reise="59.4" data-zweier="100.0" class="card coop-card" data-kritiker="78.0" data-community="70.7" data-name="MicroMacro: Crime City">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu MicroMacro: Crime City">
@@ -252,6 +257,11 @@
           <div class="balken"><i style="width:100%"></i></div>
           <small>beste Besetzung laut 388 Stimmen, obwohl 1–4 m&ouml;glich</small>
         </div>
+        <div class="punkt reise">
+          <div class="punkt-kopf"><span>Unterwegs</span><b>59,4</b></div>
+          <div class="balken"><i style="width:59%"></i></div>
+          <small>190 &times; 275 &times; 40 mm, 490 g &ndash; 2,09 Liter</small>
+        </div>
       </div>
       <table class="meta">
         <tr><td>Spieler</td><td>1–4</td></tr>
@@ -269,7 +279,7 @@
       </div>
       <a class="buy" href="https://www.brettspiel-angebote.de/spiele/micromacro-crime-city/4121/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
     </div>
-    <div data-zweier="100.0" class="card coop-card" data-kritiker="94.0" data-community="76.4" data-name="Codenames Duett">
+    <div data-reise="57.5" data-zweier="100.0" class="card coop-card" data-kritiker="94.0" data-community="76.4" data-name="Codenames Duett">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Codenames Duett">
@@ -315,6 +325,11 @@
           <div class="balken"><i style="width:100%"></i></div>
           <small>Duellspiel &ndash; Bestnote ohne Alternative</small>
         </div>
+        <div class="punkt reise">
+          <div class="punkt-kopf"><span>Unterwegs</span><b>57,5</b></div>
+          <div class="balken"><i style="width:58%"></i></div>
+          <small>160 &times; 230 &times; 55 mm, 650 g &ndash; 2,02 Liter</small>
+        </div>
       </div>
       <table class="meta">
         <tr><td>Spieler</td><td>2 (bis 4 m&ouml;glich)</td></tr>
@@ -332,7 +347,7 @@
       </div>
       <a class="buy" href="https://www.brettspiel-angebote.de/spiele/codenames-duett/2282/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
     </div>
-    <div data-zweier="28.0" class="card coop-card" data-kritiker="100.0" data-community="79.9" data-name="Die Crew: Mission Tiefsee">
+    <div data-reise="85.4" data-zweier="28.0" class="card coop-card" data-kritiker="100.0" data-community="79.9" data-name="Die Crew: Mission Tiefsee">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Die Crew: Mission Tiefsee">
@@ -371,6 +386,11 @@
           <div class="balken"><i style="width:28%"></i></div>
           <small>beste Besetzung ist 4, zu zweit nicht empfohlen (368 Stimmen)</small>
         </div>
+        <div class="punkt reise">
+          <div class="punkt-kopf"><span>Unterwegs</span><b>85,4</b></div>
+          <div class="balken"><i style="width:85%"></i></div>
+          <small>130 &times; 180 &times; 40 mm, 350 g &ndash; 0,94 Liter</small>
+        </div>
       </div>
       <table class="meta">
         <tr><td>Spieler</td><td>2&ndash;5 (zu zweit mit Sonderregel)</td></tr>
@@ -388,7 +408,7 @@
       </div>
       <a class="buy" href="https://www.brettspiel-angebote.de/spiele/die-crew-mission-tiefsee/4314/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
     </div>
-    <div data-zweier="88.0" class="card coop-card" data-kritiker="" data-community="73.7" data-name="Paleo">
+    <div data-reise="11.4" data-zweier="88.0" class="card coop-card" data-kritiker="" data-community="73.7" data-name="Paleo">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Paleo">
@@ -428,6 +448,11 @@
           <div class="balken"><i style="width:88%"></i></div>
           <small>beste Besetzung laut 439 Stimmen, obwohl 2–4 m&ouml;glich</small>
         </div>
+        <div class="punkt reise">
+          <div class="punkt-kopf"><span>Unterwegs</span><b>11,4</b></div>
+          <div class="balken"><i style="width:11%"></i></div>
+          <small>300 &times; 300 &times; 70 mm, 1700 g &ndash; 6,3 Liter</small>
+        </div>
       </div>
       <table class="meta">
         <tr><td>Spieler</td><td>2–4</td></tr>
@@ -445,7 +470,7 @@
       </div>
       <a class="buy" href="https://www.brettspiel-angebote.de/spiele/paleo/3844/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
     </div>
-    <div data-zweier="62.0" class="card coop-card" data-kritiker="70.0" data-community="65.8" data-name="Hanabi">
+    <div data-reise="97.4" data-zweier="62.0" class="card coop-card" data-kritiker="70.0" data-community="65.8" data-name="Hanabi">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Hanabi">
@@ -485,6 +510,11 @@
           <div class="balken"><i style="width:62%"></i></div>
           <small>beste Besetzung ist 4, zu zweit empfohlen (670 Stimmen)</small>
         </div>
+        <div class="punkt reise">
+          <div class="punkt-kopf"><span>Unterwegs</span><b>97,4</b></div>
+          <div class="balken"><i style="width:97%"></i></div>
+          <small>105 &times; 155 &times; 40 mm, 230 g &ndash; 0,65 Liter</small>
+        </div>
       </div>
       <table class="meta">
         <tr><td>Spieler</td><td>2&ndash;5</td></tr>
@@ -502,7 +532,7 @@
       </div>
       <a class="buy" href="https://www.brettspiel-angebote.de/spiele/hanabi-neuauflage/7122/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
     </div>
-    <div data-zweier="62.0" class="card coop-card" data-kritiker="82.0" data-community="74.3" data-name="Pandemie">
+    <div data-reise="39.1" data-zweier="62.0" class="card coop-card" data-kritiker="82.0" data-community="74.3" data-name="Pandemie">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Pandemie">
@@ -538,6 +568,11 @@
           <div class="balken"><i style="width:62%"></i></div>
           <small>beste Besetzung ist 4, zu zweit empfohlen (2194 Stimmen)</small>
         </div>
+        <div class="punkt reise">
+          <div class="punkt-kopf"><span>Unterwegs</span><b>39,1</b></div>
+          <div class="balken"><i style="width:39%"></i></div>
+          <small>310 &times; 225 &times; 45 mm, 1050 g &ndash; 3,14 Liter</small>
+        </div>
       </div>
       <table class="meta">
         <tr><td>Spieler</td><td>2–4</td></tr>
@@ -564,7 +599,7 @@
     <div class="rule"></div>
   </div>
   <div class="grid">
-    <div data-zweier="100.0" class="card duel-card" data-kritiker="86.0" data-community="79.9" data-name="7 Wonders Duel">
+    <div data-reise="51.4" data-zweier="100.0" class="card duel-card" data-kritiker="86.0" data-community="79.9" data-name="7 Wonders Duel">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu 7 Wonders Duel">
@@ -607,6 +642,11 @@
           <div class="balken"><i style="width:100%"></i></div>
           <small>Duellspiel &ndash; Bestnote ohne Alternative</small>
         </div>
+        <div class="punkt reise">
+          <div class="punkt-kopf"><span>Unterwegs</span><b>51,4</b></div>
+          <div class="balken"><i style="width:51%"></i></div>
+          <small>210 &times; 210 &times; 55 mm, 550 g &ndash; 2,43 Liter</small>
+        </div>
       </div>
       <table class="meta">
         <tr><td>Spieler</td><td>exakt 2</td></tr>
@@ -624,7 +664,7 @@
       </div>
       <a class="buy" href="https://www.brettspiel-angebote.de/spiele/7-wonders-duel/355/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
     </div>
-    <div data-zweier="100.0" class="card duel-card" data-kritiker="92.0" data-community="77.6" data-name="Splendor Duel">
+    <div data-reise="78.2" data-zweier="100.0" class="card duel-card" data-kritiker="92.0" data-community="77.6" data-name="Splendor Duel">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Splendor Duel">
@@ -665,6 +705,11 @@
           <div class="balken"><i style="width:100%"></i></div>
           <small>Duellspiel &ndash; Bestnote ohne Alternative</small>
         </div>
+        <div class="punkt reise">
+          <div class="punkt-kopf"><span>Unterwegs</span><b>78,2</b></div>
+          <div class="balken"><i style="width:78%"></i></div>
+          <small>130 &times; 180 &times; 50 mm, 440 g &ndash; 1,17 Liter</small>
+        </div>
       </div>
       <table class="meta">
         <tr><td>Spieler</td><td>exakt 2</td></tr>
@@ -682,7 +727,7 @@
       </div>
       <a class="buy" href="https://www.brettspiel-angebote.de/spiele/splendor-duel/5394/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
     </div>
-    <div data-zweier="100.0" class="card duel-card" data-kritiker="84.0" data-community="76.4" data-name="Targi">
+    <div data-reise="59.2" data-zweier="100.0" class="card duel-card" data-kritiker="84.0" data-community="76.4" data-name="Targi">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Targi">
@@ -718,6 +763,11 @@
           <div class="balken"><i style="width:100%"></i></div>
           <small>Duellspiel &ndash; Bestnote ohne Alternative</small>
         </div>
+        <div class="punkt reise">
+          <div class="punkt-kopf"><span>Unterwegs</span><b>59,2</b></div>
+          <div class="balken"><i style="width:59%"></i></div>
+          <small>205 &times; 205 &times; 50 mm, 440 g &ndash; 2,1 Liter</small>
+        </div>
       </div>
       <table class="meta">
         <tr><td>Spieler</td><td>exakt 2</td></tr>
@@ -735,7 +785,7 @@
       </div>
       <a class="buy" href="https://www.brettspiel-angebote.de/spiele/targi/186/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
     </div>
-    <div data-zweier="100.0" class="card duel-card" data-kritiker="78.0" data-community="75.3" data-name="Patchwork">
+    <div data-reise="56.2" data-zweier="100.0" class="card duel-card" data-kritiker="78.0" data-community="75.3" data-name="Patchwork">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Patchwork">
@@ -779,6 +829,11 @@
           <div class="balken"><i style="width:100%"></i></div>
           <small>Duellspiel &ndash; Bestnote ohne Alternative</small>
         </div>
+        <div class="punkt reise">
+          <div class="punkt-kopf"><span>Unterwegs</span><b>56,2</b></div>
+          <div class="balken"><i style="width:56%"></i></div>
+          <small>205 &times; 205 &times; 50 mm, 560 g &ndash; 2,1 Liter</small>
+        </div>
       </div>
       <table class="meta">
         <tr><td>Spieler</td><td>exakt 2</td></tr>
@@ -796,7 +851,7 @@
       </div>
       <a class="buy" href="https://www.brettspiel-angebote.de/spiele/patchwork/121/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
     </div>
-    <div data-zweier="100.0" class="card duel-card" data-kritiker="82.0" data-community="74.1" data-name="Schotten Totten">
+    <div data-reise="100.0" data-zweier="100.0" class="card duel-card" data-kritiker="82.0" data-community="74.1" data-name="Schotten Totten">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Schotten Totten">
@@ -837,6 +892,11 @@
           <div class="balken"><i style="width:100%"></i></div>
           <small>Duellspiel &ndash; Bestnote ohne Alternative</small>
         </div>
+        <div class="punkt reise">
+          <div class="punkt-kopf"><span>Unterwegs</span><b>100,0</b></div>
+          <div class="balken"><i style="width:100%"></i></div>
+          <small>100 &times; 150 &times; 40 mm, 240 g &ndash; 0,6 Liter</small>
+        </div>
       </div>
       <table class="meta">
         <tr><td>Spieler</td><td>exakt 2</td></tr>
@@ -854,7 +914,7 @@
       </div>
       <a class="buy" href="https://www.brettspiel-angebote.de/spiele/schotten-totten-neuauflage/6791/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
     </div>
-    <div data-zweier="100.0" class="card duel-card" data-kritiker="82.0" data-community="76.1" data-name="Hive Pocket">
+    <div data-reise="81.8" data-zweier="100.0" class="card duel-card" data-kritiker="82.0" data-community="76.1" data-name="Hive Pocket">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Hive Pocket">
@@ -892,6 +952,11 @@
           <div class="balken"><i style="width:100%"></i></div>
           <small>Duellspiel &ndash; Bestnote ohne Alternative</small>
         </div>
+        <div class="punkt reise">
+          <div class="punkt-kopf"><span>Unterwegs</span><b>81,8</b></div>
+          <div class="balken"><i style="width:82%"></i></div>
+          <small>166 &times; 147 &times; 43 mm, 280 g &ndash; 1,05 Liter</small>
+        </div>
       </div>
       <table class="meta">
         <tr><td>Spieler</td><td>exakt 2</td></tr>
@@ -909,7 +974,7 @@
       </div>
       <a class="buy" href="https://www.brettspiel-angebote.de/spiele/hive-pocket/931/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
     </div>
-    <div data-zweier="100.0" class="card duel-card" data-kritiker="60.0" data-community="74.6" data-name="Mindbug">
+    <div data-reise="85.4" data-zweier="100.0" class="card duel-card" data-kritiker="60.0" data-community="74.6" data-name="Mindbug">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Mindbug">
@@ -953,6 +1018,11 @@
           <div class="balken"><i style="width:100%"></i></div>
           <small>Duellspiel &ndash; Bestnote ohne Alternative</small>
         </div>
+        <div class="punkt reise">
+          <div class="punkt-kopf"><span>Unterwegs</span><b>85,4</b></div>
+          <div class="balken"><i style="width:85%"></i></div>
+          <small>180 &times; 130 &times; 40 mm, 250 g &ndash; 0,94 Liter</small>
+        </div>
       </div>
       <table class="meta">
         <tr><td>Spieler</td><td>exakt 2</td></tr>
@@ -970,7 +1040,7 @@
       </div>
       <a class="buy" href="https://www.brettspiel-angebote.de/spiele/mindbug/5400/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
     </div>
-    <div data-zweier="100.0" class="card duel-card" data-kritiker="" data-community="74.7" data-name="Compile: Main 1">
+    <div data-reise="97.9" data-zweier="100.0" class="card duel-card" data-kritiker="" data-community="74.7" data-name="Compile: Main 1">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Compile">
@@ -1016,6 +1086,11 @@
           <div class="balken"><i style="width:100%"></i></div>
           <small>Duellspiel &ndash; Bestnote ohne Alternative</small>
         </div>
+        <div class="punkt reise">
+          <div class="punkt-kopf"><span>Unterwegs</span><b>97,9</b></div>
+          <div class="balken"><i style="width:98%"></i></div>
+          <small>80 &times; 100 &times; 80 mm, 280 g &ndash; 0,64 Liter</small>
+        </div>
       </div>
       <table class="meta">
         <tr><td>Spieler</td><td>exakt 2</td></tr>
@@ -1033,7 +1108,7 @@
       </div>
       <a class="buy" href="https://www.brettspiel-angebote.de/spiele/compile/7426/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
     </div>
-    <div data-zweier="100.0" class="card duel-card" data-kritiker="86.0" data-community="72.8" data-name="Agent Avenue">
+    <div data-reise="85.4" data-zweier="100.0" class="card duel-card" data-kritiker="86.0" data-community="72.8" data-name="Agent Avenue">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Agent Avenue">
@@ -1079,6 +1154,11 @@
           <div class="balken"><i style="width:100%"></i></div>
           <small>beste Besetzung laut 148 Stimmen, obwohl 2–4 m&ouml;glich</small>
         </div>
+        <div class="punkt reise">
+          <div class="punkt-kopf"><span>Unterwegs</span><b>85,4</b></div>
+          <div class="balken"><i style="width:85%"></i></div>
+          <small>130 &times; 180 &times; 40 mm, 280 g &ndash; 0,94 Liter</small>
+        </div>
       </div>
       <table class="meta">
         <tr><td>Spieler</td><td>2&ndash;4 (zu zweit am st&auml;rksten)</td></tr>
@@ -1096,7 +1176,7 @@
       </div>
       <a class="buy" href="https://www.brettspiel-angebote.de/spiele/agent-avenue/6951/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
     </div>
-    <div data-zweier="100.0" class="card duel-card" data-kritiker="" data-community="71.1" data-name="Revolver Noir">
+    <div data-reise="" data-zweier="100.0" class="card duel-card" data-kritiker="" data-community="71.1" data-name="Revolver Noir">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu Revolver Noir">
@@ -1137,6 +1217,11 @@
           <div class="balken"><i style="width:100%"></i></div>
           <small>Duellspiel &ndash; Bestnote ohne Alternative</small>
         </div>
+        <div class="punkt reise fehlt">
+          <div class="punkt-kopf"><span>Unterwegs</span><b>&ndash;</b></div>
+          <div class="balken"><i style="width:0%"></i></div>
+          <small>keine Ma&szlig;e gefunden</small>
+        </div>
       </div>
       <table class="meta">
         <tr><td>Spieler</td><td>exakt 2</td></tr>
@@ -1154,7 +1239,7 @@
       </div>
       <a class="buy" href="https://www.brettspiel-angebote.de/spiele/revolver-noir/5927/" target="_blank" rel="noopener">Preise &amp; Shops &rarr;</a>
     </div>
-    <div data-zweier="62.0" class="card duel-card" data-kritiker="" data-community="67.8" data-name="Köder">
+    <div data-reise="91.0" data-zweier="62.0" class="card duel-card" data-kritiker="" data-community="67.8" data-name="Köder">
       <span class="rang" hidden></span>
       <div class="cover">
         <svg viewBox="0 0 320 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration zu K&ouml;der">
@@ -1201,6 +1286,11 @@
           <div class="balken"><i style="width:62%"></i></div>
           <small>beste Besetzung ist 3, zu zweit empfohlen (29 Stimmen)</small>
         </div>
+        <div class="punkt reise">
+          <div class="punkt-kopf"><span>Unterwegs</span><b>91,0</b></div>
+          <div class="balken"><i style="width:91%"></i></div>
+          <small>120 &times; 120 &times; 55 mm, 330 g &ndash; 0,79 Liter</small>
+        </div>
       </div>
       <table class="meta">
         <tr><td>Spieler</td><td>2&ndash;5 (Ausrei&szlig;er der Liste)</td></tr>
@@ -1235,7 +1325,7 @@
 
   <div class="quell-kopf">
     <h2>Woher die Punkte kommen</h2>
-    <p>Drei Zahlen je Spiel, aus drei verschiedenen Richtungen gemessen. Alle laufen
+    <p>Vier Zahlen je Spiel, aus vier verschiedenen Richtungen gemessen. Alle laufen
     von 0 bis 100, sind aber <em>nicht</em> untereinander vergleichbar &ndash; eine 86 bei
     der Kritik bedeutet etwas anderes als eine 86 bei der Community. Vergleichbar sind
     sie nur innerhalb ihrer eigenen Spalte.</p>
@@ -1291,6 +1381,23 @@
       f&uuml;hrt bei Kritik und Community, ist zu zweit aber weder beste noch empfohlene
       Besetzung. Wer zu zweit spielt, greift laut Umfrage besser woanders hin.</p>
     </article>
+    <article>
+      <h3>Unterwegs</h3>
+      <p>Wie sperrig ist die Schachtel? Gemessen, nicht gesch&auml;tzt: L&auml;nge,
+      Breite, H&ouml;he und Gewicht laut Produktangaben von brettspielversand.de.</p>
+      <p class="formel">Punkte = 100 &minus; 75 &times; log&#8321;&#8320;(Liter &divide; 0,6)</p>
+      <p>0,6 Liter ist das Format einer Kartenspielschachtel und ergibt 100. Jede
+      Verdopplung des Volumens kostet gleich viel &ndash; deshalb der Logarithmus und
+      keine Stufen mit willk&uuml;rlichen Grenzen. Schachteln ab 500&nbsp;g verlieren
+      zus&auml;tzlich 3 bis 12 Punkte.</p>
+      <p>Von Schotten Totten (0,6&nbsp;Liter, 240&nbsp;g) bis Paleo (6,3&nbsp;Liter,
+      1,7&nbsp;kg) liegen damit fast neunzig Punkte.</p>
+      <p class="luecke"><b>Was hier nicht gemessen wird:</b> die Tischfl&auml;che.
+      MicroMacro passt in den Rucksack, braucht am Zielort aber einen Plan von
+      75&nbsp;&times;&nbsp;110&nbsp;cm. Diese zweite Dimension steht weiter in der
+      Zeile <i>Reisetauglich</i> auf jeder Karte und in Pro und Contra.
+      F&uuml;r Revolver Noir gibt kein Shop Ma&szlig;e her.</p>
+    </article>
   </div>
 
   <h3 class="tab-titel">Alle Werte im Einzelnen</h3>
@@ -1299,26 +1406,26 @@
       <thead><tr>
         <th>Spiel</th><th class="mitte">BGG (Stimmen)</th>
         <th class="mitte">H@LL9000 Red. / Leser</th>
-        <th class="mitte">Kritik</th><th class="mitte">Community</th><th class="mitte">Zu zweit</th>
+        <th class="mitte">Kritik</th><th class="mitte">Community</th><th class="mitte">Zu zweit</th><th class="mitte">Unterwegs</th>
       </tr></thead>
       <tbody>
-        <tr><td>Die Crew: Mission Tiefsee</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/324856/" target="_blank" rel="noopener">8,04</a> <span class="leise">(26.355)</span></td><td class="mitte"><a href="https://www.hall9000.de/html/spiel/die_crew_mission_tiefsee" target="_blank" rel="noopener">6,0 / 5,3</a></td><td class="mitte"><b>100,0</b></td><td class="mitte"><b>79,9</b></td><td class="mitte"><b>28,0</b></td></tr>
-        <tr><td>7 Wonders Duel</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/173346/" target="_blank" rel="noopener">8,07</a> <span class="leise">(110.158)</span></td><td class="mitte"><a href="https://www.hall9000.de/html/spiel/7_wonders_duel" target="_blank" rel="noopener">5,3 / 5,2</a></td><td class="mitte"><b>86,0</b></td><td class="mitte"><b>79,9</b></td><td class="mitte"><b>100,0</b></td></tr>
-        <tr><td>Splendor Duel</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/364073/" target="_blank" rel="noopener">7,88</a> <span class="leise">(20.196)</span></td><td class="mitte"><a href="https://www.hall9000.de/html/spiel/splendor_duel" target="_blank" rel="noopener">5,6 / 5,1</a></td><td class="mitte"><b>92,0</b></td><td class="mitte"><b>77,6</b></td><td class="mitte"><b>100,0</b></td></tr>
-        <tr><td>Codenames Duett</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/224037/" target="_blank" rel="noopener">7,41</a> <span class="leise">(27.070)</span></td><td class="mitte"><a href="https://www.hall9000.de/html/spiel/codenames_duett" target="_blank" rel="noopener">5,7 / 5,6</a></td><td class="mitte"><b>94,0</b></td><td class="mitte"><b>76,4</b></td><td class="mitte"><b>100,0</b></td></tr>
-        <tr><td>Targi</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/118048/" target="_blank" rel="noopener">7,58</a> <span class="leise">(26.996)</span></td><td class="mitte"><a href="https://www.hall9000.de/html/spiel/targi" target="_blank" rel="noopener">5,2 / 5,3</a></td><td class="mitte"><b>84,0</b></td><td class="mitte"><b>76,4</b></td><td class="mitte"><b>100,0</b></td></tr>
-        <tr><td>Hive Pocket</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/154597/" target="_blank" rel="noopener">7,69</a> <span class="leise">(15.333)</span></td><td class="mitte"><a href="https://www.hall9000.de/html/spiel/hive" target="_blank" rel="noopener">5,1 / 5,1</a></td><td class="mitte"><b>82,0</b></td><td class="mitte"><b>76,1</b></td><td class="mitte"><b>100,0</b></td></tr>
-        <tr><td>Patchwork</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/163412/" target="_blank" rel="noopener">7,58</a> <span class="leise">(74.802)</span></td><td class="mitte"><a href="https://www.hall9000.de/html/spiel/patchwork" target="_blank" rel="noopener">4,9 / 5,1</a></td><td class="mitte"><b>78,0</b></td><td class="mitte"><b>75,3</b></td><td class="mitte"><b>100,0</b></td></tr>
-        <tr><td>Compile: Main 1</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/406652/" target="_blank" rel="noopener">7,79</a> <span class="leise">(4.483)</span></td><td class="mitte">&ndash;</td><td class="mitte"><b>&ndash;</b></td><td class="mitte"><b>74,7</b></td><td class="mitte"><b>100,0</b></td></tr>
-        <tr><td>Mindbug</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/345584/" target="_blank" rel="noopener">7,55</a> <span class="leise">(9.377)</span></td><td class="mitte"><a href="https://www.hall9000.de/html/spiel/mindbug" target="_blank" rel="noopener">4,0 / 5,0</a></td><td class="mitte"><b>60,0</b></td><td class="mitte"><b>74,6</b></td><td class="mitte"><b>100,0</b></td></tr>
-        <tr><td>Pandemie</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/30549/" target="_blank" rel="noopener">7,51</a> <span class="leise">(136.046)</span></td><td class="mitte"><a href="https://www.hall9000.de/html/spiel/pandemie" target="_blank" rel="noopener">5,1 / 5,0</a></td><td class="mitte"><b>82,0</b></td><td class="mitte"><b>74,3</b></td><td class="mitte"><b>62,0</b></td></tr>
-        <tr><td>Schotten Totten</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/372/" target="_blank" rel="noopener">7,35</a> <span class="leise">(14.479)</span></td><td class="mitte"><a href="https://www.hall9000.de/html/spiel/schotten_totten" target="_blank" rel="noopener">5,1 / 5,2</a></td><td class="mitte"><b>82,0</b></td><td class="mitte"><b>74,1</b></td><td class="mitte"><b>100,0</b></td></tr>
-        <tr><td>Paleo</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/300531/" target="_blank" rel="noopener">7,64</a> <span class="leise">(16.412)</span></td><td class="mitte">&ndash;</td><td class="mitte"><b>&ndash;</b></td><td class="mitte"><b>73,7</b></td><td class="mitte"><b>88,0</b></td></tr>
-        <tr><td>Agent Avenue</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/422732/" target="_blank" rel="noopener">7,51</a> <span class="leise">(7.201)</span></td><td class="mitte"><a href="https://www.hall9000.de/html/spiel/agent_avenue" target="_blank" rel="noopener">5,3 / 4,7</a></td><td class="mitte"><b>86,0</b></td><td class="mitte"><b>72,8</b></td><td class="mitte"><b>100,0</b></td></tr>
-        <tr><td>Revolver Noir</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/322697/" target="_blank" rel="noopener">7,19</a> <span class="leise">(954)</span></td><td class="mitte">&ndash;</td><td class="mitte"><b>&ndash;</b></td><td class="mitte"><b>71,1</b></td><td class="mitte"><b>100,0</b></td></tr>
-        <tr><td>MicroMacro: Crime City</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/318977/" target="_blank" rel="noopener">7,44</a> <span class="leise">(20.121)</span></td><td class="mitte"><a href="https://www.hall9000.de/html/spiel/micromacro_crime_city" target="_blank" rel="noopener">4,9 / 4,4</a></td><td class="mitte"><b>78,0</b></td><td class="mitte"><b>70,7</b></td><td class="mitte"><b>100,0</b></td></tr>
-        <tr><td>Köder</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/415780/" target="_blank" rel="noopener">6,83</a> <span class="leise">(2.381)</span></td><td class="mitte">&ndash;</td><td class="mitte"><b>&ndash;</b></td><td class="mitte"><b>67,8</b></td><td class="mitte"><b>62,0</b></td></tr>
-        <tr><td>Hanabi</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/98778/" target="_blank" rel="noopener">7,03</a> <span class="leise">(52.987)</span></td><td class="mitte"><a href="https://www.hall9000.de/html/spiel/hanabi" target="_blank" rel="noopener">4,5 / 4,1</a></td><td class="mitte"><b>70,0</b></td><td class="mitte"><b>65,8</b></td><td class="mitte"><b>62,0</b></td></tr>
+        <tr><td>Die Crew: Mission Tiefsee</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/324856/" target="_blank" rel="noopener">8,04</a> <span class="leise">(26.355)</span></td><td class="mitte"><a href="https://www.hall9000.de/html/spiel/die_crew_mission_tiefsee" target="_blank" rel="noopener">6,0 / 5,3</a></td><td class="mitte"><b>100,0</b></td><td class="mitte"><b>79,9</b></td><td class="mitte"><b>28,0</b></td><td class="mitte"><b>85,4</b></td></tr>
+        <tr><td>7 Wonders Duel</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/173346/" target="_blank" rel="noopener">8,07</a> <span class="leise">(110.158)</span></td><td class="mitte"><a href="https://www.hall9000.de/html/spiel/7_wonders_duel" target="_blank" rel="noopener">5,3 / 5,2</a></td><td class="mitte"><b>86,0</b></td><td class="mitte"><b>79,9</b></td><td class="mitte"><b>100,0</b></td><td class="mitte"><b>51,4</b></td></tr>
+        <tr><td>Splendor Duel</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/364073/" target="_blank" rel="noopener">7,88</a> <span class="leise">(20.196)</span></td><td class="mitte"><a href="https://www.hall9000.de/html/spiel/splendor_duel" target="_blank" rel="noopener">5,6 / 5,1</a></td><td class="mitte"><b>92,0</b></td><td class="mitte"><b>77,6</b></td><td class="mitte"><b>100,0</b></td><td class="mitte"><b>78,2</b></td></tr>
+        <tr><td>Codenames Duett</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/224037/" target="_blank" rel="noopener">7,41</a> <span class="leise">(27.070)</span></td><td class="mitte"><a href="https://www.hall9000.de/html/spiel/codenames_duett" target="_blank" rel="noopener">5,7 / 5,6</a></td><td class="mitte"><b>94,0</b></td><td class="mitte"><b>76,4</b></td><td class="mitte"><b>100,0</b></td><td class="mitte"><b>57,5</b></td></tr>
+        <tr><td>Targi</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/118048/" target="_blank" rel="noopener">7,58</a> <span class="leise">(26.996)</span></td><td class="mitte"><a href="https://www.hall9000.de/html/spiel/targi" target="_blank" rel="noopener">5,2 / 5,3</a></td><td class="mitte"><b>84,0</b></td><td class="mitte"><b>76,4</b></td><td class="mitte"><b>100,0</b></td><td class="mitte"><b>59,2</b></td></tr>
+        <tr><td>Hive Pocket</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/154597/" target="_blank" rel="noopener">7,69</a> <span class="leise">(15.333)</span></td><td class="mitte"><a href="https://www.hall9000.de/html/spiel/hive" target="_blank" rel="noopener">5,1 / 5,1</a></td><td class="mitte"><b>82,0</b></td><td class="mitte"><b>76,1</b></td><td class="mitte"><b>100,0</b></td><td class="mitte"><b>81,8</b></td></tr>
+        <tr><td>Patchwork</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/163412/" target="_blank" rel="noopener">7,58</a> <span class="leise">(74.802)</span></td><td class="mitte"><a href="https://www.hall9000.de/html/spiel/patchwork" target="_blank" rel="noopener">4,9 / 5,1</a></td><td class="mitte"><b>78,0</b></td><td class="mitte"><b>75,3</b></td><td class="mitte"><b>100,0</b></td><td class="mitte"><b>56,2</b></td></tr>
+        <tr><td>Compile: Main 1</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/406652/" target="_blank" rel="noopener">7,79</a> <span class="leise">(4.483)</span></td><td class="mitte">&ndash;</td><td class="mitte"><b>&ndash;</b></td><td class="mitte"><b>74,7</b></td><td class="mitte"><b>100,0</b></td><td class="mitte"><b>97,9</b></td></tr>
+        <tr><td>Mindbug</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/345584/" target="_blank" rel="noopener">7,55</a> <span class="leise">(9.377)</span></td><td class="mitte"><a href="https://www.hall9000.de/html/spiel/mindbug" target="_blank" rel="noopener">4,0 / 5,0</a></td><td class="mitte"><b>60,0</b></td><td class="mitte"><b>74,6</b></td><td class="mitte"><b>100,0</b></td><td class="mitte"><b>85,4</b></td></tr>
+        <tr><td>Pandemie</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/30549/" target="_blank" rel="noopener">7,51</a> <span class="leise">(136.046)</span></td><td class="mitte"><a href="https://www.hall9000.de/html/spiel/pandemie" target="_blank" rel="noopener">5,1 / 5,0</a></td><td class="mitte"><b>82,0</b></td><td class="mitte"><b>74,3</b></td><td class="mitte"><b>62,0</b></td><td class="mitte"><b>39,1</b></td></tr>
+        <tr><td>Schotten Totten</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/372/" target="_blank" rel="noopener">7,35</a> <span class="leise">(14.479)</span></td><td class="mitte"><a href="https://www.hall9000.de/html/spiel/schotten_totten" target="_blank" rel="noopener">5,1 / 5,2</a></td><td class="mitte"><b>82,0</b></td><td class="mitte"><b>74,1</b></td><td class="mitte"><b>100,0</b></td><td class="mitte"><b>100,0</b></td></tr>
+        <tr><td>Paleo</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/300531/" target="_blank" rel="noopener">7,64</a> <span class="leise">(16.412)</span></td><td class="mitte">&ndash;</td><td class="mitte"><b>&ndash;</b></td><td class="mitte"><b>73,7</b></td><td class="mitte"><b>88,0</b></td><td class="mitte"><b>11,4</b></td></tr>
+        <tr><td>Agent Avenue</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/422732/" target="_blank" rel="noopener">7,51</a> <span class="leise">(7.201)</span></td><td class="mitte"><a href="https://www.hall9000.de/html/spiel/agent_avenue" target="_blank" rel="noopener">5,3 / 4,7</a></td><td class="mitte"><b>86,0</b></td><td class="mitte"><b>72,8</b></td><td class="mitte"><b>100,0</b></td><td class="mitte"><b>85,4</b></td></tr>
+        <tr><td>Revolver Noir</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/322697/" target="_blank" rel="noopener">7,19</a> <span class="leise">(954)</span></td><td class="mitte">&ndash;</td><td class="mitte"><b>&ndash;</b></td><td class="mitte"><b>71,1</b></td><td class="mitte"><b>100,0</b></td><td class="mitte"><b>&ndash;</b></td></tr>
+        <tr><td>MicroMacro: Crime City</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/318977/" target="_blank" rel="noopener">7,44</a> <span class="leise">(20.121)</span></td><td class="mitte"><a href="https://www.hall9000.de/html/spiel/micromacro_crime_city" target="_blank" rel="noopener">4,9 / 4,4</a></td><td class="mitte"><b>78,0</b></td><td class="mitte"><b>70,7</b></td><td class="mitte"><b>100,0</b></td><td class="mitte"><b>59,4</b></td></tr>
+        <tr><td>Köder</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/415780/" target="_blank" rel="noopener">6,83</a> <span class="leise">(2.381)</span></td><td class="mitte">&ndash;</td><td class="mitte"><b>&ndash;</b></td><td class="mitte"><b>67,8</b></td><td class="mitte"><b>62,0</b></td><td class="mitte"><b>91,0</b></td></tr>
+        <tr><td>Hanabi</td><td class="mitte"><a href="https://boardgamegeek.com/boardgame/98778/" target="_blank" rel="noopener">7,03</a> <span class="leise">(52.987)</span></td><td class="mitte"><a href="https://www.hall9000.de/html/spiel/hanabi" target="_blank" rel="noopener">4,5 / 4,1</a></td><td class="mitte"><b>70,0</b></td><td class="mitte"><b>65,8</b></td><td class="mitte"><b>62,0</b></td><td class="mitte"><b>97,4</b></td></tr>
       </tbody>
     </table>
   </div>

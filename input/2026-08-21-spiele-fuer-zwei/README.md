@@ -14,7 +14,7 @@ sechs kooperative und elf kompetitive.
 
 ## Punkte
 
-Jedes Spiel trägt drei Zahlen von 0 bis 100, aus drei Richtungen gemessen:
+Jedes Spiel trägt vier Zahlen von 0 bis 100, aus vier Richtungen gemessen:
 
 - **Kritik** — Redaktionswertung von H@LL9000 (Skala 1–6), linear gestreckt.
   Liegt für 13 der 17 Titel vor.
@@ -23,6 +23,10 @@ Jedes Spiel trägt drei Zahlen von 0 bis 100, aus drei Richtungen gemessen:
 - **Zu zweit** — aus der BGG-Spielerzahl-Umfrage: beste Besetzung 100, eine von
   mehreren besten 88, nur empfohlen 62, weder noch 28. Bei reinen Duellspielen
   ist die 100 trivial; solche Titel sind gedämpft dargestellt.
+- **Unterwegs** — Packmaß aus Schachtelmaßen und Gewicht (brettspielversand.de):
+  `100 − 75 × log₁₀(Liter ÷ 0,6)`, plus Abzug ab 500 g. Liegt für 16 der 17 vor.
+  Die benötigte Tischfläche misst diese Zahl nicht — die steht in der Zeile
+  *Reisetauglich* auf den Karten.
 
 Die Zahlen sind nicht untereinander vergleichbar, nur innerhalb ihrer
 Spalte. Formeln, Rohwerte und alle Quellen stehen im Reiter *Punkte & Quellen*
@@ -76,6 +80,7 @@ Revolver Noir · Köder
 - Die Crew: Mission Tiefsee führt bei Kritik und Community, ist zu zweit laut
   BGG-Umfrage aber weder beste noch empfohlene Besetzung (28 von 100). Der
   Titel bleibt in der Liste, die Zahl sagt aber deutlich, was Sache ist
+- Für Revolver Noir gibt kein Shop Schachtelmaße her; *Unterwegs* bleibt dort leer
 - Wertungen und Preise veralten; Stand ist durchgehend der 21.08.2026
 
 ---
