@@ -14,14 +14,17 @@ sechs kooperative und elf kompetitive.
 
 ## Punkte
 
-Jedes Spiel trägt zwei Zahlen von 0 bis 100, aus zwei Richtungen gemessen:
+Jedes Spiel trägt drei Zahlen von 0 bis 100, aus drei Richtungen gemessen:
 
 - **Kritik** — Redaktionswertung von H@LL9000 (Skala 1–6), linear gestreckt.
   Liegt für 13 der 17 Titel vor.
 - **Community** — BoardGameGeek-Nutzerschnitt, nach Stimmenzahl gedämpft, plus
   H@LL9000-Leserwertung mit einem Viertel Gewicht. Liegt für alle 17 vor.
+- **Zu zweit** — aus der BGG-Spielerzahl-Umfrage: beste Besetzung 100, eine von
+  mehreren besten 88, nur empfohlen 62, weder noch 28. Bei reinen Duellspielen
+  ist die 100 trivial; solche Titel sind gedämpft dargestellt.
 
-Die beiden Zahlen sind nicht untereinander vergleichbar, nur innerhalb ihrer
+Die Zahlen sind nicht untereinander vergleichbar, nur innerhalb ihrer
 Spalte. Formeln, Rohwerte und alle Quellen stehen im Reiter *Punkte & Quellen*
 der Seite selbst.
 
@@ -35,7 +38,8 @@ eine Beschreibung, den vollständigen Schachtelinhalt, je ein Pro und Contra
 aus Reviews und einen Link zum Preisvergleich.
 
 Über den Blöcken lässt sich die Reihenfolge umschalten: nach Community, nach
-Kritik oder zurück in die ursprüngliche Anordnung. Der zweite Reiter erklärt die
+Kritik, nach Zwei-Personen-Tauglichkeit oder zurück in die ursprüngliche
+Anordnung. Der zweite Reiter erklärt die
 Punkte und listet die Quellen. Beide Reiter sind ohne Scrollen erreichbar.
 
 Die Cover sind gezeichnet – siebzehn Illustrationen als Inline-SVG, ohne ein
@@ -69,6 +73,9 @@ Revolver Noir · Köder
   Bieten verliert zu zweit an Reiz. Auf der Karte ist das vermerkt
 - Für Paleo, Compile, Revolver Noir und Köder gibt es keine Redaktionswertung;
   sie zeigen bei *Kritik* einen Strich und stehen beim Sortieren danach am Ende
+- Die Crew: Mission Tiefsee führt bei Kritik und Community, ist zu zweit laut
+  BGG-Umfrage aber weder beste noch empfohlene Besetzung (28 von 100). Der
+  Titel bleibt in der Liste, die Zahl sagt aber deutlich, was Sache ist
 - Wertungen und Preise veralten; Stand ist durchgehend der 21.08.2026
 
 ---
