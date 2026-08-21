@@ -124,18 +124,34 @@ def pruefe_html(pfad):
 
 
 def lies_readme(pfad):
-    """-> (ueberschrift, einzeiler)"""
-    ueberschrift, einzeiler = "", ""
+    """-> (ueberschrift, einzeiler)
+
+    Der Einzeiler ist der erste Absatz unter der Überschrift, zu einer Zeile
+    zusammengezogen - ein umbrochener Satz soll in der Übersicht nicht
+    mitten im Wort enden.
+    """
+    ueberschrift = ""
+    absatz = []
     for roh in lies(pfad).splitlines():
         zeile = roh.strip()
         if not zeile:
+            if absatz:
+                break
             continue
         if not ueberschrift and zeile.startswith("#"):
             ueberschrift = zeile.lstrip("#").strip()
             continue
-        if ueberschrift and not einzeiler and not zeile.startswith(("#", "---", "```")):
-            einzeiler = zeile
-            break
+        if not ueberschrift:
+            continue
+        if zeile.startswith(("#", "---", "```", "|", "*Der folgende")):
+            if absatz:
+                break
+            continue
+        absatz.append(zeile)
+
+    einzeiler = " ".join(absatz)
+    if len(einzeiler) > 140:
+        einzeiler = einzeiler[:137].rsplit(" ", 1)[0] + "..."
     return ueberschrift, einzeiler
 
 

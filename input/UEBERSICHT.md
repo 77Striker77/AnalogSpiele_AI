@@ -2,4 +2,13 @@
 
 Erzeugt von `werkzeug/ablage_pruefen.py` - nicht von Hand bearbeiten.
 
-Noch keine Ablage. Anleitung steht in [LIESMICH.md](LIESMICH.md).
+| Ablage | Titel | Beschreibung | HTML | Zustand |
+| --- | --- | --- | --- | --- |
+| [2026-08-21-spiele-fuer-zwei](2026-08-21-spiele-fuer-zwei/) | Spiele für Zwei – Miteinander & Gegeneinander | Einseitige Übersicht der zwölf besten analogen Zwei-Personen-Spiele – sechs kooperative, sechs kompetitive. | index.html - 42.1 KB | vollständig |
+
+## Anmerkungen
+
+**2026-08-21-spiele-fuer-zwei**
+
+- Hinweis: Zeile 7: link lädt von Google Fonts - https://fonts.googleapis.com
+- Hinweis: Zeile 8: link lädt von Google Fonts - https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz...
